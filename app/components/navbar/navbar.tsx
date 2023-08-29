@@ -6,7 +6,9 @@ import CenterDiv from "../center-div";
 import { navbarOptions } from "@/app/common/utils/navbar-options";
 import NavbarType from "@/app/types/navbar.type";
 
-function Navbar() {
+import { theme } from "@/app/common/styles/themes/theme";
+
+function Navbar({ footerPosition = false }: any) {
   return (
     <>
       <nav>
@@ -27,7 +29,12 @@ function Navbar() {
       </nav>
       <style jsx>{`
         nav {
-          position: fixed;
+          ${!footerPosition &&
+          `
+            position: fixed;
+            top: 0;
+            left: 0;
+          `}
           top: 0;
           left: 0;
           width: 100%;
@@ -36,6 +43,7 @@ function Navbar() {
           align-items: center;
           justify-content: center;
           padding: 0px 100px;
+          z-index: 1000;
         }
         img {
           width: 250px;
@@ -44,11 +52,18 @@ function Navbar() {
           display: flex;
           align-items: center;
           justify-content: center;
-          gap: 20px;
+          gap: 40px;
         }
         ul li {
           list-style: none;
           font-size: 18px;
+          color: ${!footerPosition
+            ? theme.secondary.black
+            : theme.secondary.white};
+        }
+        ul li:hover {
+          color: ${theme.primary.lightGreen};
+          transition: all 0.2s ease;
         }
         ul li:last-child {
           font-weight: bold;

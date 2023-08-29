@@ -8,6 +8,7 @@ export const theme = {
   },
   secondary: {
     black: "#000000",
+    white: "#FFFFFF",
     darkGrey: "#666366",
     lightGrey: "#96989A",
   },
