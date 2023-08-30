@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 
 import CenterDiv from "../center-div";
@@ -9,22 +9,40 @@ import NavbarType from "@/app/types/navbar.type";
 import { theme } from "@/app/common/styles/themes/theme";
 
 function Navbar({ footerPosition = false }: any) {
+  const [changeNavbarColor, setChangeNavbarColor] = useState(false);
+
+  const handleScroll = () => {
+    if (window.scrollY > 100) {
+      setChangeNavbarColor(true);
+    } else {
+      setChangeNavbarColor(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+  }, []);
+
+  console.log(changeNavbarColor);
+
   return (
     <>
       <nav>
         <CenterDiv>
-          <img
-            src={"/images/logo/logo-completo-color.png"}
-            alt="logo-gherbezza-turbinas-neumaticas-sembradoras"
-            title="Gherbezza, turbinas neumaticas para sembradoras"
-          />
-          <ul>
-            {navbarOptions.map((option: NavbarType, index: number) => (
-              <li key={option.name}>
-                <Link href={option.link}>{option.name}</Link>
-              </li>
-            ))}
-          </ul>
+          <div className="nav_container">
+            <img
+              src={"/images/logo/logo-completo-color.png"}
+              alt="logo-gherbezza-turbinas-neumaticas-sembradoras"
+              title="Gherbezza, turbinas neumaticas para sembradoras"
+            />
+            <ul>
+              {navbarOptions.map((option: NavbarType, index: number) => (
+                <li key={option.name}>
+                  <Link href={option.link}>{option.name}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </CenterDiv>
       </nav>
       <style jsx>{`
@@ -44,6 +62,17 @@ function Navbar({ footerPosition = false }: any) {
           justify-content: center;
           padding: 0px 100px;
           z-index: 1000;
+          background-color: ${!footerPosition &&
+          changeNavbarColor &&
+          theme.secondary.white};
+          transition: all 0.3s ease;
+        }
+        .nav_container {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
         }
         img {
           width: 250px;
@@ -57,6 +86,7 @@ function Navbar({ footerPosition = false }: any) {
         ul li {
           list-style: none;
           font-size: 18px;
+          font-weight: 400;
           color: ${!footerPosition
             ? theme.secondary.black
             : theme.secondary.white};
