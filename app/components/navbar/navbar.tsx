@@ -23,8 +23,6 @@ function Navbar({ footerPosition = false }: any) {
     window.addEventListener("scroll", handleScroll);
   }, []);
 
-  console.log(changeNavbarColor);
-
   return (
     <>
       <nav>
