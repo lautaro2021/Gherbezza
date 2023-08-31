@@ -63,6 +63,8 @@ function Navbar({ footerPosition = false }: any) {
           background-color: ${!footerPosition &&
           changeNavbarColor &&
           theme.secondary.white};
+          box-shadow: ${!footerPosition &&
+          "0px 2px 6px 2px rgba(117, 117, 117, 0.2)"};
           transition: all 0.3s ease;
         }
         .nav_container {

@@ -7,42 +7,45 @@ import { footerOptions } from "@/app/common/utils/footer-options";
 import { footerSocial } from "@/app/common/utils/footer-options";
 import OptionsFooterInterface from "@/app/types/footer-options.type";
 import { theme } from "@/app/common/styles/themes/theme";
+import CenterDiv from "../center-div";
 
 function Footer() {
   return (
     <>
       <footer>
         <Navbar footerPosition={true} />
-        <div className="footer_options_container">
-          <p>
-            Líderes en turbinas neumáticas y tecnología agrícola. Unimos calidad
-            y innovación. Únete para impulsar la agricultura del futuro con
-            soluciones tecnológicas de excelencia.
-          </p>
-          <ul>
-            {footerOptions.map((option: OptionsFooterInterface) => (
-              <li key={option.description}>
-                <span>{option.description}</span>
-              </li>
-            ))}
-            <div>
-              {footerSocial.map((option: OptionsFooterInterface) => (
-                <a
-                  key={option.description}
-                  href={option.link}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img
-                    src={option.image}
-                    alt={option.description}
-                    title={option.title}
-                  />
-                </a>
+        <CenterDiv>
+          <div className="footer_options_container">
+            <p>
+              Líderes en turbinas neumáticas y tecnología agrícola. Unimos
+              calidad y innovación. Únete para impulsar la agricultura del
+              futuro con soluciones tecnológicas de excelencia.
+            </p>
+            <ul>
+              {footerOptions.map((option: OptionsFooterInterface) => (
+                <li key={option.description}>
+                  <span>{option.description}</span>
+                </li>
               ))}
-            </div>
-          </ul>
-        </div>
+              <div>
+                {footerSocial.map((option: OptionsFooterInterface) => (
+                  <a
+                    key={option.description}
+                    href={option.link}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img
+                      src={option.image}
+                      alt={option.description}
+                      title={option.title}
+                    />
+                  </a>
+                ))}
+              </div>
+            </ul>
+          </div>
+        </CenterDiv>
       </footer>
       <style jsx>{`
         footer {
@@ -62,7 +65,6 @@ function Footer() {
           height: 100%;
         }
         .footer_options_container {
-          max-width: 1920px;
           width: 100%;
           display: flex;
           justify-content: space-between;

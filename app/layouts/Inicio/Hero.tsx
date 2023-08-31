@@ -40,7 +40,7 @@ function Hero() {
             height: 100vh;
             min-height: 650px;
             background-color: brown;
-            padding: 200px 250px;
+            padding: 200px 150px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -68,10 +68,13 @@ function Hero() {
           .text_container {
             grid-area: 2 / 2 / 3 / 3;
             text-align: end;
+            display: flex;
+            align-items: flex-end;
           }
           h1 {
-            font-size: 120px;
+            font-size: var(--desktop-title-fontsize);
             font-weight: bold;
+            line-height: 110%;
           }
           span {
             display: block;

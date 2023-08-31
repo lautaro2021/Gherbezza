@@ -24,7 +24,7 @@ function Card({ subtitle, title, description, buttonText }: CardType) {
         .card_container {
           border: 2px solid white;
           height: 100%;
-          width: 28%;
+          width: 33%;
           border-radius: 0px 60px 0px 0px;
           display: flex;
           flex-direction: column;
@@ -40,7 +40,7 @@ function Card({ subtitle, title, description, buttonText }: CardType) {
           color: ${theme.secondary.darkGrey};
         }
         h3 {
-          font-size: 40px;
+          font-size: 35px;
           font-weight: bold;
         }
         p {

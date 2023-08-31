@@ -6,12 +6,9 @@ function CenterDiv({ children }: any) {
       <div>{children}</div>
       <style jsx>{`
         div {
-          max-width: 1920px;
+          max-width: 1500px;
           width: 100%;
           height: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
         }
       `}</style>
     </>
