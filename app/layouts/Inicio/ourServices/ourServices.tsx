@@ -2,11 +2,12 @@ import { theme } from "@/app/common/styles/themes/theme";
 import Button from "@/app/components/button/button";
 import CenterDiv from "@/app/components/center-div";
 import React from "react";
+import PageSection from "@/app/components/page-section";
 
 function OurServices() {
   return (
     <>
-      <section id="pagesection">
+      <PageSection backgroundColor={theme.secondary.greyBackground}>
         <CenterDiv>
           <div className="title_container">
             <div></div>
@@ -32,7 +33,7 @@ function OurServices() {
             </div>
           </div>
         </CenterDiv>
-      </section>
+      </PageSection>
       <style jsx>{`
         section {
           width: 100%;

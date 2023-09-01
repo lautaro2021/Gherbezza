@@ -34,6 +34,7 @@ function Button({ text, bordered = false, textColor, link }: ButtonType) {
           text-align: start;
           cursor: pointer;
           padding: ${bordered ? "8px 12px" : ""};
+          margin: 25px 0px;
         }
       `}</style>
     </>

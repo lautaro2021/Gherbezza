@@ -2,17 +2,19 @@ import React from "react";
 
 import { theme } from "@/app/common/styles/themes/theme";
 import CenterDiv from "@/app/components/center-div";
+import SectionTitles from "@/app/components/section-titles";
+import PageSection from "@/app/components/page-section";
 import Button from "@/app/components/button/button";
 import Image from "next/image";
 
 function OurCompany() {
   return (
     <>
-      <section id="pagesection">
+      <PageSection>
         <CenterDiv>
           <div className="container">
             <div className="text_container">
-              <h2>Nuestra empresa</h2>
+              <SectionTitles text="Nuestra empresa" />
               <p>
                 Nace en el año 2003, en la ciudad de Rosario, con el objetivo
                 principal de brindar soluciones a la industria de maquinaria
@@ -33,24 +35,17 @@ function OurCompany() {
                 alt="Gherbezza fabrica de turbinas neumaticas para sembradoras"
                 title="Gherbezza turbinas neumaticas para sembradoras"
                 fill
-                objectFit="cover"
+                style={{ objectFit: "cover" }}
                 placeholder="blur"
                 blurDataURL="/images/layouts/inicio/ourCompany/ourCompany.png"
                 priority
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
           </div>
         </CenterDiv>
-      </section>
+      </PageSection>
       <style jsx>{`
-        section {
-          width: 100%;
-          height: 100vh;
-          background-color: ${theme.secondary.white};
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
         .container {
           width: 100%;
           height: 100%;
@@ -67,11 +62,6 @@ function OurCompany() {
           justify-content: center;
           text-align: start;
           gap: 15px;
-        }
-        .text_container h2 {
-          font-size: 70px;
-          color: ${theme.primary.lightGreen};
-          font-weight: bold;
         }
         .text_container p {
           font-size: 24px;

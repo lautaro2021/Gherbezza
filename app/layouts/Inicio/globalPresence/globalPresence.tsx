@@ -3,14 +3,23 @@ import Image from "next/image";
 import CenterDiv from "@/app/components/center-div";
 import React from "react";
 
+import PageSection from "@/app/components/page-section";
+import SectionTitles from "@/app/components/section-titles";
+
 function GlobalPresence() {
   return (
     <>
-      <section id="pagesection">
+      <PageSection
+        backgroundColor={theme.secondary.greyBackground}
+        height="auto"
+      >
         <CenterDiv>
           <div className="container">
             <div className="text_container">
-              <h2>Nuestra presencia global</h2>
+              <SectionTitles
+                text="Nuestra presencia global"
+                colorText={theme.primary.red}
+              />
               <br />
               <p>
                 Durante 20 años, hemos forjado alianzas en todo el mundo. Desde
@@ -26,12 +35,16 @@ function GlobalPresence() {
                 alt="nuestra presencia global Gherbezza turbinas neumaticas para sembradoras"
                 title="nuestra presencia global Gherbezza turbinas neumaticas para sembradoras"
                 fill
-                objectFit="contain"
+                style={{ objectFit: "contain" }}
+                priority
+                placeholder="blur"
+                blurDataURL="/images/layouts/inicio/globalPresence/globalPresence.png"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
           </div>
         </CenterDiv>
-      </section>
+      </PageSection>
       <style jsx>{`
         section {
           width: 100%;
