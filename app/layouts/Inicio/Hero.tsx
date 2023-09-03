@@ -10,6 +10,19 @@ function Hero() {
   return (
     <>
       <section>
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          id="Gherbezza%20turbinas%20neumaticas%20para%20sembradoras%20-%20Home%20BG"
+          poster="https://res.cloudinary.com/dn72zz8r5/image/upload/v1693594263/Gherbezza%20-%20Hero%20background.png"
+        >
+          <source
+            src="https://res.cloudinary.com/dn72zz8r5/video/upload/v1693592799/pexels-altaf-shah-9487183_2160p_c47eht.mp4"
+            type="video/mp4"
+          />
+        </video>
         <CenterDiv>
           <div className="grid_container">
             <div className="cards_container">
@@ -39,15 +52,18 @@ function Hero() {
             width: 100%;
             height: 100vh;
             min-height: 650px;
-            background-color: brown;
             padding: 200px 150px;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-              url("/images/layouts/inicio/hero/background.webp");
-            background-size: cover;
-            background-position: center;
+          }
+          video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            object-fit: contain;
+            z-index: -1;
+            filter: brightness(0.2);
           }
           .grid_container {
             width: 100%;

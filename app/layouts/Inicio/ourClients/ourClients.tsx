@@ -25,25 +25,34 @@ function OurClients() {
             <div className="embla" ref={emblaRef}>
               <div className="embla__container">
                 <div className="embla__slide">
-                  {carouselOptions.slide1?.map(
-                    (obj: ImageCarouselType, index: number) => (
-                      <img src={obj.src} alt={obj.alt} title={obj.title} />
-                    )
-                  )}
+                  {carouselOptions.slide1?.map((obj: ImageCarouselType) => (
+                    <img
+                      src={obj.src}
+                      alt={obj.alt}
+                      title={obj.title}
+                      key={obj.title}
+                    />
+                  ))}
                 </div>
                 <div className="embla__slide">
-                  {carouselOptions.slide2?.map(
-                    (obj: ImageCarouselType, index: number) => (
-                      <img src={obj.src} alt={obj.alt} title={obj.title} />
-                    )
-                  )}
+                  {carouselOptions.slide2?.map((obj: ImageCarouselType) => (
+                    <img
+                      src={obj.src}
+                      alt={obj.alt}
+                      title={obj.title}
+                      key={obj.title}
+                    />
+                  ))}
                 </div>
                 <div className="embla__slide">
-                  {carouselOptions.slide3?.map(
-                    (obj: ImageCarouselType, index: number) => (
-                      <img src={obj.src} alt={obj.alt} title={obj.title} />
-                    )
-                  )}
+                  {carouselOptions.slide3?.map((obj: ImageCarouselType) => (
+                    <img
+                      src={obj.src}
+                      alt={obj.alt}
+                      title={obj.title}
+                      key={obj.title}
+                    />
+                  ))}
                 </div>
               </div>
             </div>

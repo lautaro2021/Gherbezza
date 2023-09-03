@@ -64,6 +64,7 @@ function Navbar({ footerPosition = false }: any) {
           changeNavbarColor &&
           theme.secondary.white};
           box-shadow: ${!footerPosition &&
+          changeNavbarColor &&
           "0px 2px 6px 2px rgba(117, 117, 117, 0.2)"};
           transition: all 0.3s ease;
         }
@@ -87,7 +88,7 @@ function Navbar({ footerPosition = false }: any) {
           list-style: none;
           font-size: 18px;
           font-weight: 400;
-          color: ${!footerPosition
+          color: ${changeNavbarColor && !footerPosition
             ? theme.secondary.black
             : theme.secondary.white};
         }
