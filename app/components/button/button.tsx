@@ -33,8 +33,21 @@ function Button({ text, bordered = false, textColor, link }: ButtonType) {
           transition: all 0.2s ease;
           text-align: start;
           cursor: pointer;
-          padding: ${bordered ? "8px 12px" : ""};
+          padding: ${bordered ? "10px 16px" : ""};
           margin: 25px 0px;
+          transition: all 0.3s ease;
+        }
+        button:hover {
+          ${!bordered
+            ? `
+          color: ${theme.primary.lightGreen};
+          gap: 20px;
+          `
+            : `
+          background-color: ${theme.secondary.white};
+          color: ${theme.secondary.black};
+          gap: 20px;
+          `}
         }
       `}</style>
     </>

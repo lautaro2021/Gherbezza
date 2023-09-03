@@ -8,7 +8,22 @@ import { BsArrowRight, BsArrowLeft } from "react-icons/bs";
 
 function OurServices() {
   const [actualService, setActualService] = useState<string>("postventa");
-  const arrowStyles = { color: `${theme.secondary.white}`, cursor: "pointer" };
+  const leftArrowStyle = {
+    color: `${
+      actualService === "postventa"
+        ? theme.secondary.lightGrey
+        : theme.secondary.white
+    }`,
+    cursor: "pointer",
+  };
+  const rightArrowStyle = {
+    color: `${
+      actualService !== "postventa"
+        ? theme.secondary.lightGrey
+        : theme.secondary.white
+    }`,
+    cursor: "pointer",
+  };
 
   const changeService = () => {
     setActualService((prevValue) =>
@@ -29,8 +44,11 @@ function OurServices() {
               <div className="image_container">
                 <img src="/images/layouts/inicio/ourServices/imagen.png" />
                 <div>
-                  <BsArrowLeft onClick={changeService} style={arrowStyles} />
-                  <BsArrowRight onClick={changeService} style={arrowStyles} />
+                  <BsArrowLeft onClick={changeService} style={leftArrowStyle} />
+                  <BsArrowRight
+                    onClick={changeService}
+                    style={rightArrowStyle}
+                  />
                 </div>
               </div>
               <div className="service_info_container">
@@ -55,8 +73,11 @@ function OurServices() {
               <div className="image_container">
                 <img src="/images/layouts/inicio/ourServices/imagen.png" />
                 <div>
-                  <BsArrowLeft onClick={changeService} style={arrowStyles} />
-                  <BsArrowRight onClick={changeService} style={arrowStyles} />
+                  <BsArrowLeft onClick={changeService} style={leftArrowStyle} />
+                  <BsArrowRight
+                    onClick={changeService}
+                    style={rightArrowStyle}
+                  />
                 </div>
               </div>
               <div className="service_info_container">

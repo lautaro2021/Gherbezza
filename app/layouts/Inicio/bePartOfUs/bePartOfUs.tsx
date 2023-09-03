@@ -1,5 +1,6 @@
+"use client";
 import { theme } from "@/app/common/styles/themes/theme";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import CenterDiv from "@/app/components/center-div";
 import PageSection from "@/app/components/page-section";
@@ -24,6 +25,11 @@ function BePartOfUs() {
                 blurDataURL="/images/layouts/inicio/bePartOfUs/partOfUs.png"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
+              <img
+                src="/images/layouts/inicio/bePartOfUs/operario.png"
+                alt="operario - trabaja con nosotros - gherbezza turbinas neumaticas para sembradoras"
+                title="trabaja con nosotros"
+              />
             </div>
             <div className="text_container">
               <SectionTitles text="Forma parte del equipo" />
@@ -35,7 +41,7 @@ function BePartOfUs() {
               </p>
               <Button
                 link="/nosotros"
-                text="Sumate"
+                text="Unite"
                 textColor={theme.secondary.black}
               />
             </div>
@@ -54,6 +60,12 @@ function BePartOfUs() {
           width: 40%;
           height: 600px;
           position: relative;
+        }
+        .image_container img {
+          z-index: 1000;
+          position: absolute;
+          bottom: -30px;
+          right: -4vw;
         }
         .text_container {
           width: 40%;
