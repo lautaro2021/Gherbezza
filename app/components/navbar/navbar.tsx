@@ -8,7 +8,13 @@ import NavbarType from "@/app/types/navbar.type";
 
 import { theme } from "@/app/common/styles/themes/theme";
 
-function Navbar({ footerPosition = false }: any) {
+type Navbar = {
+  footerPosition?: boolean;
+  backgroundColor?: string;
+  textColor?: string;
+};
+
+function Navbar({ footerPosition = false }: Navbar) {
   const [changeNavbarColor, setChangeNavbarColor] = useState(false);
 
   const handleScroll = () => {

@@ -8,7 +8,7 @@ type ButtonType = {
   text?: string;
   bordered?: boolean;
   textColor?: string;
-  link: string;
+  link?: string;
 };
 function Button({ text, bordered = false, textColor, link }: ButtonType) {
   return (

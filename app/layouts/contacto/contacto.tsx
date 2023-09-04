@@ -1,44 +1,86 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 
 import CenterDiv from "@/app/components/center-div";
 import { theme } from "@/app/common/styles/themes/theme";
 import Link from "next/link";
 import SectionTitles from "@/app/components/section-titles";
+import FormButton from "@/app/components/button/form-button";
+
+import { FormType } from "@/app/types/form.type";
+import { intialForm } from "@/app/common/utils/initialForm";
 
 function Contacto() {
+  const [form, setForm] = useState<FormType>(intialForm);
+
+  const changeValues = (e: React.FormEvent<HTMLInputElement> | any) => {
+    setForm({
+      ...form,
+      [e.currentTarget.name]: e.currentTarget.value,
+    });
+  };
+
   return (
     <>
       <section>
         <CenterDiv>
           <div className="container">
             <form>
-              <label>
-                <Link href="/">INICIO</Link>/<strong>CONTACTO</strong>
-              </label>
-              <SectionTitles
-                text="CONTACTO"
-                colorText={theme.secondary.black}
-              />
+              <div>
+                <label>
+                  <Link href="/">INICIO</Link>/<strong>CONTACTO</strong>
+                </label>
+                <SectionTitles
+                  text="CONTACTO"
+                  colorText={theme.secondary.black}
+                />
+              </div>
+
               <div className="input_container">
-                <input type="text" required placeholder="Nombre" name="name" />
+                <input
+                  type="text"
+                  required
+                  placeholder="Nombre"
+                  name="name"
+                  onChange={changeValues}
+                />
                 <input
                   type="text"
                   required
                   placeholder="Empresa"
-                  name="empress"
+                  name="company"
+                  onChange={changeValues}
                 />
-                <input type="email" required placeholder="Email" name="email" />
+                <input
+                  type="email"
+                  required
+                  placeholder="Email"
+                  name="email"
+                  onChange={changeValues}
+                />
                 <input
                   type="number"
                   required
                   placeholder="Teléfono"
-                  name="tel"
+                  name="phone"
+                  onChange={changeValues}
                 />
-                <input type="text" required placeholder="Ciudad" name="city" />
-                <textarea placeholder="Tu consulta" required name="question" />
+                <input
+                  type="text"
+                  required
+                  placeholder="Ciudad"
+                  name="city"
+                  onChange={changeValues}
+                />
+                <textarea placeholder="Tu consulta" required name="text" />
               </div>
+              <FormButton
+                text="Enviar"
+                textColor={theme.secondary.black}
+                background={theme.secondary.white}
+                type="submit"
+              />
             </form>
             <div className="info_container">
               <div className="image_container">
@@ -89,6 +131,7 @@ function Contacto() {
           height: 70%;
           display: flex;
           flex-direction: column;
+          gap: 50px;
           padding: 0px 50px 0px 0px;
         }
         form label {
@@ -105,7 +148,6 @@ function Contacto() {
           grid-column-gap: 20px;
           grid-row-gap: 0px;
           height: 70%;
-          margin-top: 50px;
         }
         .input_container input {
           border: none;
@@ -113,6 +155,11 @@ function Contacto() {
           font-size: 18px;
           padding: 5px 12px;
           height: 50px;
+        }
+        input[type="number"]::-webkit-outer-spin-button,
+        input[type="number"]::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
         }
         .input_container input:focus {
           outline: 0;
