@@ -13,7 +13,11 @@ function Footer() {
   return (
     <>
       <footer>
-        <Navbar footerPosition={true} />
+        <Navbar
+          footerPosition={true}
+          textColor={theme.secondary.white}
+          backgroundColor="transparent"
+        />
         <CenterDiv>
           <div className="footer_options_container">
             <p>

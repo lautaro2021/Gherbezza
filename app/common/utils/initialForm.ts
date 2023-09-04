@@ -4,6 +4,7 @@ export const intialForm: FormType = {
   name: "",
   company: "",
   email: "",
-  phone: null,
+  phone: 0,
+  city: "",
   text: "",
 };

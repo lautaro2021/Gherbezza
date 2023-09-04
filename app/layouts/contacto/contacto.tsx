@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
 import CenterDiv from "@/app/components/center-div";
@@ -7,6 +7,7 @@ import { theme } from "@/app/common/styles/themes/theme";
 import Link from "next/link";
 import SectionTitles from "@/app/components/section-titles";
 import FormButton from "@/app/components/button/form-button";
+import emailjs from "@emailjs/browser";
 
 import { FormType } from "@/app/types/form.type";
 import { intialForm } from "@/app/common/utils/initialForm";
@@ -14,11 +15,31 @@ import { intialForm } from "@/app/common/utils/initialForm";
 function Contacto() {
   const [form, setForm] = useState<FormType>(intialForm);
 
-  const changeValues = (e: React.FormEvent<HTMLInputElement> | any) => {
+  const changeValues = (
+    e:
+      | React.FormEvent<HTMLInputElement>
+      | React.ChangeEvent<HTMLTextAreaElement>
+  ) => {
     setForm({
       ...form,
       [e.currentTarget.name]: e.currentTarget.value,
     });
+  };
+
+  const submitForm = (e: any) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_998q9p9",
+        "template_cjha2xx",
+        e.target,
+        "EQ_zqGb2OP0BOi-d5"
+      )
+      .then(() => {
+        alert("Su consulta fue enviada correctamente.");
+        setForm(intialForm);
+      });
   };
 
   return (
@@ -26,8 +47,8 @@ function Contacto() {
       <section>
         <CenterDiv>
           <div className="container">
-            <form>
-              <div>
+            <form onSubmit={submitForm} action="POST">
+              <div className="title_container">
                 <label>
                   <Link href="/">INICIO</Link>/<strong>CONTACTO</strong>
                 </label>
@@ -41,39 +62,50 @@ function Contacto() {
                 <input
                   type="text"
                   required
-                  placeholder="Nombre"
+                  placeholder="Nombre(*)"
                   name="name"
+                  value={form.name}
                   onChange={changeValues}
                 />
                 <input
                   type="text"
                   required
-                  placeholder="Empresa"
+                  placeholder="Empresa(*)"
                   name="company"
+                  value={form.company}
                   onChange={changeValues}
                 />
                 <input
                   type="email"
                   required
-                  placeholder="Email"
+                  placeholder="Email(*)"
                   name="email"
+                  value={form.email}
                   onChange={changeValues}
                 />
                 <input
                   type="number"
                   required
-                  placeholder="Teléfono"
+                  placeholder="Teléfono(*)"
                   name="phone"
+                  value={form.phone || ""}
                   onChange={changeValues}
                 />
                 <input
                   type="text"
                   required
-                  placeholder="Ciudad"
+                  placeholder="Ciudad(*)"
                   name="city"
+                  value={form.city}
                   onChange={changeValues}
                 />
-                <textarea placeholder="Tu consulta" required name="text" />
+                <textarea
+                  placeholder="Tu consulta(*)"
+                  required
+                  name="text"
+                  onChange={changeValues}
+                  value={form.text}
+                />
               </div>
               <FormButton
                 text="Enviar"
@@ -140,6 +172,10 @@ function Contacto() {
         }
         form label strong {
           color: ${theme.secondary.darkGrey};
+        }
+        .title_container {
+          display: flex;
+          flex-direction: column;
         }
         .input_container {
           display: grid;

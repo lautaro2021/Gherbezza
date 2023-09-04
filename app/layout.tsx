@@ -9,6 +9,7 @@ import Footer from "./components/footer/footer";
 import Powered from "./components/footer/powered";
 import Loader from "./components/loader/loader";
 import { useEffect, useState } from "react";
+import { theme } from "./common/styles/themes/theme";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -40,7 +41,10 @@ export default function RootLayout({
             <Loader />
           ) : (
             <>
-              <Navbar />
+              <Navbar
+                textColor={theme.secondary.white}
+                backgroundColor="transparent"
+              />
               {children}
               <Footer />
               <Powered />

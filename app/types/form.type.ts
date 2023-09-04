@@ -3,5 +3,6 @@ export type FormType = {
   company: string;
   email: string;
   phone: number | null;
+  city: string;
   text: string;
 };

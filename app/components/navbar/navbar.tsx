@@ -5,28 +5,42 @@ import Link from "next/link";
 import CenterDiv from "../center-div";
 import { navbarOptions } from "@/app/common/utils/navbar-options";
 import NavbarType from "@/app/types/navbar.type";
+import getCurrentPathname from "@/app/common/utils/getCurrentPathname";
 
 import { theme } from "@/app/common/styles/themes/theme";
 
 type Navbar = {
   footerPosition?: boolean;
-  backgroundColor?: string;
-  textColor?: string;
+  backgroundColor: string;
+  textColor: string;
 };
 
-function Navbar({ footerPosition = false }: Navbar) {
-  const [changeNavbarColor, setChangeNavbarColor] = useState(false);
+function Navbar({
+  footerPosition = false,
+  backgroundColor,
+  textColor,
+}: Navbar) {
+  const [navbarColor, setNavbarColor] = useState<string>(backgroundColor);
+  const [navbarTextColor, setNavbarTextColor] = useState<string>("");
+  const actualPath = getCurrentPathname();
 
   const handleScroll = () => {
-    if (window.scrollY > 100) {
-      setChangeNavbarColor(true);
-    } else {
-      setChangeNavbarColor(false);
+    if (!footerPosition) {
+      if (window.scrollY > 100) {
+        setNavbarColor(theme.secondary.white);
+        setNavbarTextColor(theme.secondary.black);
+      } else {
+        setNavbarColor(backgroundColor);
+        actualPath !== "/contacto" && setNavbarTextColor(textColor);
+      }
     }
   };
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
+    actualPath === "/contacto"
+      ? setNavbarTextColor(theme.secondary.black)
+      : setNavbarTextColor(textColor);
   }, []);
 
   return (
@@ -66,11 +80,9 @@ function Navbar({ footerPosition = false }: Navbar) {
           justify-content: center;
           padding: 0px 100px;
           z-index: 1000;
-          background-color: ${!footerPosition &&
-          changeNavbarColor &&
-          theme.secondary.white};
+          background-color: ${navbarColor};
           box-shadow: ${!footerPosition &&
-          changeNavbarColor &&
+          navbarColor !== "transparent" &&
           "0px 2px 6px 2px rgba(117, 117, 117, 0.2)"};
           transition: all 0.3s ease;
         }
@@ -94,9 +106,7 @@ function Navbar({ footerPosition = false }: Navbar) {
           list-style: none;
           font-size: 18px;
           font-weight: 400;
-          color: ${changeNavbarColor && !footerPosition
-            ? theme.secondary.black
-            : theme.secondary.white};
+          color: ${navbarTextColor};
         }
         ul li:hover {
           color: ${theme.primary.lightGreen};
