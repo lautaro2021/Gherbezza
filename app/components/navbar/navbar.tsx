@@ -31,16 +31,13 @@ function Navbar({
         setNavbarTextColor(theme.secondary.black);
       } else {
         setNavbarColor(backgroundColor);
-        actualPath !== "/contacto" && setNavbarTextColor(textColor);
+        setNavbarTextColor(textColor);
       }
     }
   };
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
-    actualPath === "/contacto"
-      ? setNavbarTextColor(theme.secondary.black)
-      : setNavbarTextColor(textColor);
   }, []);
 
   return (
@@ -48,11 +45,13 @@ function Navbar({
       <nav>
         <CenterDiv>
           <div className="nav_container">
-            <img
-              src={"/images/logo/logo-completo-color.png"}
-              alt="logo-gherbezza-turbinas-neumaticas-sembradoras"
-              title="Gherbezza, turbinas neumaticas para sembradoras"
-            />
+            <Link href="/">
+              <img
+                src={"/images/logo/logo-completo-color.png"}
+                alt="logo-gherbezza-turbinas-neumaticas-sembradoras"
+                title="Gherbezza, turbinas neumaticas para sembradoras"
+              />
+            </Link>
             <ul>
               {navbarOptions.map((option: NavbarType, index: number) => (
                 <li key={option.name}>
@@ -106,7 +105,9 @@ function Navbar({
           list-style: none;
           font-size: 18px;
           font-weight: 400;
-          color: ${navbarTextColor};
+          color: ${actualPath === "/contacto"
+            ? theme.secondary.black
+            : navbarTextColor};
         }
         ul li:hover {
           color: ${theme.primary.lightGreen};
