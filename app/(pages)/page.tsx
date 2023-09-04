@@ -11,7 +11,7 @@ import BePartOfUs from "../layouts/Inicio/bePartOfUs/bePartOfUs";
 
 export default function Home() {
   return (
-    <>
+    <main>
       <Hero />
       <Banner />
       <OurCompany />
@@ -19,6 +19,6 @@ export default function Home() {
       <OurClients />
       <GlobalPresence />
       <BePartOfUs />
-    </>
+    </main>
   );
 }
