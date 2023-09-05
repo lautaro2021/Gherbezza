@@ -15,7 +15,7 @@ function OurClients() {
 
   return (
     <>
-      <PageSection height="auto">
+      <PageSection height>
         <CenterDiv>
           <div className="container">
             <SectionTitles

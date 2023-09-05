@@ -7,22 +7,16 @@ type SectionTitle = {
   centeredText?: boolean;
   fontSize?: string;
 };
-function SectionTitles({
-  text,
-  colorText,
-  centeredText,
-  fontSize,
-}: SectionTitle) {
+function HeroTitles({ text, colorText, centeredText, fontSize }: SectionTitle) {
   return (
     <>
-      <h2>{text}</h2>
+      <h1>{text}</h1>
       <style jsx>{`
-        h2 {
+        h1 {
           font-size: ${fontSize ? fontSize : "70px"};
           color: ${!colorText ? theme.primary.lightGreen : colorText};
           font-weight: bold;
           line-height: 100%;
-          width: ${centeredText ? "100%" : ""};
           text-align: ${centeredText ? "center" : ""};
         }
       `}</style>
@@ -30,4 +24,4 @@ function SectionTitles({
   );
 }
 
-export default SectionTitles;
+export default HeroTitles;

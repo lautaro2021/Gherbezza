@@ -9,10 +9,7 @@ import SectionTitles from "@/app/components/section-titles";
 function GlobalPresence() {
   return (
     <>
-      <PageSection
-        backgroundColor={theme.secondary.greyBackground}
-        height="auto"
-      >
+      <PageSection backgroundColor={theme.secondary.greyBackground} height>
         <CenterDiv>
           <div className="container">
             <div className="text_container">

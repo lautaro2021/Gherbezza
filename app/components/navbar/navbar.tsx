@@ -21,7 +21,7 @@ function Navbar({
   textColor,
 }: Navbar) {
   const [navbarColor, setNavbarColor] = useState<string>(backgroundColor);
-  const [navbarTextColor, setNavbarTextColor] = useState<string>("");
+  const [navbarTextColor, setNavbarTextColor] = useState<string>(textColor);
   const actualPath = getCurrentPathname();
 
   const handleScroll = () => {
