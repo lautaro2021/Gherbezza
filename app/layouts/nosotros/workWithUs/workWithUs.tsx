@@ -1,17 +1,15 @@
 "use client";
 import React, { useState } from "react";
-import emailjs from "@emailjs/browser";
 
 import CenterDiv from "@/app/components/center-div";
 import { theme } from "@/app/common/styles/themes/theme";
 import FormButton from "@/app/components/button/form-button";
+import UploadManager from "@/app/components/uploadManager/upload-manager";
 
 function WorkWithUs() {
   const [form, setForm] = useState({
     file: "",
   });
-
-  const inputText = form.file ? "Documento cargado" : "Seleccionar documento";
 
   const handleFile = (e: React.FormEvent<HTMLInputElement>) => {
     const file = e.currentTarget.value[0];
@@ -54,22 +52,7 @@ function WorkWithUs() {
           <div className="container">
             <div className="modal">
               <h3>Se parte del equipo</h3>
-              <form onSubmit={submitForm} action="POST">
-                <input
-                  type="file"
-                  required
-                  name="cv"
-                  onChange={handleFile}
-                  disabled={form.file !== "" ? true : false}
-                ></input>
-                <FormButton
-                  text="Enviar"
-                  textColor={theme.secondary.lightGrey}
-                  type="submit"
-                  noBorder
-                  background="transparent"
-                />
-              </form>
+              <UploadManager />
             </div>
           </div>
         </CenterDiv>
