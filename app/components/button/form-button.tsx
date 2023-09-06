@@ -8,6 +8,8 @@ type FormButton = {
   borderColor?: string;
   background?: string;
   type: "button" | "submit" | "reset" | undefined;
+  noBorder?: boolean;
+  noHover?: boolean;
 };
 
 function FormButton({
@@ -16,6 +18,7 @@ function FormButton({
   borderColor,
   background,
   type,
+  noBorder,
 }: FormButton) {
   return (
     <>
@@ -23,7 +26,7 @@ function FormButton({
       <style jsx>{`
         button {
           padding: 8px 16px;
-          border: 1px solid black;
+          border: ${!noBorder ? "1px solid black" : "none"};
           border-radius: 3px;
           max-width: 120px;
           font-weight: bold;
@@ -31,11 +34,15 @@ function FormButton({
           transition: all 0.3s ease;
           cursor: pointer;
           background-color: ${background};
+          color: ${textColor ? textColor : theme.secondary.white};
         }
         button:hover {
+          ${!noBorder
+            ? `
           border: 1px solid ${theme.primary.darkGreen};
           background-color: ${theme.primary.darkGreen};
-          color: ${theme.secondary.white};
+          color: ${theme.secondary.white};`
+            : ``}
         }
       `}</style>
     </>

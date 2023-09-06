@@ -56,7 +56,7 @@ function Footer() {
           width: 100%;
           height: 600px;
           background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-            url(/images/footer/background-footer.png);
+            url(/images/footer/background.webp);
           background-position: center;
           background-size: cover;
           display: flex;

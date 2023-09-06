@@ -48,6 +48,6 @@ export const carouselInfo: HistoryCarouselType[] = [
     alt: "",
     title: "",
     textTitle: "2023",
-    textDescription: "Mudanza Parque Industrial",
+    textDescription: "Mudanza Parque Industrial Park Empresarial",
   },
 ];
