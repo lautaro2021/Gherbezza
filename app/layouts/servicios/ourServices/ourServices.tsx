@@ -140,9 +140,11 @@ function OurServices() {
         li {
           list-style: none;
           margin: 5px 0px;
+          color: ${theme.secondary.darkGrey};
         }
         li strong {
-          font-weight: 600;
+          font-weight: 400;
+          color: ${theme.secondary.black};
         }
         aside {
           flex: 1;

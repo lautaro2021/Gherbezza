@@ -12,36 +12,28 @@ import Button from "@/app/components/button/button";
 function ContactUs() {
   return (
     <>
-      <PageSection
-        backgroundColor={theme.secondary.greyBackground}
-        height
-        maxHeight
-      >
-        <CenterDiv>
+      <PageSection height maxHeight>
+        <CenterDiv
+          backgroundColor={theme.primary.darkGreen}
+          padding="50px"
+          backgroundImage
+          backgroundURL="/images/layouts/servicios/asd.jpg"
+        >
           <div className="container">
             <div className="text_container">
               <SectionTitles
                 text="Comunicate con nosotros"
-                colorText={theme.primary.lightGreen}
+                colorText={theme.secondary.white}
               />
               <p>
                 Nuestro equipo de expertos está a tu disposición para responder
                 a tus consultas y atender tus necesidades de manera profesional
                 y eficiente. Tu satisfacción es nuestro compromiso.
               </p>
-              <Button text="Contactanos" />
-            </div>
-            <div className="image_container">
-              <Image
-                src="/images/layouts/servicios/contactanos-bg.png"
-                alt="Asesoramiento tecnico - Gherbezza fabrica de turbinas para sembradoras"
-                title="Gherbezza, nuestros servicios - asesoramiento tecnico"
-                fill
-                style={{ objectFit: "contain" }}
-                placeholder="blur"
-                blurDataURL="/images/layouts/servicios/contactanos-bg.png"
-                priority
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              <Button
+                text="Contactanos"
+                textColor={theme.secondary.white}
+                link="/contacto"
               />
             </div>
           </div>
@@ -66,12 +58,23 @@ function ContactUs() {
           flex: 1;
           height: 400px;
           position: relative;
+          overflow: hidden;
+        }
+        img {
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          transform: translateY(-50%);
+          height: 450px;
         }
         p {
           font-size: 24px;
           font-weight: 200;
           margin-top: 12px;
           max-width: 50ch;
+          color: white;
         }
       `}</style>
     </>
