@@ -61,7 +61,9 @@ function Hero() {
             position: absolute;
             top: 0;
             left: 0;
-            object-fit: contain;
+            width: 100%;
+            max-height: 100dvh;
+            object-fit: cover;
             z-index: -1;
             filter: brightness(0.2);
           }

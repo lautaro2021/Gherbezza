@@ -1,36 +1,67 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useAppContext } from "@/app/store/context/context";
+import emailjs from "@emailjs/browser";
 
 import CenterDiv from "@/app/components/center-div";
 import { theme } from "@/app/common/styles/themes/theme";
 import FormButton from "@/app/components/button/form-button";
 import UploadManager from "@/app/components/uploadManager/upload-manager";
 
-function WorkWithUs() {
-  const [form, setForm] = useState({
-    file: "",
-  });
+type FormType = {
+  file: string | undefined;
+  job: string;
+  name: string;
+  country: string;
+};
 
-  const handleFile = (e: React.FormEvent<HTMLInputElement>) => {
-    const file = e.currentTarget.value[0];
+const initialForm = {
+  file: "",
+  job: "",
+  name: "",
+  country: "",
+};
+
+function WorkWithUs() {
+  const { uploadedFile } = useAppContext();
+  const JOB_OPPORTUNITIES = [
+    "Área técnica",
+    "Ingeniería",
+    "Administración",
+    "Operario",
+  ];
+
+  const [form, setForm] = useState<FormType>(initialForm);
+
+  const handleForm = (e: any) => {
     setForm({
       ...form,
-      file,
+      [e.target.name]: e.target.value,
     });
   };
 
   const submitForm = (e: any) => {
     e.preventDefault();
 
-    const message = "hola";
-    const num = 3413880895;
-
-    const whatsappUrl = `https://wa.me/${num}?text=${`Hola! Mi nombre es ${message}`}&file=${
-      form.file
-    }`;
-
-    window.open(whatsappUrl, "_blank");
+    emailjs
+      .sendForm(
+        "service_qyefga7",
+        "template_cjha2xx",
+        e.target,
+        "EQ_zqGb2OP0BOi-d5"
+      )
+      .then(() => {
+        alert("");
+        setForm(initialForm);
+      });
   };
+
+  useEffect(() => {
+    setForm({
+      ...form,
+      file: uploadedFile,
+    });
+  }, [uploadedFile]);
 
   return (
     <>
@@ -53,6 +84,53 @@ function WorkWithUs() {
             <div className="modal">
               <h3>Se parte del equipo</h3>
               <UploadManager />
+              <form onSubmit={submitForm}>
+                <input
+                  hidden
+                  value={form.file}
+                  name="file"
+                  onChange={handleForm}
+                />
+                <input
+                  type="text"
+                  required
+                  placeholder="Nombre(*)"
+                  name="name"
+                  value={form.name}
+                  onChange={handleForm}
+                />
+                <input
+                  type="text"
+                  required
+                  placeholder="Ciudad(*)"
+                  name="country"
+                  value={form.country}
+                  onChange={handleForm}
+                />
+                <select
+                  required
+                  name="job"
+                  value={form.job}
+                  onChange={handleForm}
+                >
+                  <option value="" hidden disabled>
+                    Seleccionar puesto(*)
+                  </option>
+                  {JOB_OPPORTUNITIES.map((job: string, index: number) => (
+                    <option value={job} key={index}>
+                      {job}
+                    </option>
+                  ))}
+                </select>
+                <FormButton
+                  text="Enviar"
+                  textColor={theme.secondary.lightGrey}
+                  type="submit"
+                  borderColor={theme.secondary.white}
+                  background="transparent"
+                  disabled={uploadedFile ? false : true}
+                />
+              </form>
             </div>
           </div>
         </CenterDiv>
@@ -97,28 +175,27 @@ function WorkWithUs() {
           font-weight: bold;
         }
         form {
+          display: flex;
+          flex-direction: column;
+          gap: 50px;
           margin-top: 25px;
         }
-        input[type="file"] {
-          color: ${!form.file
-            ? theme.secondary.lightGrey
-            : theme.secondary.darkGrey};
-        }
-        input[type="file"]::-webkit-file-upload-button {
-          visibility: hidden;
-        }
-        input[type="file"]::before {
-          content: "Seleccionar documento";
-          display: inline-block;
-          background: ${form.file ? theme.secondary.lightGrey : "transparent"};
-          border: 1px solid ${theme.secondary.lightGrey};
-          border-radius: 3px;
-          padding: 10px 12px;
-          outline: none;
-          white-space: nowrap;
-          -webkit-user-select: none;
-          cursor: ${!form.file ? "pointer" : "normal"};
+        input,
+        select {
+          max-width: 50%;
+          border: none;
+          background: none;
+          border-bottom: 1px solid ${theme.secondary.white};
+          padding: 5px 10px;
+          color: ${theme.secondary.lightGrey};
           font-size: 18px;
+        }
+        select {
+          color: ${theme.secondary.lightGrey};
+        }
+        input:focus,
+        select:focus {
+          outline: 0;
         }
       `}</style>
     </>

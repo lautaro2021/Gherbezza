@@ -47,7 +47,7 @@ function Navbar({
           <div className="nav_container">
             <Link href="/">
               <img
-                src={"/images/logo/logo-completo-color.png"}
+                src={"/images/logo/logo.png"}
                 alt="logo-gherbezza-turbinas-neumaticas-sembradoras"
                 title="Gherbezza, turbinas neumaticas para sembradoras"
               />
