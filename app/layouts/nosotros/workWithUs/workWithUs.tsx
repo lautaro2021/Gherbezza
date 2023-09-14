@@ -161,7 +161,7 @@ function WorkWithUs() {
           display: flex;
           align-items: flex-end;
           justify-content: flex-start;
-          padding: 0px 0px 100px 100px;
+          padding: 0px 0px 100px 0px;
         }
         .modal {
           background-color: rgba(134, 134, 134, 0.2);

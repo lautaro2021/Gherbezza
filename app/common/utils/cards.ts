@@ -7,12 +7,14 @@ export const cardsProperties: CardType[] = [
     description:
       "Turbinas de soplado para equipos con sistemas de transporte neumático",
     buttonText: "Más información",
+    href: "/productos/eolo",
   },
   {
     subtitle: "línea",
     title: "AIR DRILL",
     description: "Dosificadores de Siembra a Chorrillo para Sistema AIR DRILL",
     buttonText: "Más información",
+    href: "/productos/airdrill",
   },
   {
     subtitle: "línea",
@@ -20,5 +22,6 @@ export const cardsProperties: CardType[] = [
     description:
       "Turbinas de aspiracion para sembradoras con dosificadores neumáticos monograno",
     buttonText: "Más información",
+    href: "/productos/vacuo",
   },
 ];

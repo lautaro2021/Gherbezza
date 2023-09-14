@@ -17,7 +17,7 @@ function ContactUs() {
           backgroundColor={theme.primary.darkGreen}
           padding="50px"
           backgroundImage
-          backgroundURL="/images/layouts/servicios/asd.jpg"
+          backgroundURL="/images/layouts/servicios/contactanos-bg.webp"
         >
           <div className="container">
             <div className="text_container">

@@ -35,7 +35,7 @@ export default function RootLayout({
 
   return (
     <AppProvider>
-      <html lang="en">
+      <html lang="es">
         <head>
           <script
             src="https://upload-widget.cloudinary.com/global/all.js"

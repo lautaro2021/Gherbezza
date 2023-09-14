@@ -13,4 +13,9 @@ export const theme = {
     lightGrey: "#96989A",
     greyBackground: "#F6F6F6",
   },
+  products: {
+    blue: "#2E70BC",
+    green: "#328A12",
+    brown: "#7F5E35",
+  },
 };

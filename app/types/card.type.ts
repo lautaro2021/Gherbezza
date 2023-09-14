@@ -3,4 +3,5 @@ export default interface CardType {
   title?: string;
   description?: string;
   buttonText?: string;
+  href: string;
 }

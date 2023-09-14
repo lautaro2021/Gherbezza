@@ -33,6 +33,7 @@ function Hero() {
                   description={card.description}
                   buttonText={card.buttonText}
                   key={index}
+                  href={card.href}
                 />
               ))}
             </div>
