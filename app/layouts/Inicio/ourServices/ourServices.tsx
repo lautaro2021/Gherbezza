@@ -117,7 +117,7 @@ function OurServices() {
           justify-content: space-between;
         }
         .title_container h2 {
-          font-size: 70px;
+          font-size: 60px;
           color: ${theme.primary.lightGreen};
           font-weight: bold;
           width: 40%;
@@ -140,7 +140,7 @@ function OurServices() {
           width: 40%;
         }
         .service_info_container h3 {
-          font-size: 70px;
+          font-size: 60px;
           font-weight: bold;
           line-height: 100%;
         }

@@ -3,21 +3,29 @@ import React from "react";
 
 import { theme } from "@/app/common/styles/themes/theme";
 import HeroTitles from "@/app/components/hero-titles";
+import CenterDiv from "@/app/components/center-div";
+import RutedLabel from "@/app/components/rutedLabel";
 
 function Hero() {
   return (
     <>
       <section>
-        <HeroTitles
-          text="NUESTRA EMPRESA"
-          fontSize="80px"
-          colorText={theme.secondary.white}
-        />
+        <CenterDiv>
+          <div className="container">
+            <RutedLabel linkedText="INICIO" text="NOSOTROS" />
+            <HeroTitles
+              text="NUESTRA EMPRESA"
+              fontSize="70px"
+              colorText={theme.secondary.white}
+            />
+          </div>
+        </CenterDiv>
       </section>
       <style jsx>{`
         section {
           width: 100%;
           height: 100dvh;
+          max-height: 768px;
           background-size: cover;
           background-position: center;
           background-image: linear-gradient(
@@ -27,6 +35,14 @@ function Hero() {
             url("/images/layouts/nosotros/Hero/background.webp");
           display: flex;
           align-items: center;
+          justify-content: center;
+        }
+        .container {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
           justify-content: center;
         }
       `}</style>

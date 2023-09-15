@@ -1,7 +1,5 @@
 "use client";
 import React, { useReducer } from "react";
-import { ModalBody, ModalFooter, ModalHeader, Modal } from "react-bootstrap";
-
 import { theme } from "@/app/common/styles/themes/theme";
 import CenterDiv from "@/app/components/center-div";
 import PageSection from "@/app/components/page-section";
@@ -10,23 +8,37 @@ import ProductCard from "@/app/components/product-card";
 
 import { productVariants } from "@/app/common/utils/product-variants.options";
 import { ProductCardType } from "@/app/types/product-card.type";
+import Modal from "@/app/components/modal";
+
+type ModalStateType = {
+  open: boolean;
+  selectedModal: string;
+};
+
+type ActionType = {
+  type: string;
+  payload: ModalStateType;
+};
 
 function Variants() {
-  const initialState = {
+  const initialState: ModalStateType = {
     open: false,
     selectedModal: "",
   };
 
-  const [modal, dispatch] = useReducer((state: any, action: any): any => {
-    switch (action.type) {
-      case "OPEN_MODAL":
-        return action.payload;
-      case "CLOSE_MODAL":
-        return action.payload;
-      default:
-        return state;
-    }
-  }, initialState);
+  const [modal, dispatch] = useReducer(
+    (state: ModalStateType, action: ActionType): ModalStateType => {
+      switch (action.type) {
+        case "OPEN_MODAL":
+          return action.payload;
+        case "CLOSE_MODAL":
+          return action.payload;
+        default:
+          return state;
+      }
+    },
+    initialState
+  );
 
   const openModal = (modal: string) => {
     dispatch({
@@ -48,8 +60,6 @@ function Variants() {
     });
   };
 
-  console.log("state?", modal);
-
   return (
     <>
       <PageSection>
@@ -59,6 +69,7 @@ function Variants() {
               <SectionTitles
                 text="Variantes"
                 colorText={theme.primary.lightGreen}
+                fontSize="60px"
               />
               <br />
               <p>
@@ -82,16 +93,14 @@ function Variants() {
               )}
             </div>
           </div>
-          {modal.open && (
-            <Modal isOpen={modal.open} toggle={closeModal}></Modal>
-          )}
         </CenterDiv>
       </PageSection>
+      <Modal
+        isOpen={modal.open}
+        onClose={closeModal}
+        modalHeader={modal.selectedModal}
+      />
       <style jsx>{`
-        button {
-          width: 200px;
-          height: 50px;
-        }
         .container {
           width: 100%;
           height: 100%;

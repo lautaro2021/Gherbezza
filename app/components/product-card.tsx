@@ -31,10 +31,10 @@ function ProductCard({ title, description, openModal }: ProductCardType) {
           padding: 25px;
           position: relative;
           cursor: pointer;
-          transition: all 0.3s ease;
+          transition: all 0.2s ease;
         }
         h3 {
-          font-size: 40px;
+          font-size: 35px;
           font-weight: 400;
         }
         p {
@@ -42,8 +42,7 @@ function ProductCard({ title, description, openModal }: ProductCardType) {
           font-weight: 200;
         }
         article:hover {
-          background-color: ${theme.primary.darkGreen};
-          color: ${theme.secondary.white};
+          box-shadow: 0px 5px 12px 2px rgba(0, 0, 0, 0.1);
         }
       `}</style>
     </>

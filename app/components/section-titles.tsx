@@ -18,7 +18,7 @@ function SectionTitles({
       <h2>{text}</h2>
       <style jsx>{`
         h2 {
-          font-size: ${fontSize ? fontSize : "70px"};
+          font-size: ${fontSize ? fontSize : "60px"};
           color: ${!colorText ? theme.primary.lightGreen : colorText};
           font-weight: bold;
           line-height: 100%;

@@ -66,6 +66,7 @@ function WorkWithUs() {
   return (
     <>
       <section>
+        <div id="work"></div>
         <video
           autoPlay
           loop
@@ -143,6 +144,12 @@ function WorkWithUs() {
           align-items: center;
           justify-content: center;
           position: relative;
+        }
+        #work {
+          width: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
         }
         video {
           aspect-ratio: 16/9;

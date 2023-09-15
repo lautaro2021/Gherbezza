@@ -51,10 +51,10 @@ function ProductsNavbar() {
       <style jsx>{`
         nav {
           width: 100%;
-          height: 70px;
+          height: 50px;
           position: -webkit-sticky;
           position: sticky;
-          top: 120px;
+          top: 119px;
           display: flex;
           align-items: center;
           justify-content: center;

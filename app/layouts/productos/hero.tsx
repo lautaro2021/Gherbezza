@@ -4,6 +4,7 @@ import React from "react";
 import CenterDiv from "@/app/components/center-div";
 import { theme } from "@/app/common/styles/themes/theme";
 import HeroTitles from "@/app/components/hero-titles";
+import RutedLabel from "@/app/components/rutedLabel";
 
 function Hero() {
   return (
@@ -11,25 +12,20 @@ function Hero() {
       <section>
         <CenterDiv>
           <div className="container">
+            <RutedLabel linkedText="INICIO" text="PRODUCTOS" />
             <HeroTitles
               text="NUESTROS PRODUCTOS"
               colorText={theme.secondary.white}
-              fontSize="80px"
+              fontSize="70px"
             />
-            <p>
-              Impulsamos la agricultura con tecnología líder. Nuestras turbinas
-              para sembradoras garantizan rendimiento, confiabilidad y
-              eficiencia. Potenciamos cultivos alrededor del mundo,
-              contribuyendo al crecimiento agrícola sostenible.
-            </p>
           </div>
         </CenterDiv>
       </section>
       <style jsx>{`
         section {
           width: 100%;
-          height: 100dvh;
-          min-height: 600px;
+          height: 70dvh;
+          max-height: 768px;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -45,8 +41,7 @@ function Hero() {
           display: flex;
           flex-direction: column;
           align-items: flex-start;
-          justify-content: flex-end;
-          padding-bottom: 15vh;
+          justify-content: center;
         }
         p {
           color: ${theme.secondary.lightGrey};

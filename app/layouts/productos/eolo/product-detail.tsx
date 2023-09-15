@@ -28,12 +28,13 @@ function ProductDetail() {
                   equipo agrícola que utilice sistemas de soplado de aire.
                 </p>
               </div>
-              <Button
-                bordered
-                arrow={false}
-                text="Ficha técnica"
-                borderColor={theme.secondary.black}
-              />
+              <a
+                href="https://drive.google.com/file/d/1myxLjONvJzA29r6-WKOszfOkucAifXD-/view?usp=sharing"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span>Ficha Técnica</span>
+              </a>
             </article>
             <div className="image_container">
               <Image
@@ -76,6 +77,12 @@ function ProductDetail() {
           width: 50%;
           height: 100%;
           position: relative;
+        }
+        span {
+          font-weight: bold;
+          font-size: 22px;
+          color: ${theme.primary.red};
+          cursor: pointer;
         }
       `}</style>
     </>

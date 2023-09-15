@@ -40,7 +40,7 @@ function BePartOfUs() {
                 impulsa la agricultura moderna a través de la innovación.
               </p>
               <Button
-                link="/nosotros"
+                link="/nosotros#work"
                 text="Unite"
                 textColor={theme.secondary.black}
               />
