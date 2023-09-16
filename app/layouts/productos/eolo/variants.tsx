@@ -3,8 +3,8 @@ import React, { useReducer } from "react";
 import { theme } from "@/app/common/styles/themes/theme";
 import CenterDiv from "@/app/components/center-div";
 import PageSection from "@/app/components/page-section";
-import SectionTitles from "@/app/components/section-titles";
-import ProductCard from "@/app/components/product-card";
+import SectionTitles from "@/app/components/titles/section-titles";
+import ProductCard from "@/app/components/product/product-card";
 
 import { productVariants } from "@/app/common/utils/product-variants.options";
 import { ProductCardType } from "@/app/types/product-card.type";

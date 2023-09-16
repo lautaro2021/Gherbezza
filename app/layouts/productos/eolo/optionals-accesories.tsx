@@ -3,8 +3,8 @@ import React from "react";
 
 import CenterDiv from "@/app/components/center-div";
 import PageSection from "@/app/components/page-section";
-import SectionTitles from "@/app/components/section-titles";
-import ProductOptionalsCard from "@/app/components/product-optionals-card";
+import SectionTitles from "@/app/components/titles/section-titles";
+import ProductOptionalsCard from "@/app/components/product/product-optionals-card";
 
 import { theme } from "@/app/common/styles/themes/theme";
 import { optionalsData } from "@/app/common/utils/products/eolo/optionals/optionals-data";

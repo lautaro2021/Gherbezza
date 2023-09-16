@@ -4,7 +4,7 @@ import CenterDiv from "@/app/components/center-div";
 import React from "react";
 
 import PageSection from "@/app/components/page-section";
-import SectionTitles from "@/app/components/section-titles";
+import SectionTitles from "@/app/components/titles/section-titles";
 
 function GlobalPresence() {
   return (

@@ -5,7 +5,7 @@ import Image from "next/image";
 import CenterDiv from "@/app/components/center-div";
 import { theme } from "@/app/common/styles/themes/theme";
 import Link from "next/link";
-import SectionTitles from "@/app/components/section-titles";
+import SectionTitles from "@/app/components/titles/section-titles";
 import FormButton from "@/app/components/button/form-button";
 import emailjs from "@emailjs/browser";
 

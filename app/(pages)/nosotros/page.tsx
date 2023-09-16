@@ -8,7 +8,7 @@ import KnowEolo from "@/app/layouts/nosotros/knowEolo/knowEolo";
 import Eolo from "@/app/layouts/nosotros/knowEolo/eolo";
 import WorkWithUs from "@/app/layouts/nosotros/workWithUs/workWithUs";
 
-function page() {
+function OurUs() {
   return (
     <main>
       <Hero />
@@ -22,4 +22,4 @@ function page() {
   );
 }
 
-export default page;
+export default OurUs;

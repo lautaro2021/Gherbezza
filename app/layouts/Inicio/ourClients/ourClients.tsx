@@ -3,7 +3,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import PageSection from "@/app/components/page-section";
 import CenterDiv from "@/app/components/center-div";
-import SectionTitles from "@/app/components/section-titles";
+import SectionTitles from "@/app/components/titles/section-titles";
 
 import { carouselOptions } from "@/app/common/utils/carousel-options";
 import { ImageCarouselType } from "@/app/types/carousel.type";

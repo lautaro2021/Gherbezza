@@ -2,7 +2,7 @@
 import { theme } from "@/app/common/styles/themes/theme";
 import CenterDiv from "@/app/components/center-div";
 import PageSection from "@/app/components/page-section";
-import SectionTitles from "@/app/components/section-titles";
+import SectionTitles from "@/app/components/titles/section-titles";
 import React from "react";
 
 function KnowEolo() {

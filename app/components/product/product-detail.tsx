@@ -5,10 +5,18 @@ import Image from "next/image";
 import { theme } from "@/app/common/styles/themes/theme";
 import CenterDiv from "@/app/components/center-div";
 import PageSection from "@/app/components/page-section";
-import SectionTitles from "@/app/components/section-titles";
-import Button from "@/app/components/button/button";
+import SectionTitles from "@/app/components/titles/section-titles";
 
-function ProductDetail() {
+import { ProductDetailType } from "../../types/product-detail.type";
+
+function ProductDetail({
+  title,
+  subtitle,
+  description,
+  imageUrl,
+  dataSheetLink,
+  altDescription,
+}: ProductDetailType) {
   return (
     <>
       <PageSection>
@@ -16,35 +24,28 @@ function ProductDetail() {
           <div className="container">
             <article className="side_container">
               <div className="text_container">
+                <h4>{subtitle}</h4>
                 <SectionTitles
-                  text="Mayor eficiencia, menor consumo"
+                  text={title}
                   colorText={theme.secondary.black}
                   fontSize="50px"
                 />
                 <br />
-                <p>
-                  Para transporte neumático en maquinaria agrícola sembradoras
-                  tipo Air Drill, fertilizadoras neumáticas y cualquier otro
-                  equipo agrícola que utilice sistemas de soplado de aire.
-                </p>
+                <p>{description}</p>
               </div>
-              <a
-                href="https://drive.google.com/file/d/1myxLjONvJzA29r6-WKOszfOkucAifXD-/view?usp=sharing"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <span>Ficha Técnica</span>
+              <a href={dataSheetLink} target="_blank" rel="noreferrer">
+                <span>Ver Ficha Técnica</span>
               </a>
             </article>
             <div className="image_container">
               <Image
-                src="/images/layouts/productos/eolo/eolo.png"
-                alt="Turbina Eolo - Gherbezza, fabrica de turbinas para sembradoras"
-                title="Turbina Eolo"
+                src={imageUrl}
+                alt={`${altDescription} - Gherbezza, fabrica de turbinas para sembradoras`}
+                title={`${altDescription}`}
                 fill
                 style={{ objectFit: "cover" }}
                 placeholder="blur"
-                blurDataURL="/images/layouts/productos/eolo/eolo.png"
+                blurDataURL={imageUrl}
                 priority
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
@@ -81,8 +82,20 @@ function ProductDetail() {
         span {
           font-weight: bold;
           font-size: 22px;
-          color: ${theme.primary.red};
           cursor: pointer;
+          border: 2px solid ${theme.primary.lightGreen};
+          padding: 8px 16px;
+          color: ${theme.primary.lightGreen};
+          transition: all 0.3s ease;
+        }
+        span:hover {
+          background-color: ${theme.primary.lightGreen};
+          color: ${theme.secondary.white};
+        }
+        h4 {
+          font-weight: 400;
+          font-size: 20px;
+          color: ${theme.secondary.lightGrey};
         }
       `}</style>
     </>

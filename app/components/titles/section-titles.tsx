@@ -1,5 +1,5 @@
 import React from "react";
-import { theme } from "../common/styles/themes/theme";
+import { theme } from "@/app/common/styles/themes/theme";
 
 type SectionTitle = {
   text: string;

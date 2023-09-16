@@ -3,7 +3,7 @@ import React from "react";
 
 import PageSection from "@/app/components/page-section";
 import CenterDiv from "@/app/components/center-div";
-import SectionTitles from "@/app/components/section-titles";
+import SectionTitles from "@/app/components/titles/section-titles";
 import RutedLabel from "@/app/components/rutedLabel";
 import { theme } from "@/app/common/styles/themes/theme";
 
@@ -17,6 +17,7 @@ function Hero() {
             <SectionTitles
               text="NUESTROS SERVICIOS"
               colorText={theme.secondary.white}
+              fontSize="70px"
             />
           </div>
         </CenterDiv>

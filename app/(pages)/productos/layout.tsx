@@ -2,7 +2,7 @@
 import React, { useEffect } from "react";
 
 import Hero from "@/app/layouts/productos/hero";
-import ProductsNavbar from "@/app/components/products-navbar/products-navbar";
+import ProductsNavbar from "@/app/components/navbar/products-navbar";
 
 export default function ProductsLayout({
   children,

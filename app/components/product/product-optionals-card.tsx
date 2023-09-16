@@ -1,7 +1,7 @@
 import React from "react";
 
-import { ProductOptionalsType } from "../common/utils/products/eolo/optionals/optionals-data";
-import { theme } from "../common/styles/themes/theme";
+import { ProductOptionalsType } from "@/app/common/utils/products/eolo/optionals/optionals-data";
+import { theme } from "../../common/styles/themes/theme";
 
 function ProductOptionalsCard({ text, position }: ProductOptionalsType) {
   return (

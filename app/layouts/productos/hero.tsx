@@ -3,7 +3,7 @@ import React from "react";
 
 import CenterDiv from "@/app/components/center-div";
 import { theme } from "@/app/common/styles/themes/theme";
-import HeroTitles from "@/app/components/hero-titles";
+import HeroTitles from "@/app/components/titles/hero-titles";
 import RutedLabel from "@/app/components/rutedLabel";
 
 function Hero() {

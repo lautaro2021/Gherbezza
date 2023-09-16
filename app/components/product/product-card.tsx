@@ -2,8 +2,8 @@
 import React from "react";
 import { BsArrowRight } from "react-icons/bs";
 
-import { ProductCardType } from "../types/product-card.type";
-import { theme } from "../common/styles/themes/theme";
+import { ProductCardType } from "../../types/product-card.type";
+import { theme } from "../../common/styles/themes/theme";
 
 function ProductCard({ title, description, openModal }: ProductCardType) {
   return (

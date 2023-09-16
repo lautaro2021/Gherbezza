@@ -1,12 +1,21 @@
-"use client";
 import React from "react";
 
-function page() {
+import ProductDetail from "@/app/components/product/product-detail";
+import { productData } from "@/app/common/utils/products/product-description/data";
+
+function Airdrill() {
   return (
-    <>
-      <style jsx>{``}</style>
-    </>
+    <main>
+      <ProductDetail
+        title={productData.airdrill.title}
+        imageUrl={productData.airdrill.imageUrl}
+        subtitle={productData.airdrill.subtitle}
+        description={productData.airdrill.description}
+        altDescription={productData.airdrill.altDescription}
+        dataSheetLink={productData.airdrill.dataSheetLink}
+      />
+    </main>
   );
 }
 
-export default page;
+export default Airdrill;
