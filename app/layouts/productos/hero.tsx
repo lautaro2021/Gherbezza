@@ -4,7 +4,7 @@ import React from "react";
 import CenterDiv from "@/app/components/center-div";
 import { theme } from "@/app/common/styles/themes/theme";
 import HeroTitles from "@/app/components/titles/hero-titles";
-import RutedLabel from "@/app/components/rutedLabel";
+import RouteText from "@/app/components/routeText";
 
 function Hero() {
   return (
@@ -12,7 +12,7 @@ function Hero() {
       <section>
         <CenterDiv>
           <div className="container">
-            <RutedLabel linkedText="INICIO" text="PRODUCTOS" />
+            <RouteText linkedText="INICIO" text="PRODUCTOS" />
             <HeroTitles
               text="NUESTROS PRODUCTOS"
               colorText={theme.secondary.white}

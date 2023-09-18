@@ -1,5 +1,3 @@
-import { ProductDetailType } from "@/app/types/product-detail.type";
-
 export const productData = {
   eolo: {
     title: "Mayor eficiencia, menor consumo",

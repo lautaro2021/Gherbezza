@@ -7,6 +7,7 @@ import { theme } from "@/app/common/styles/themes/theme";
 import Link from "next/link";
 import SectionTitles from "@/app/components/titles/section-titles";
 import FormButton from "@/app/components/button/form-button";
+import RouteText from "@/app/components/routeText";
 import emailjs from "@emailjs/browser";
 
 import { FormType } from "@/app/types/form.type";
@@ -47,11 +48,9 @@ function Contacto() {
       <section>
         <CenterDiv>
           <div className="container">
-            <form onSubmit={submitForm} action="POST">
+            <form onSubmit={submitForm} action="POST" id="contact-form">
               <div className="title_container">
-                <label>
-                  <Link href="/">INICIO</Link>/<strong>CONTACTO</strong>
-                </label>
+                <RouteText text="CONTACTO" linkedText="INICIO" />
                 <SectionTitles
                   text="CONTACTO"
                   colorText={theme.secondary.black}
@@ -66,6 +65,7 @@ function Contacto() {
                   name="name"
                   value={form.name}
                   onChange={changeValues}
+                  autoComplete="name"
                 />
                 <input
                   type="text"
@@ -74,6 +74,7 @@ function Contacto() {
                   name="company"
                   value={form.company}
                   onChange={changeValues}
+                  autoComplete="company"
                 />
                 <input
                   type="email"
@@ -82,6 +83,7 @@ function Contacto() {
                   name="email"
                   value={form.email}
                   onChange={changeValues}
+                  autoComplete="email"
                 />
                 <input
                   type="number"
@@ -90,6 +92,7 @@ function Contacto() {
                   name="phone"
                   value={form.phone || ""}
                   onChange={changeValues}
+                  autoComplete="phone"
                 />
                 <input
                   type="text"
@@ -98,6 +101,7 @@ function Contacto() {
                   name="city"
                   value={form.city}
                   onChange={changeValues}
+                  autoComplete="country"
                 />
                 <textarea
                   placeholder="Tu consulta(*)"
@@ -165,13 +169,6 @@ function Contacto() {
           flex-direction: column;
           gap: 50px;
           padding: 0px 50px 0px 0px;
-        }
-        form label {
-          font-size: 18px;
-          color: ${theme.secondary.lightGrey};
-        }
-        form label strong {
-          color: ${theme.secondary.darkGrey};
         }
         .title_container {
           display: flex;

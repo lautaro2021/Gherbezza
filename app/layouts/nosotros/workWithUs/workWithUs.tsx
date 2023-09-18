@@ -85,7 +85,7 @@ function WorkWithUs() {
             <div className="modal">
               <h3>Se parte del equipo</h3>
               <UploadManager />
-              <form onSubmit={submitForm}>
+              <form onSubmit={submitForm} id="work-form">
                 <input
                   hidden
                   value={form.file}
@@ -99,6 +99,7 @@ function WorkWithUs() {
                   name="name"
                   value={form.name}
                   onChange={handleForm}
+                  autoComplete="name"
                 />
                 <input
                   type="text"
@@ -107,6 +108,7 @@ function WorkWithUs() {
                   name="country"
                   value={form.country}
                   onChange={handleForm}
+                  autoComplete="country"
                 />
                 <select
                   required

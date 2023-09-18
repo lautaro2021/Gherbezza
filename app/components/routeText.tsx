@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import { theme } from "../common/styles/themes/theme";
 
-type RutedLabelType = {
+type RouteTextType = {
   linkedTextColor?: string;
   textColor?: string;
   linkedText: string;
@@ -11,26 +11,26 @@ type RutedLabelType = {
   fontSize?: string;
 };
 
-function RutedLabel({
+function RouteText({
   linkedTextColor,
   textColor,
   linkedText,
   text,
   fontSize,
-}: RutedLabelType) {
+}: RouteTextType) {
   return (
     <>
-      <label>
+      <span>
         <Link href="/">{linkedText}</Link>/<strong>{text}</strong>
-      </label>
+      </span>
       <style jsx>{`
-        label {
+        span {
           font-size: ${fontSize ? fontSize : "18px"};
           color: ${linkedTextColor
             ? linkedTextColor
             : theme.secondary.lightGrey};
         }
-        label strong {
+        span strong {
           color: ${textColor ? textColor : theme.secondary.darkGrey};
         }
       `}</style>
@@ -38,4 +38,4 @@ function RutedLabel({
   );
 }
 
-export default RutedLabel;
+export default RouteText;

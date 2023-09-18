@@ -15,7 +15,7 @@ function Banner() {
               <li key={index}>
                 <img src={data.image} alt={data.title} title={data.title} />
                 <div>
-                  <label>{data.title}</label>
+                  <span>{data.title}</span>
                   <p>{data.description}</p>
                 </div>
               </li>
@@ -49,7 +49,7 @@ function Banner() {
         li div {
           max-width: 320px;
         }
-        li label {
+        li span {
           color: ${theme.primary.orange};
           font-weight: bold;
           font-size: 26px;

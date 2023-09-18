@@ -18,7 +18,7 @@ function Carousel(props: any) {
               <div className="embla__slide" key={index}>
                 <img className="embla__slide__img" />
                 <strong>{obj.textTitle}</strong>
-                <label>{obj.textDescription}</label>
+                <span>{obj.textDescription}</span>
               </div>
             ))}
           </div>
@@ -60,7 +60,7 @@ function Carousel(props: any) {
         strong {
           margin-top: 15px;
         }
-        label {
+        span {
           color: ${theme.secondary.lightGrey};
         }
       `}</style>
