@@ -146,7 +146,7 @@ function OurServices() {
         }
         .service_info_container p {
           width: max(100%, 6ch);
-          font-size: var(--desktop-text-fontsize);
+          font-size: 24px;
           margin-top: 15px;
         }
         .image_container {

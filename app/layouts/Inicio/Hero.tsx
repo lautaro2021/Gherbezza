@@ -91,7 +91,7 @@ function Hero() {
             align-items: flex-end;
           }
           h1 {
-            font-size: var(--desktop-title-fontsize);
+            font-size: 120px;
             font-weight: bold;
             line-height: 110%;
           }

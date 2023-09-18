@@ -65,7 +65,7 @@ function GlobalPresence() {
           line-height: 110%;
         }
         .text_container p {
-          font-size: var(--desktop-text-fontsize);
+          font-size: 24px;
           font-weight: 200;
         }
         .image_container {

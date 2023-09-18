@@ -1,12 +1,11 @@
+"use client";
 import React, { createContext, useContext, useReducer } from "react";
-
-/*eslint-disable*/
 
 interface ContextState {
   loader?: boolean;
-  updateLoader?: any;
+  updateLoader?: () => void;
   uploadedFile?: string | undefined;
-  updateFile?: any;
+  updateFile?: (file: any) => void;
 }
 
 export const initialState: ContextState = {

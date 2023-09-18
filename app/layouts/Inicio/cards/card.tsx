@@ -46,6 +46,7 @@ function Card({ subtitle, title, description, buttonText, href }: CardType) {
         h3 {
           font-size: 35px;
           font-weight: bold;
+          white-space: nowrap;
         }
         p {
           font-weight: 200;

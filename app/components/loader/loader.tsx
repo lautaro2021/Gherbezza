@@ -1,16 +1,30 @@
 "use client";
+import { useState, useEffect } from "react";
+
 import { theme } from "@/app/common/styles/themes/theme";
 
 function Loader() {
+  const [loader, setLoader] = useState(true);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setLoader(false);
+    }, 4000);
+
+    return () => clearTimeout(timeout);
+  }, []);
   return (
     <>
-      <section>
-        <img
-          src="/images/logo/logo-byn.png"
-          alt="logo gherbezza turbinas para sembradoras"
-          title="gherbezza turbinas para sembradoras"
-        />
-      </section>
+      {loader ? (
+        <section>
+          <img
+            src="/images/logo/logo-byn.png"
+            alt="logo gherbezza turbinas para sembradoras"
+            title="gherbezza turbinas para sembradoras"
+          />
+        </section>
+      ) : null}
+
       <style jsx>{`
         section {
           width: 100%;
