@@ -5,7 +5,7 @@ import Link from "next/link";
 import CenterDiv from "../center-div";
 import { navbarOptions } from "@/app/common/utils/navbar-options";
 import NavbarType from "@/app/types/navbar.type";
-import getCurrentPathname from "@/app/common/utils/getCurrentPathname";
+import useGetCurrentPathname from "@/app/common/utils/getCurrentPathname";
 
 import { theme } from "@/app/common/styles/themes/theme";
 
@@ -22,7 +22,7 @@ function Navbar({
 }: Navbar) {
   const [navbarColor, setNavbarColor] = useState<string>(backgroundColor);
   const [navbarTextColor, setNavbarTextColor] = useState<string>(textColor);
-  const actualPath = getCurrentPathname();
+  const actualPath = useGetCurrentPathname();
 
   const handleScroll = () => {
     if (!footerPosition) {

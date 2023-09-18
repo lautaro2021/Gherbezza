@@ -5,12 +5,12 @@ import Link from "next/link";
 import CenterDiv from "../center-div";
 import { productsNavbarData } from "@/app/common/utils/products-navbar.options";
 import NavbarType from "@/app/types/navbar.type";
-import getCurrentPathname from "@/app/common/utils/getCurrentPathname";
+import useGetCurrentPathname from "@/app/common/utils/getCurrentPathname";
 
 import { theme } from "@/app/common/styles/themes/theme";
 
 function ProductsNavbar() {
-  const actualPath = getCurrentPathname().split("/")[2];
+  const actualPath = useGetCurrentPathname().split("/")[2];
 
   const color =
     actualPath === "eolo"

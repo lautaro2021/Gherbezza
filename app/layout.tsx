@@ -2,7 +2,8 @@
 import "./common/styles/globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { useAppContext, AppProvider } from "./store/context/context";
+import { AppProvider } from "./store/context/context";
+import Script from "next/script";
 
 import Navbar from "./components/navbar/navbar";
 import Footer from "./components/footer/footer";
@@ -13,7 +14,7 @@ import { theme } from "./common/styles/themes/theme";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
+const metadata: Metadata = {
   title: "Gherbezza",
   description: "Hooooooooola",
 };
@@ -36,12 +37,10 @@ export default function RootLayout({
   return (
     <AppProvider>
       <html lang="es">
-        <head>
-          <script
-            src="https://upload-widget.cloudinary.com/global/all.js"
-            type="text/javascript"
-          ></script>
-        </head>
+        <Script
+          src="https://upload-widget.cloudinary.com/global/all.js"
+          type="text/javascript"
+        ></Script>
         <body className={inter.className}>
           {loader ? (
             <Loader />

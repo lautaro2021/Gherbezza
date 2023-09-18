@@ -1,10 +1,9 @@
-import React from "react";
 import { usePathname } from "next/navigation";
 
-function getCurrentPathname() {
+function useGetCurrentPathname() {
   const pathname = usePathname();
 
   return pathname;
 }
 
-export default getCurrentPathname;
+export default useGetCurrentPathname;
