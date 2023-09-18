@@ -3,9 +3,9 @@ import React, { createContext, useContext, useReducer } from "react";
 
 interface ContextState {
   loader?: boolean;
-  updateLoader?: () => void;
+  updateLoader?: any;
   uploadedFile?: string | undefined;
-  updateFile?: (file: any) => void;
+  updateFile?: any;
 }
 
 export const initialState: ContextState = {
