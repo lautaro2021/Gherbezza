@@ -7,6 +7,12 @@ import Banner from "@/app/layouts/nosotros/banner/us-banner";
 import KnowEolo from "@/app/layouts/nosotros/knowEolo/knowEolo";
 import Eolo from "@/app/layouts/nosotros/knowEolo/eolo";
 import WorkWithUs from "@/app/layouts/nosotros/workWithUs/workWithUs";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Sobre Nosotros",
+  description: "",
+};
 
 function OurUs() {
   return (
