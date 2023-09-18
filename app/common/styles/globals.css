@@ -21,35 +21,28 @@ body {
 }
 
 @font-face{
-  font-family: 'Gill Sans';
+  font-family: 'Gill Sans', sans-serif;
   src: url('/assets/font/Gill_Sans_Bold_bold.otf') format('otf');
   font-weight: bold;
   font-display: block;
 }
 
 @font-face{
-  font-family: 'Gill Sans';
+  font-family: 'Gill Sans', sans-serif;
   src: url('/assets/font/Gill_Sans_Light_200.otf') format('otf');
   font-weight: 200;
   font-display: block;
 }
 
 @font-face{
-  font-family: 'Gill Sans';
+  font-family: 'Gill Sans', sans-serif;
   src: url('/assets/font/Gill_Sans_400.otf') format('otf');
   font-weight: 400;
   font-display: block;
 }
 
 @font-face{
-  font-family: 'Gill Sans';
-  src: url('/assets/font/Gill_Sans_400.otf') format('otf');
-  font-weight: normal;
-  font-display: block;
-}
-
-@font-face{
-  font-family: 'Gill Sans';
+  font-family: 'Gill Sans', sans-serif;
   src: url('/assets/font/Gill_Sans_Medium_600.otf') format('otf');
   font-weight: 600;
   font-display: block;

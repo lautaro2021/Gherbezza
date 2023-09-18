@@ -24,6 +24,10 @@ function Navbar({
   const [navbarTextColor, setNavbarTextColor] = useState<string>(textColor);
   const actualPath = useGetCurrentPathname();
 
+  const actualStringPath = actualPath.split("/")[1].length
+    ? actualPath.split("/")[1]
+    : "Inicio";
+
   const handleScroll = () => {
     if (!footerPosition) {
       if (window.scrollY > 100) {
@@ -53,11 +57,18 @@ function Navbar({
               />
             </Link>
             <ul>
-              {navbarOptions.map((option: NavbarType, index: number) => (
-                <li key={index}>
-                  <Link href={option.link}>{option.name}</Link>
-                </li>
-              ))}
+              {navbarOptions.map((option: NavbarType, index: number) => {
+                const currentNavigation =
+                  option.name.toLowerCase() === actualStringPath.toLowerCase();
+                const style = {
+                  color: currentNavigation ? theme.primary.lightGreen : "",
+                };
+                return (
+                  <li key={index} style={style}>
+                    <Link href={option.link}>{option.name}</Link>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </CenterDiv>

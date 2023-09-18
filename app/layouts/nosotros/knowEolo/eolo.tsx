@@ -42,7 +42,7 @@ function Eolo() {
               text="Ver más"
               textColor={theme.secondary.white}
               bordered
-              link="/productos"
+              link="/productos/eolo"
             />
           </div>
         </CenterDiv>

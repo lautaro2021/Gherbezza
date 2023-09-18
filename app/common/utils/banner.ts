@@ -9,7 +9,7 @@ export const bannerData: BannerType[] = [
   {
     image: "/assets/icons/best-seller.png",
     title: "Calidad",
-    description: "Excelencia en cada componente  ",
+    description: "Excelencia en cada componente para mayor rendimiento",
   },
   {
     image: "/assets/icons/Trust.png",

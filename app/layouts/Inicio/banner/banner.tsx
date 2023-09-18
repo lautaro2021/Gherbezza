@@ -42,7 +42,7 @@ function Banner() {
         li {
           list-style: none;
           display: flex;
-          align-items: center;
+          align-items: flex-start;
           justify-content: center;
           gap: 20px;
         }

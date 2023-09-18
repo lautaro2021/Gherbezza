@@ -11,8 +11,8 @@ function UploadManager() {
   const [fileName, setFileName] = useState("");
 
   useEffect(() => {
-    cloudinaryRef.current = window.cloudinary;
-    widgetRef.current = cloudinaryRef.current.createUploadWidget(
+    cloudinaryRef.current = window?.cloudinary;
+    widgetRef.current = cloudinaryRef?.current?.createUploadWidget(
       {
         cloudName: "dn72zz8r5",
         uploadPreset: "frnjfs47",
