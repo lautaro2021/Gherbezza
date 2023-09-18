@@ -1,12 +1,12 @@
 "use client";
-import React from "react";
 import { BsArrowRightCircle } from "react-icons/bs";
 
 import Carousel from "./carousel";
+import useSliderMargin from "./slider-margin";
 import { theme } from "@/app/common/styles/themes/theme";
 
 function OurTour() {
-  const SLIDER_MARGIN = (window.innerWidth - 1500) / 2;
+  const SLIDER_MARGIN = useSliderMargin(1500);
   const OPTIONS = { dragFree: true, containScroll: "trimSnaps" };
 
   return (
@@ -15,7 +15,10 @@ function OurTour() {
         <h3>Nuestro recorrido</h3>
         <div className="carousel_container">
           <BsArrowRightCircle
-            style={{ fontSize: "40px", color: `${theme.secondary.lightGrey}` }}
+            style={{
+              fontSize: "40px",
+              color: `${theme.secondary.lightGrey}`,
+            }}
           />
           <Carousel options={OPTIONS} />
         </div>
