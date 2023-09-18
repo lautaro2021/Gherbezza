@@ -1,11 +1,11 @@
 "use client";
-import { theme } from "@/app/common/styles/themes/theme";
-import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import CenterDiv from "@/app/components/center-div";
 import PageSection from "@/app/components/page-section";
 import Button from "@/app/components/button/button";
 import SectionTitles from "@/app/components/titles/section-titles";
+
+import { theme } from "@/app/common/styles/themes/theme";
 
 function BePartOfUs() {
   return (

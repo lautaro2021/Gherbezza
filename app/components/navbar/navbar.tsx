@@ -54,7 +54,7 @@ function Navbar({
             </Link>
             <ul>
               {navbarOptions.map((option: NavbarType, index: number) => (
-                <li key={option.name}>
+                <li key={index}>
                   <Link href={option.link}>{option.name}</Link>
                 </li>
               ))}

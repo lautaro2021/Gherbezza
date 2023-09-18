@@ -2,7 +2,7 @@ import React from "react";
 import { theme } from "../common/styles/themes/theme";
 
 type PageSectionType = {
-  children: any;
+  children: React.ReactNode;
   backgroundColor?: string;
   height?: boolean;
   maxHeight?: boolean;

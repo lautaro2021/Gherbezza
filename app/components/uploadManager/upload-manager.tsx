@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useAppContext } from "@/app/store/context/context";
 import { theme } from "@/app/common/styles/themes/theme";
+
+/*eslint-disable*/
 function UploadManager() {
   const { updateFile } = useAppContext();
   const cloudinaryRef = useRef<any>();

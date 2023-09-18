@@ -1,10 +1,10 @@
 "use client";
 import React, { useState } from "react";
+import { FormEvent } from "react";
 import Image from "next/image";
 
 import CenterDiv from "@/app/components/center-div";
 import { theme } from "@/app/common/styles/themes/theme";
-import Link from "next/link";
 import SectionTitles from "@/app/components/titles/section-titles";
 import FormButton from "@/app/components/button/form-button";
 import RouteText from "@/app/components/routeText";
@@ -27,14 +27,16 @@ function Contacto() {
     });
   };
 
-  const submitForm = (e: any) => {
+  const submitForm = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    const form = e.currentTarget;
 
     emailjs
       .sendForm(
         "service_998q9p9",
         "template_cjha2xx",
-        e.target,
+        form,
         "EQ_zqGb2OP0BOi-d5"
       )
       .then(() => {
