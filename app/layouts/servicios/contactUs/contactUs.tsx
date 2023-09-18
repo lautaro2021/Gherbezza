@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import Image from "next/image";
 
 import CenterDiv from "@/app/components/center-div";
 import PageSection from "@/app/components/page-section";

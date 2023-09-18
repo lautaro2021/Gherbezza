@@ -1,7 +1,5 @@
 "use client";
 import { theme } from "@/app/common/styles/themes/theme";
-import React, { useEffect, useState } from "react";
-import { useAppContext } from "@/app/store/context/context";
 
 function Loader() {
   return (

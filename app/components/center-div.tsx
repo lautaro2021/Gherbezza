@@ -1,7 +1,7 @@
 import React from "react";
 
 type CenterDivType = {
-  children: any;
+  children: React.ReactNode;
   backgroundColor?: string;
   padding?: string;
   borderRadius?: string;

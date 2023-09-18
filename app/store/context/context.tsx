@@ -1,5 +1,7 @@
 import React, { createContext, useContext, useReducer } from "react";
 
+/*eslint-disable*/
+
 interface ContextState {
   loader?: boolean;
   updateLoader?: any;

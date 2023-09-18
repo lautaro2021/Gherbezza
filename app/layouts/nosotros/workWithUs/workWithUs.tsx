@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { ChangeEvent, FormEvent, useEffect, useState } from "react";
 import { useAppContext } from "@/app/store/context/context";
 import emailjs from "@emailjs/browser";
 
@@ -33,21 +33,23 @@ function WorkWithUs() {
 
   const [form, setForm] = useState<FormType>(initialForm);
 
-  const handleForm = (e: any) => {
+  const handleForm = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     setForm({
       ...form,
       [e.target.name]: e.target.value,
     });
   };
 
-  const submitForm = (e: any) => {
+  const submitForm = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    const form = e.currentTarget;
 
     emailjs
       .sendForm(
         "service_qyefga7",
         "template_cjha2xx",
-        e.target,
+        form,
         "EQ_zqGb2OP0BOi-d5"
       )
       .then(() => {

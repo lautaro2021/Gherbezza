@@ -14,7 +14,7 @@ import { theme } from "./common/styles/themes/theme";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const metadata: Metadata = {
+export const metadata: Metadata = {
   title: "Gherbezza",
   description: "Hooooooooola",
 };
