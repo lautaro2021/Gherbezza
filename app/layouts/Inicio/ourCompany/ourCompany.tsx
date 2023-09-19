@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 
 import { theme } from "@/app/common/styles/themes/theme";

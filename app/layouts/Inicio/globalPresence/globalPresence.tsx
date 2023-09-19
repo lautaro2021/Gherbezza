@@ -1,3 +1,4 @@
+"use client";
 import { theme } from "@/app/common/styles/themes/theme";
 import Image from "next/image";
 import CenterDiv from "@/app/components/center-div";

@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 
 import Hero from "../layouts/Inicio/Hero";
@@ -8,6 +7,13 @@ import OurServices from "../layouts/Inicio/ourServices/ourServices";
 import OurClients from "../layouts/Inicio/ourClients/ourClients";
 import GlobalPresence from "../layouts/Inicio/globalPresence/globalPresence";
 import BePartOfUs from "../layouts/Inicio/bePartOfUs/bePartOfUs";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Gherbezza - Turbinas neumáticas para sembradoras",
+  description:
+    "Bienvenido a la fábrica de turbinas neumáticas para sembradoras en Rosario, Santa Fe. Descubre nuestras avanzadas turbinas neumáticas para agricultura de precisión. Nuestros productos de alta calidad mejoran la eficiencia en la siembra, impulsando la productividad agrícola. Explora nuestras soluciones líderes en la industria y haz que tus sembradoras sean más precisas y rentables.",
+};
 
 export default function Home() {
   return (
