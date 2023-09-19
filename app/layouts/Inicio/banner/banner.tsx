@@ -1,3 +1,4 @@
+"use client";
 import { theme } from "@/app/common/styles/themes/theme";
 import CenterDiv from "@/app/components/center-div";
 import React from "react";

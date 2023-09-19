@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 
 import { cardsProperties } from "@/app/common/utils/cards";
