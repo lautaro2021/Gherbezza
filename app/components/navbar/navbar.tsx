@@ -116,7 +116,7 @@ function Navbar({
           list-style: none;
           font-size: 18px;
           font-weight: 400;
-          color: ${actualPath === "/contacto"
+          color: ${actualPath === "/contacto" && !footerPosition
             ? theme.secondary.black
             : navbarTextColor};
         }

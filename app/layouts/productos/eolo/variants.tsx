@@ -77,11 +77,11 @@ function Variants() {
               />
               <br />
               <p>
-                La línea de turbinas de soplado eolo está compuesta por 2 grupos
-                de turbinas: EOLO junior y EOLO senior. Las principales
-                diferencias entre estos grupos está dada por el tamaño de la
-                carcasa y los parámetros de caudal y presión que pueden
-                desarrollar
+                La línea de turbinas de soplado eolo está compuesta por 3 grupos
+                de turbinas: EOLO mini, EOLO junior y EOLO senior. Las
+                principales diferencias entre estos grupos está dada por el
+                tamaño de la carcasa y los parámetros de caudal y presión que
+                pueden desarrollar.
               </p>
             </section>
             <div className="products_card_container">
