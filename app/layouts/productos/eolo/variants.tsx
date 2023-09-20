@@ -7,12 +7,12 @@ import SectionTitles from "@/app/components/titles/section-titles";
 import ProductCard from "@/app/components/product/product-card";
 
 import { productVariants } from "@/app/common/utils/product-variants.options";
-import { ProductCardType } from "@/app/types/product-card.type";
+import { ProductCardType, ProductType } from "@/app/types/product-card.type";
 import Modal from "@/app/components/modal";
 
 type ModalStateType = {
   open: boolean;
-  selectedModal: string;
+  selectedModal: ProductType;
 };
 
 type ActionType = {
@@ -23,15 +23,19 @@ type ActionType = {
 function Variants() {
   const initialState: ModalStateType = {
     open: false,
-    selectedModal: "",
+    selectedModal: { title: "", images: [] },
   };
 
   const [modal, dispatch] = useReducer(
     (state: ModalStateType, action: ActionType): ModalStateType => {
       switch (action.type) {
         case "OPEN_MODAL":
+          document.body.style.overflow = "hidden";
+          document.body.style.height = "100%";
           return action.payload;
         case "CLOSE_MODAL":
+          document.body.style.overflow = "auto";
+          document.body.style.height = "auto";
           return action.payload;
         default:
           return state;
@@ -40,7 +44,7 @@ function Variants() {
     initialState
   );
 
-  const openModal = (modal: string) => {
+  const openModal = (modal: ProductType) => {
     dispatch({
       type: "OPEN_MODAL",
       payload: {
@@ -55,7 +59,7 @@ function Variants() {
       type: "CLOSE_MODAL",
       payload: {
         open: false,
-        selectedModal: "",
+        selectedModal: { title: "", images: [] },
       },
     });
   };
@@ -86,6 +90,7 @@ function Variants() {
                   <ProductCard
                     title={variant.title}
                     description={variant.description}
+                    images={variant.images}
                     key={index}
                     openModal={openModal}
                   />
@@ -98,7 +103,7 @@ function Variants() {
       <Modal
         isOpen={modal.open}
         onClose={closeModal}
-        modalHeader={modal.selectedModal}
+        product={modal.selectedModal}
       />
       <style jsx>{`
         .container {

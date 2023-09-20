@@ -1,5 +1,11 @@
+export type ProductType = {
+  title: string;
+  images: string[];
+};
+
 export type ProductCardType = {
   title: string;
   description: string;
-  openModal: (modal: string) => void;
+  openModal: (product: ProductType) => void;
+  images: string[];
 };

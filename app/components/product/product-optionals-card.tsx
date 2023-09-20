@@ -8,7 +8,7 @@ function ProductOptionalsCard({ text, position }: ProductOptionalsType) {
     <>
       <article>
         <span>{position}</span>
-        <label>{text}</label>
+        <p>{text}</p>
       </article>
       <style jsx>{`
         article {
@@ -29,7 +29,7 @@ function ProductOptionalsCard({ text, position }: ProductOptionalsType) {
           font-size: 20px;
           font-weight: bold;
         }
-        label {
+        p {
           font-size: 24px;
           font-weight: bold;
         }
