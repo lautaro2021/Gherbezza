@@ -1,5 +1,7 @@
+import { ProductType } from "./product-card.type";
+
 export type ModalType = {
   isOpen?: boolean;
   onClose?: () => void;
-  modalHeader?: string;
+  product: ProductType;
 };

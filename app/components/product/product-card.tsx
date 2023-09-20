@@ -5,13 +5,19 @@ import { BsArrowRight } from "react-icons/bs";
 import { ProductCardType } from "../../types/product-card.type";
 import { theme } from "../../common/styles/themes/theme";
 
-function ProductCard({ title, description, openModal }: ProductCardType) {
+function ProductCard({
+  product,
+  openModal,
+}: {
+  product: ProductCardType;
+  openModal: (productInfo: ProductCardType) => void;
+}) {
   return (
     <>
-      <article onClick={() => openModal(title)}>
-        <h3>{title}</h3>
+      <article onClick={() => openModal(product)}>
+        <h3>{product.title}</h3>
         <br />
-        <p>{description}</p>
+        <p>{product.description}</p>
         <BsArrowRight
           style={{
             position: "absolute",
