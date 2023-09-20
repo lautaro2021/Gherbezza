@@ -1,11 +1,12 @@
 import React from "react";
+import Image from "next/image";
 import { AiOutlineClose } from "react-icons/ai";
 
 import { ModalType } from "../types/modal.type";
 import { theme } from "../common/styles/themes/theme";
 
 function Modal({ isOpen, onClose, product }: ModalType) {
-  const { title, images } = product;
+  const { title, images, productInfo, table } = product;
 
   return (
     <>
@@ -18,11 +19,41 @@ function Modal({ isOpen, onClose, product }: ModalType) {
               <AiOutlineClose onClick={onClose} style={{ cursor: "pointer" }} />
             </header>
             <section className="body">
-              {images?.map((image: string, index: number) => (
-                <figure key={index} className={`fig${index}`}>
-                  <img src={image} />
-                </figure>
-              ))}
+              <div className="image_container">
+                {images?.map((image: string, index: number) => (
+                  <figure key={index} className={`fig${index}`}>
+                    <Image
+                      src={image}
+                      alt={`${title} - image${index}`}
+                      title={`${title}, imagen ${index} - Gherbezza, fabrica de turbinas neumaticas para sembradoras`}
+                      fill
+                      style={{ objectFit: "cover" }}
+                      priority
+                      placeholder="blur"
+                      blurDataURL={image}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
+                  </figure>
+                ))}
+              </div>
+              <h4>Detalles</h4>
+              <p>{productInfo}</p>
+              <br />
+              <p>{productInfo}</p>
+              <br />
+              <p>{productInfo}</p>
+              {table && (
+                <>
+                  <h4>Tabla técnica</h4>
+                  <figure className="table_container">
+                    <img
+                      src={table}
+                      alt={`${title} - table`}
+                      title={`${title}, table - Gherbezza, fabrica de turbinas neumaticas para sembradoras`}
+                    />
+                  </figure>
+                </>
+              )}
             </section>
           </div>
         </>
@@ -94,14 +125,39 @@ function Modal({ isOpen, onClose, product }: ModalType) {
         .body {
           margin-top: 25px;
           width: 100%;
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          grid-template-rows: repeat(2, 1fr);
-          grid-column-gap: 0px;
-          grid-row-gap: 0px;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-start;
+        }
+        .image_container {
+          width: 100%;
+          height: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        figure {
+          position: relative;
+          height: 100%;
+          width: 100%;
+        }
+        .table_container {
+          height: auto;
         }
         img {
           width: 100%;
+        }
+        h4 {
+          color: ${theme.primary.lightGreen};
+          width: 100%;
+          text-align: left;
+          font-size: 32px;
+          margin-top: 15px;
+        }
+        p {
+          font-size: 20px;
         }
       `}</style>
     </>

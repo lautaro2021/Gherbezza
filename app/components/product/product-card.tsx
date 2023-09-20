@@ -6,22 +6,18 @@ import { ProductCardType } from "../../types/product-card.type";
 import { theme } from "../../common/styles/themes/theme";
 
 function ProductCard({
-  title,
-  description,
+  product,
   openModal,
-  images,
-}: ProductCardType) {
-  const product = {
-    title,
-    images,
-  };
-
+}: {
+  product: ProductCardType;
+  openModal: (productInfo: ProductCardType) => void;
+}) {
   return (
     <>
       <article onClick={() => openModal(product)}>
-        <h3>{title}</h3>
+        <h3>{product.title}</h3>
         <br />
-        <p>{description}</p>
+        <p>{product.description}</p>
         <BsArrowRight
           style={{
             position: "absolute",

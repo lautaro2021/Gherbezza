@@ -44,12 +44,12 @@ function Variants() {
     initialState
   );
 
-  const openModal = (modal: ProductType) => {
+  const openModal = (productInfo: ProductType) => {
     dispatch({
       type: "OPEN_MODAL",
       payload: {
         open: true,
-        selectedModal: modal,
+        selectedModal: productInfo,
       },
     });
   };
@@ -88,9 +88,7 @@ function Variants() {
               {productVariants.map(
                 (variant: ProductCardType, index: number) => (
                   <ProductCard
-                    title={variant.title}
-                    description={variant.description}
-                    images={variant.images}
+                    product={variant}
                     key={index}
                     openModal={openModal}
                   />
