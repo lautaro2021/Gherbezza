@@ -40,7 +40,9 @@ function ProductsNavbar() {
                     }`,
                   }}
                 >
-                  <Link href={value.link}>{value.name}</Link>
+                  <Link href={value.link} scroll={false}>
+                    {value.name}
+                  </Link>
                 </li>
               );
             })}
