@@ -1,13 +1,17 @@
 "use client";
-import { theme } from "@/app/common/styles/themes/theme";
 import Button from "@/app/components/button/button";
 import CenterDiv from "@/app/components/center-div";
-import React, { useState } from "react";
 import PageSection from "@/app/components/page-section";
 import { BsArrowRight, BsArrowLeft } from "react-icons/bs";
+import { useSearchParams } from "next/navigation";
+
+import { theme } from "@/app/common/styles/themes/theme";
+import Link from "next/link";
 
 function OurServices() {
-  const [actualService, setActualService] = useState<string>("postventa");
+  const searchParams = useSearchParams();
+  const actualService = searchParams.get("service") || "postventa";
+
   const leftArrowStyle = {
     color: `${
       actualService === "postventa"
@@ -25,12 +29,6 @@ function OurServices() {
     cursor: "pointer",
   };
 
-  const changeService = () => {
-    setActualService((prevValue) =>
-      prevValue === "postventa" ? "asesoramiento" : "postventa"
-    );
-  };
-
   return (
     <>
       <PageSection backgroundColor={theme.secondary.greyBackground}>
@@ -44,11 +42,12 @@ function OurServices() {
               <div className="image_container">
                 <img src="/images/layouts/inicio/ourServices/imagen.png" />
                 <div>
-                  <BsArrowLeft onClick={changeService} style={leftArrowStyle} />
-                  <BsArrowRight
-                    onClick={changeService}
-                    style={rightArrowStyle}
-                  />
+                  <Link href={`?service=postventa`} scroll={false}>
+                    <BsArrowLeft style={leftArrowStyle} />
+                  </Link>
+                  <Link href={`?service=asesoramiento`} scroll={false}>
+                    <BsArrowRight style={rightArrowStyle} />
+                  </Link>
                 </div>
               </div>
               <div className="service_info_container">
@@ -73,11 +72,12 @@ function OurServices() {
               <div className="image_container">
                 <img src="/images/layouts/inicio/ourServices/imagen.png" />
                 <div>
-                  <BsArrowLeft onClick={changeService} style={leftArrowStyle} />
-                  <BsArrowRight
-                    onClick={changeService}
-                    style={rightArrowStyle}
-                  />
+                  <Link href={`?service=postventa`} scroll={false}>
+                    <BsArrowLeft style={leftArrowStyle} />
+                  </Link>
+                  <Link href={`?service=asesoramiento`} scroll={false}>
+                    <BsArrowRight style={rightArrowStyle} />
+                  </Link>
                 </div>
               </div>
               <div className="service_info_container">
