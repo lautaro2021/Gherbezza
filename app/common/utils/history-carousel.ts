@@ -1,6 +1,6 @@
 import { HistoryCarouselType } from "@/app/types/history-carousel.type";
 
-export const carouselInfo: HistoryCarouselType[] = [
+export const tourData: HistoryCarouselType[] = [
   {
     image: "",
     alt: "",

@@ -1,8 +1,8 @@
-import React from "react";
-
 import ProductDetail from "@/app/components/product/product-detail";
 import { productData } from "@/app/common/utils/products/product-description/data";
 import { Metadata } from "next";
+
+import { productsCarouselData } from "@/app/common/utils/products/carousel-info";
 
 export const metadata: Metadata = {
   title:
@@ -12,15 +12,15 @@ export const metadata: Metadata = {
 };
 
 function Airdrill() {
+  const { airdrill } = productsCarouselData;
   return (
     <main>
       <ProductDetail
         title={productData.airdrill.title}
-        imageUrl={productData.airdrill.imageUrl}
         subtitle={productData.airdrill.subtitle}
         description={productData.airdrill.description}
-        altDescription={productData.airdrill.altDescription}
         dataSheetLink={productData.airdrill.dataSheetLink}
+        dataForCarrousel={airdrill}
       />
     </main>
   );
