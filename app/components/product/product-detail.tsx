@@ -33,9 +33,17 @@ function ProductDetail({
                 <br />
                 <p>{description}</p>
               </div>
-              <a href={dataSheetLink} target="_blank" rel="noreferrer">
-                <span>Ver Ficha Técnica</span>
-              </a>
+              <div className="buttons_container">
+                <a href={dataSheetLink} target="_blank" rel="noreferrer">
+                  <span>Manual de uso</span>
+                </a>
+                <a href={dataSheetLink} target="_blank" rel="noreferrer">
+                  <span>Medidas</span>
+                </a>
+                <a href={dataSheetLink} target="_blank" rel="noreferrer">
+                  <span>Ficha Técnica</span>
+                </a>
+              </div>
             </article>
             <div className="image_container">
               <Image
@@ -79,7 +87,13 @@ function ProductDetail({
           height: 100%;
           position: relative;
         }
-        span {
+        .buttons_container {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          height: 100%;
+        }
+        a {
           font-weight: bold;
           font-size: 22px;
           cursor: pointer;
@@ -87,8 +101,10 @@ function ProductDetail({
           padding: 8px 16px;
           color: ${theme.primary.lightGreen};
           transition: all 0.3s ease;
+          max-width: 200px;
+          text-align: center;
         }
-        span:hover {
+        a:hover {
           background-color: ${theme.primary.lightGreen};
           color: ${theme.secondary.white};
         }

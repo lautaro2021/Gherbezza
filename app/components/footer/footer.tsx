@@ -98,6 +98,10 @@ function Footer() {
         .footer_options_container div img {
           width: 40px;
           height: 40px;
+          transition: all 0.2s ease;
+        }
+        .footer_options_container div img:hover {
+          filter: brightness(2);
         }
       `}</style>
     </>

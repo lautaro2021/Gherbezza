@@ -1,37 +1,58 @@
 import React from "react";
+import Image from "next/image";
 
 import { ProductOptionalsType } from "@/app/common/utils/products/eolo/optionals/optionals-data";
-import { theme } from "../../common/styles/themes/theme";
 
-function ProductOptionalsCard({ text, position }: ProductOptionalsType) {
+function ProductOptionalsCard({
+  optionalDescription,
+  imageUrl,
+}: ProductOptionalsType) {
   return (
     <>
       <article>
-        <span>{position}</span>
-        <p>{text}</p>
+        <figure>
+          <Image
+            src={imageUrl}
+            alt="Gherbezza fabrica de turbinas neumaticas para sembradoras"
+            title="Gherbezza turbinas neumaticas para sembradoras"
+            fill
+            style={{ objectFit: "cover" }}
+            placeholder="blur"
+            blurDataURL={imageUrl}
+            priority
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
+        </figure>
+        <div className="optional_description_container">
+          <p>{optionalDescription}</p>
+        </div>
       </article>
       <style jsx>{`
         article {
           width: 100%;
+          max-width: 340px;
           height: 300px;
-          padding: 20px;
           display: flex;
+          flex-direction: column;
           align-items: center;
-          background-color: ${theme.secondary.greyBackground};
           position: relative;
           text-align: center;
+          box-shadow: 0px 5px 12px 5px rgba(0, 0, 0, 0.1);
         }
-        span {
-          position: absolute;
-          top: 20px;
-          left: 20px;
-          color: ${theme.secondary.lightGrey};
-          font-size: 20px;
-          font-weight: bold;
+        figure {
+          width: 100%;
+          height: 75%;
+          position: relative;
+        }
+        .optional_description_container {
+          height: 25%;
+          width: 100%;
+          display: grid;
+          place-items: center;
+          padding: 12px;
         }
         p {
-          font-size: 24px;
-          font-weight: bold;
+          font-size: 20px;
         }
       `}</style>
     </>

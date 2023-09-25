@@ -32,7 +32,7 @@ function Eolo() {
             <ul>
               {eoloCardsInfo.map((text: EoloCardsType, index: number) => (
                 <li key={index}>
-                  <strong>{index + 1}</strong>
+                  <h4>{text.productType}</h4>
                   <br />
                   <p>{text.text}</p>
                 </li>
@@ -64,10 +64,8 @@ function Eolo() {
           margin-top: -100px;
         }
         img:nth-child(odd) {
+          height: 400px;
           max-width: 25%;
-        }
-        img:not(:nth-child(odd)) {
-          max-width: 50%;
         }
         ul {
           width: 100%;
@@ -76,8 +74,7 @@ function Eolo() {
           justify-content: center;
           gap: 1vw;
           margin: 100px 0px;
-          background-color: ${theme.secondary.white};
-          padding: 50px;
+          padding: 50px 0px;
           border-radius: 8px;
         }
         li {
@@ -85,12 +82,15 @@ function Eolo() {
           display: flex;
           flex-direction: column;
           padding: 20px;
-          background-color: ${theme.secondary.greyBackground};
-          color: ${theme.secondary.black};
-          width: 25%;
-          max-width: 300px;
+          color: ${theme.secondary.white};
+          border: 2px solid ${theme.secondary.white};
+          width: 100%;
           border-radius: 8px;
-          box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.2);
+          text-align: center;
+        }
+        li h4 {
+          color: ${theme.primary.orange};
+          font-size: 35px;
         }
         li p {
           text-align: center;

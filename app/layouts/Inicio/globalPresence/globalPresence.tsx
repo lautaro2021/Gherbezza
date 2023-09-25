@@ -21,22 +21,22 @@ function GlobalPresence() {
               <br />
               <p>
                 Durante 20 años, hemos forjado alianzas en todo el mundo. Desde
-                España e Italia hasta Brasil, Francia y Sudafrica, nuestro
-                impacto internacional en la fabricación de turbinas para
+                España e Italia hasta Brasil, Francia, Sudafrica y Uruguay,
+                nuestro impacto internacional en la fabricación de turbinas para
                 sembradoras es evidente. Conectando países, cultivamos éxito
                 agrícola global.
               </p>
             </div>
             <div className="image_container">
               <Image
-                src="/images/layouts/inicio/globalPresence/globalPresence.png"
+                src="/images/layouts/inicio/globalPresence/globalPresence.webp"
                 alt="nuestra presencia global Gherbezza turbinas neumaticas para sembradoras"
                 title="nuestra presencia global Gherbezza turbinas neumaticas para sembradoras"
                 fill
                 style={{ objectFit: "contain" }}
                 priority
                 placeholder="blur"
-                blurDataURL="/images/layouts/inicio/globalPresence/globalPresence.png"
+                blurDataURL="/images/layouts/inicio/globalPresence/globalPresence.webp"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>

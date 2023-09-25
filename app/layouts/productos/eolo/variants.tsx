@@ -71,7 +71,7 @@ function Variants() {
           <div className="container">
             <section className="text_container">
               <SectionTitles
-                text="Variantes"
+                text="Familia Eolo"
                 colorText={theme.primary.lightGreen}
                 fontSize="60px"
               />

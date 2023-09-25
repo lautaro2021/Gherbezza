@@ -17,7 +17,6 @@ function Banner() {
                 <img src={data.image} alt={data.title} title={data.title} />
                 <div>
                   <span>{data.title}</span>
-                  <p>{data.description}</p>
                 </div>
               </li>
             ))}
@@ -26,7 +25,7 @@ function Banner() {
       </section>
       <style jsx>{`
         section {
-          padding: 40px 60px;
+          padding: 20px 60px;
           background-color: ${theme.primary.darkGreen};
           display: flex;
           align-items: center;
@@ -43,7 +42,7 @@ function Banner() {
         li {
           list-style: none;
           display: flex;
-          align-items: flex-start;
+          align-items: center;
           justify-content: center;
           gap: 20px;
         }
