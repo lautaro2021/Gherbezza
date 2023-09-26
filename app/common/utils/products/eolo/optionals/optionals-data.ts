@@ -1,22 +1,19 @@
-type OptionalsDataType = {
-  text: string;
-};
 export type ProductOptionalsType = {
-  text: string;
-  position: number;
+  optionalDescription: string;
+  imageUrl: string;
 };
 
-export const optionalsData: OptionalsDataType[] = [
+export const optionalsData: ProductOptionalsType[] = [
   {
-    text: "Sentido de rotación antihorario",
+    optionalDescription: "Soporte para radiador de aceite",
+    imageUrl: "/images/layouts/productos/eolo/optionals/preview.webp",
   },
   {
-    text: "Soporte para radiador de aceite",
+    optionalDescription: "Brida para conectar salida a cañeria o tolva",
+    imageUrl: "/images/layouts/productos/eolo/optionals/preview.webp",
   },
   {
-    text: "Brida para conectar salida a cañeria o tolva",
-  },
-  {
-    text: "Sin motor para accionamientos especiales",
+    optionalDescription: "Sin motor para accionamientos especiales",
+    imageUrl: "/images/layouts/productos/eolo/optionals/preview.webp",
   },
 ];

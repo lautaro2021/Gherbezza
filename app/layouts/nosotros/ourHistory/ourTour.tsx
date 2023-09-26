@@ -1,8 +1,9 @@
 "use client";
 import { BsArrowRightCircle } from "react-icons/bs";
 
-import Carousel from "./carousel";
-import useSliderMargin from "./slider-margin";
+import { tourData } from "@/app/common/utils/history-carousel";
+import Carousel from "@/app/components/carousel";
+import useSliderMargin from "@/app/hooks/useSliderMargin";
 import { theme } from "@/app/common/styles/themes/theme";
 
 function OurTour() {
@@ -20,7 +21,7 @@ function OurTour() {
               color: `${theme.secondary.lightGrey}`,
             }}
           />
-          <Carousel options={OPTIONS} />
+          <Carousel options={OPTIONS} data={tourData} />
         </div>
       </section>
       <style jsx>{`

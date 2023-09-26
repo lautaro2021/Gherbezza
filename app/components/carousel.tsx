@@ -1,12 +1,11 @@
 import useEmblaCarousel from "embla-carousel-react";
 
-import { carouselInfo } from "@/app/common/utils/history-carousel";
 import { HistoryCarouselType } from "@/app/types/history-carousel.type";
 import { theme } from "@/app/common/styles/themes/theme";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function Carousel(props: any) {
-  const { options } = props;
+  const { options, data } = props;
   const [emblaRef] = useEmblaCarousel(options);
 
   return (
@@ -14,7 +13,7 @@ function Carousel(props: any) {
       <div className="embla">
         <div className="embla__viewport" ref={emblaRef}>
           <div className="embla__container">
-            {carouselInfo.map((obj: HistoryCarouselType, index: number) => (
+            {data.map((obj: HistoryCarouselType, index: number) => (
               <div className="embla__slide" key={index}>
                 <img className="embla__slide__img" />
                 <strong>{obj.textTitle}</strong>

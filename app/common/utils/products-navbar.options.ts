@@ -6,11 +6,11 @@ export const productsNavbarData: NavbarType[] = [
     link: "/productos/eolo",
   },
   {
-    name: "AIR DRILL",
-    link: "/productos/airdrill",
-  },
-  {
     name: "VACUO",
     link: "/productos/vacuo",
+  },
+  {
+    name: "AIR DRILL",
+    link: "/productos/airdrill",
   },
 ];

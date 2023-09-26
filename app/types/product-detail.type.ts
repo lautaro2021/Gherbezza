@@ -1,8 +1,9 @@
+import { HistoryCarouselType } from "@/app/types/history-carousel.type";
+
 export type ProductDetailType = {
   title: string;
   subtitle: string;
   description: string;
   dataSheetLink: string;
-  imageUrl: string;
-  altDescription: string;
+  dataForCarrousel: HistoryCarouselType[];
 };

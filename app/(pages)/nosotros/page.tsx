@@ -4,9 +4,10 @@ import Hero from "@/app/layouts/nosotros/Hero";
 import OurHistory from "@/app/layouts/nosotros/ourHistory/ourHistory";
 import OurTour from "@/app/layouts/nosotros/ourHistory/ourTour";
 import Banner from "@/app/layouts/nosotros/banner/us-banner";
-import KnowEolo from "@/app/layouts/nosotros/knowEolo/knowEolo";
-import Eolo from "@/app/layouts/nosotros/knowEolo/eolo";
+import KnowProducts from "@/app/layouts/nosotros/knowProducts/know-products";
+import Eolo from "@/app/layouts/nosotros/knowProducts/eolo";
 import WorkWithUs from "@/app/layouts/nosotros/workWithUs/workWithUs";
+import Map from "@/app/layouts/nosotros/map";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -22,9 +23,10 @@ function OurUs() {
       <OurHistory />
       <OurTour />
       <Banner />
-      <KnowEolo />
+      <KnowProducts />
       <Eolo />
       <WorkWithUs />
+      <Map />
     </main>
   );
 }

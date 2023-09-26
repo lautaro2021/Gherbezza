@@ -21,10 +21,10 @@ function OptionalsAndAccesories() {
               fontSize="60px"
             />
             <ul>
-              {optionalsData.map((value, index: number) => (
+              {optionalsData.map((optionalData, index: number) => (
                 <ProductOptionalsCard
-                  text={value.text}
-                  position={index + 1}
+                  optionalDescription={optionalData.optionalDescription}
+                  imageUrl={optionalData.imageUrl}
                   key={index}
                 />
               ))}
@@ -45,7 +45,7 @@ function OptionalsAndAccesories() {
           width: 100%;
           display: flex;
           align-items: center;
-          justify-content: center;
+          justify-content: flex-start;
           gap: 2vw;
           margin: 50px 0px;
         }

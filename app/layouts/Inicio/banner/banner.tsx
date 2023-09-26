@@ -1,32 +1,19 @@
 "use client";
-import { theme } from "@/app/common/styles/themes/theme";
 import CenterDiv from "@/app/components/center-div";
-import React from "react";
 
-import { bannerData } from "@/app/common/utils/banner";
-import BannerType from "@/app/types/banner.type";
+import { theme } from "@/app/common/styles/themes/theme";
 
 function Banner() {
   return (
     <>
       <section>
         <CenterDiv>
-          <ul className="container">
-            {bannerData.map((data: BannerType, index: number) => (
-              <li key={index}>
-                <img src={data.image} alt={data.title} title={data.title} />
-                <div>
-                  <span>{data.title}</span>
-                  <p>{data.description}</p>
-                </div>
-              </li>
-            ))}
-          </ul>
+          <ul className="container"></ul>
         </CenterDiv>
       </section>
       <style jsx>{`
         section {
-          padding: 40px 60px;
+          padding: 20px 60px;
           background-color: ${theme.primary.darkGreen};
           display: flex;
           align-items: center;
@@ -43,7 +30,7 @@ function Banner() {
         li {
           list-style: none;
           display: flex;
-          align-items: flex-start;
+          align-items: center;
           justify-content: center;
           gap: 20px;
         }
