@@ -1,9 +1,11 @@
 import React from "react";
 
 import ProductDetail from "@/app/components/product/product-detail";
-import Variants from "@/app/layouts/productos/eolo/variants";
-import OptionalsAndAccesories from "@/app/layouts/productos/eolo/optionals-accesories";
+import Variants from "@/app/components/product/variants";
+import OptionalsAndAccesories from "@/app/components/product/optionals-accesories";
 
+import { optionalsData } from "@/app/common/utils/products/eolo/optionals/optionals-data";
+import { productVariants } from "@/app/common/utils/product-variants.options";
 import { productsCarouselData } from "@/app/common/utils/products/carousel-info";
 import { productData } from "@/app/common/utils/products/product-description/data";
 import { Metadata } from "next";
@@ -17,6 +19,11 @@ export const metadata: Metadata = {
 
 function Eolo() {
   const { eolo } = productsCarouselData;
+  const { eoloVariants } = productVariants;
+  const { eoloOptionals } = optionalsData;
+  const textForVariant =
+    "La línea de turbinas de soplado eolo está compuesta por 3 grupos de turbinas: EOLO mini, EOLO junior y EOLO senior. Las principales diferencias entre estos grupos está dada por el tamaño de la carcasa y los parámetros de caudal y presión que pueden desarrollar.";
+
   return (
     <main>
       <ProductDetail
@@ -26,8 +33,12 @@ function Eolo() {
         dataSheetLink={productData.eolo.dataSheetLink}
         dataForCarrousel={eolo}
       />
-      <Variants />
-      <OptionalsAndAccesories />
+      <Variants
+        title="Familia Eolo"
+        text={textForVariant}
+        dataForVariants={eoloVariants}
+      />
+      <OptionalsAndAccesories dataForOptionals={eoloOptionals} />
     </main>
   );
 }

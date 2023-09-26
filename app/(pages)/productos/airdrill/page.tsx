@@ -3,6 +3,10 @@ import { productData } from "@/app/common/utils/products/product-description/dat
 import { Metadata } from "next";
 
 import { productsCarouselData } from "@/app/common/utils/products/carousel-info";
+import Variants from "@/app/components/product/variants";
+import OptionalsAndAccesories from "@/app/components/product/optionals-accesories";
+import { optionalsData } from "@/app/common/utils/products/eolo/optionals/optionals-data";
+import { productVariants } from "@/app/common/utils/product-variants.options";
 
 export const metadata: Metadata = {
   title:
@@ -13,6 +17,8 @@ export const metadata: Metadata = {
 
 function Airdrill() {
   const { airdrill } = productsCarouselData;
+  const { airdrillVariants } = productVariants;
+  const { airdrillOptionals } = optionalsData;
   return (
     <main>
       <ProductDetail
@@ -22,6 +28,12 @@ function Airdrill() {
         dataSheetLink={productData.airdrill.dataSheetLink}
         dataForCarrousel={airdrill}
       />
+      <Variants
+        title="Familia AirDrill"
+        text=""
+        dataForVariants={airdrillVariants}
+      />
+      <OptionalsAndAccesories dataForOptionals={airdrillOptionals} />
     </main>
   );
 }

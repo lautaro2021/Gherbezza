@@ -6,9 +6,8 @@ import PageSection from "@/app/components/page-section";
 import SectionTitles from "@/app/components/titles/section-titles";
 import ProductCard from "@/app/components/product/product-card";
 
-import { productVariants } from "@/app/common/utils/product-variants.options";
 import { ProductCardType, ProductType } from "@/app/types/product-card.type";
-import Modal from "@/app/components/modal";
+import Modal from "@/app/components/product/modal";
 
 type ModalStateType = {
   open: boolean;
@@ -20,7 +19,13 @@ type ActionType = {
   payload: ModalStateType;
 };
 
-function Variants() {
+type VariantType = {
+  title: string;
+  text: string;
+  dataForVariants: ProductCardType[];
+};
+
+function Variants({ title, text, dataForVariants }: VariantType) {
   const initialState: ModalStateType = {
     open: false,
     selectedModal: { title: "", images: [] },
@@ -71,21 +76,15 @@ function Variants() {
           <div className="container">
             <section className="text_container">
               <SectionTitles
-                text="Familia Eolo"
+                text={title}
                 colorText={theme.primary.lightGreen}
                 fontSize="60px"
               />
               <br />
-              <p>
-                La línea de turbinas de soplado eolo está compuesta por 3 grupos
-                de turbinas: EOLO mini, EOLO junior y EOLO senior. Las
-                principales diferencias entre estos grupos está dada por el
-                tamaño de la carcasa y los parámetros de caudal y presión que
-                pueden desarrollar.
-              </p>
+              <p>{text}</p>
             </section>
             <div className="products_card_container">
-              {productVariants.map(
+              {dataForVariants.map(
                 (variant: ProductCardType, index: number) => (
                   <ProductCard
                     product={variant}
@@ -120,7 +119,8 @@ function Variants() {
         .products_card_container {
           display: flex;
           align-items: center;
-          justify-content: space-between;
+          justify-content: flex-start;
+          gap: 20px;
         }
       `}</style>
     </>
