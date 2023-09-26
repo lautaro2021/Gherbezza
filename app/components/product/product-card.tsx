@@ -29,7 +29,7 @@ function ProductCard({
       </article>
       <style jsx>{`
         article {
-          width: 30%;
+          width: 100%;
           height: 300px;
           display: flex;
           flex-direction: column;

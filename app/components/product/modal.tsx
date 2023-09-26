@@ -2,8 +2,8 @@ import React from "react";
 import Image from "next/image";
 import { AiOutlineClose } from "react-icons/ai";
 
-import { ModalType } from "../types/modal.type";
-import { theme } from "../common/styles/themes/theme";
+import { ModalType } from "../../types/modal.type";
+import { theme } from "../../common/styles/themes/theme";
 
 function Modal({ isOpen, onClose, product }: ModalType) {
   const { title, images, productInfo, table } = product;

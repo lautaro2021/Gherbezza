@@ -7,9 +7,15 @@ import SectionTitles from "@/app/components/titles/section-titles";
 import ProductOptionalsCard from "@/app/components/product/product-optionals-card";
 
 import { theme } from "@/app/common/styles/themes/theme";
-import { optionalsData } from "@/app/common/utils/products/eolo/optionals/optionals-data";
+import { ProductOptionalsType } from "@/app/common/utils/products/eolo/optionals/optionals-data";
 
-function OptionalsAndAccesories() {
+type OptionalsAndAccesoriesType = {
+  dataForOptionals: ProductOptionalsType[];
+};
+
+function OptionalsAndAccesories({
+  dataForOptionals,
+}: OptionalsAndAccesoriesType) {
   return (
     <>
       <PageSection height maxHeight>
@@ -21,7 +27,7 @@ function OptionalsAndAccesories() {
               fontSize="60px"
             />
             <ul>
-              {optionalsData.map((optionalData, index: number) => (
+              {dataForOptionals.map((optionalData, index: number) => (
                 <ProductOptionalsCard
                   optionalDescription={optionalData.optionalDescription}
                   imageUrl={optionalData.imageUrl}

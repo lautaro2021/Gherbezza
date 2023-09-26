@@ -1,10 +1,14 @@
 import React from "react";
 
 import ProductDetail from "@/app/components/product/product-detail";
+import Variants from "@/app/components/product/variants";
+import OptionalsAndAccesories from "@/app/components/product/optionals-accesories";
 
 import { productData } from "@/app/common/utils/products/product-description/data";
 import { productsCarouselData } from "@/app/common/utils/products/carousel-info";
 import { Metadata } from "next";
+import { optionalsData } from "@/app/common/utils/products/eolo/optionals/optionals-data";
+import { productVariants } from "@/app/common/utils/product-variants.options";
 
 export const metadata: Metadata = {
   title:
@@ -15,6 +19,11 @@ export const metadata: Metadata = {
 
 function Vacuo() {
   const { vacuo } = productsCarouselData;
+  const { vacuoVariants } = productVariants;
+  const { vacuoOptionals } = optionalsData;
+  const textForVariant =
+    "La línea de turbinas de soplado Vacuo se ha diversificado en cuatro grupos distintos: la Sección Mini, la Hidráulica Estándar, la TDF Estándar y la Superior. Cada uno de estos grupos presenta notables diferencias en cuanto al diseño de la carcasa y los parámetros de caudal y presión que son capaces de generar.";
+
   return (
     <main>
       <ProductDetail
@@ -24,6 +33,12 @@ function Vacuo() {
         dataSheetLink={productData.vacuo.dataSheetLink}
         dataForCarrousel={vacuo}
       />
+      <Variants
+        title="Familia Vacuo"
+        dataForVariants={vacuoVariants}
+        text={textForVariant}
+      />
+      <OptionalsAndAccesories dataForOptionals={vacuoOptionals} />
     </main>
   );
 }
