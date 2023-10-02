@@ -19,11 +19,7 @@ function CenterDiv({
 }: CenterDivType) {
   return (
     <>
-      {backgroundImage ? (
-        <div className="bg_image">{children}</div>
-      ) : (
-        <div>{children}</div>
-      )}
+      <div className={backgroundImage ? "bg_image" : ""}>{children}</div>
       <style jsx>{`
         div {
           max-width: 1500px;
@@ -39,6 +35,11 @@ function CenterDiv({
           background-size: cover;
           background-position: center;
           background-repeat: no-repeat;
+        }
+        @media screen and (max-width: 1530px) {
+          div {
+            padding: 0px 30px;
+          }
         }
       `}</style>
     </>

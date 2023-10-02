@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 
-import Navbar from "../navbar/navbar";
+import FooterNavbar from "../navbar/footer-navbar";
 
 import { footerOptions } from "@/app/common/utils/footer-options";
 import { footerSocial } from "@/app/common/utils/footer-options";
@@ -13,11 +13,7 @@ function Footer() {
   return (
     <>
       <footer>
-        <Navbar
-          footerPosition={true}
-          textColor={theme.secondary.white}
-          backgroundColor="transparent"
-        />
+        <FooterNavbar />
         <CenterDiv>
           <div className="footer_options_container">
             <p>

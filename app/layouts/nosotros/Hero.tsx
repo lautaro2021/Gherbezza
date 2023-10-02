@@ -15,7 +15,6 @@ function Hero() {
             <RouteText linkedText="INICIO" text="NOSOTROS" />
             <HeroTitles
               text="NUESTRA EMPRESA"
-              fontSize="70px"
               colorText={theme.secondary.white}
             />
           </div>

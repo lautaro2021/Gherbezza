@@ -16,7 +16,6 @@ function Hero() {
             <HeroTitles
               text="NUESTROS PRODUCTOS"
               colorText={theme.secondary.white}
-              fontSize="70px"
             />
           </div>
         </CenterDiv>

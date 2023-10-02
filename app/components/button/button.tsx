@@ -49,6 +49,11 @@ function Button({ text, bordered = false, textColor, link }: ButtonType) {
           gap: 20px;
           `}
         }
+        @media screen and (max-width: 600px) {
+          button {
+            font-size: var(--s-button-fontsize);
+          }
+        }
       `}</style>
     </>
   );

@@ -5,8 +5,8 @@ import Image from "next/image";
 
 import CenterDiv from "@/app/components/center-div";
 import { theme } from "@/app/common/styles/themes/theme";
-import SectionTitles from "@/app/components/titles/section-titles";
 import FormButton from "@/app/components/button/form-button";
+import HeroTitles from "@/app/components/titles/hero-titles";
 import RouteText from "@/app/components/routeText";
 import emailjs from "@emailjs/browser";
 
@@ -53,10 +53,7 @@ function Contacto() {
             <form onSubmit={submitForm} action="POST" id="contact-form">
               <div className="title_container">
                 <RouteText text="CONTACTO" linkedText="INICIO" />
-                <SectionTitles
-                  text="CONTACTO"
-                  colorText={theme.secondary.black}
-                />
+                <HeroTitles text="CONTACTO" colorText={theme.secondary.black} />
               </div>
 
               <div className="input_container">

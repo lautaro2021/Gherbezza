@@ -1,4 +1,5 @@
 "use client";
+/*eslint-disable*/
 import "./common/styles/globals.css";
 import { AppProvider } from "./store/context/context";
 import Script from "next/script";
@@ -45,8 +46,8 @@ export default function RootLayout({
                 backgroundColor="transparent"
               />
               <StyledJsxRegistry>{children}</StyledJsxRegistry>
-              <Footer />
-              <Powered />
+              {/* <Footer />
+              <Powered /> */}
             </>
           )}
         </body>

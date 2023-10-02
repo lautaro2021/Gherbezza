@@ -65,13 +65,34 @@ function OurCompany() {
           gap: 15px;
         }
         .text_container p {
-          font-size: 24px;
+          font-size: var(--bd-text-fontsize);
           font-weight: 200;
         }
         .image_container {
           width: 40%;
           height: 100%;
           position: relative;
+        }
+        @media screen and (max-width: 1920px) {
+          .text_container p {
+            font-size: var(--d-text-fontsize);
+          }
+        }
+        @media screen and (max-width: 1000px) {
+          .container {
+            flex-direction: column-reverse;
+          }
+          .text_container {
+            width: 100%;
+          }
+          .image_container {
+            width: 100%;
+          }
+        }
+        @media screen and (max-width: 600px) {
+          .text_container p {
+            font-size: var(--s-text-fontsize);
+          }
         }
       `}</style>
     </>

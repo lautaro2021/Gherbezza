@@ -75,6 +75,35 @@ function GlobalPresence() {
           min-height: 500px;
           position: relative;
         }
+        @media screen and (max-width: 1920px) {
+          .text_container p {
+            font-size: var(--d-text-fontsize);
+          }
+        }
+        @media screen and (max-width: 1000px) {
+          .container {
+            flex-direction: column;
+          }
+          .text_container {
+            width: 100%;
+          }
+          .image_container {
+            width: 100%;
+          }
+        }
+        @media screen and (max-width: 600px) {
+          .image_container {
+            min-height: 350px;
+          }
+          .text_container p {
+            font-size: var(--s-text-fontsize);
+          }
+        }
+        @media screen and (max-width: 400px) {
+          .image_container {
+            min-height: 280px;
+          }
+        }
       `}</style>
     </>
   );
