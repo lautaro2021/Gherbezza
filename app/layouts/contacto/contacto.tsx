@@ -247,6 +247,39 @@ function Contacto() {
           gap: 30px;
           font-size: 18px;
         }
+        @media screen and (max-width: 1200px) {
+          .input_container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+          }
+          textarea {
+            min-height: 200px;
+          }
+          h3 {
+            font-size: 18px;
+          }
+          strong {
+            font-size: 16px;
+          }
+        }
+        @media screen and (max-width: 1000px) {
+          form {
+            max-width: 50%;
+          }
+        }
+        @media screen and (max-width: 700px) {
+          .info_container {
+            display: none;
+          }
+          form {
+            max-width: 100%;
+            padding: 0;
+          }
+          textarea {
+            min-height: 150px;
+          }
+        }
       `}</style>
     </>
   );

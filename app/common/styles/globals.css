@@ -11,12 +11,14 @@
     --bd-hero-home-fontsize: 120px;
     --bd-button-fontsize: 18px;
     /* DESKTOP */
+    --d-hero-title-fontsize: clamp(60px, 3.64vw, 70px);
     --d-title-fontsize: clamp(45px, 3.125vw ,60px);
     --d-subtitle-fontsize: '';
     --d-text-fontsize: clamp(20px, 1.25vw, 24px);
     --d-hero-home-fontsize: clamp(75px, 5.2vw, 100px);
     --d-button-fontsize: 18px;
     /* TABLET */
+    --t-hero-title-fontsize: clamp(50px, 6vw, 60px);
     --t-title-fontsize: 45px;
     --t-subtitle-fontsize: '';
     --t-text-fontsize: 20px;

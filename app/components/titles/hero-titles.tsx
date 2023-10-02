@@ -19,6 +19,16 @@ function HeroTitles({ text, colorText, centeredText, fontSize }: SectionTitle) {
           line-height: 100%;
           text-align: ${centeredText ? "center" : ""};
         }
+        @media screen and (max-width: 1920px) {
+          h1 {
+            font-size: var(--d-hero-title-fontsize);
+          }
+        }
+        @media screen and (max-width: 1000px) {
+          h1 {
+            font-size: var(--t-hero-title-fontsize);
+          }
+        }
       `}</style>
     </>
   );
