@@ -143,7 +143,7 @@ function WorkWithUs() {
       <style jsx>{`
         section {
           width: 100%;
-          height: 70dvh;
+          height: auto;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -172,7 +172,7 @@ function WorkWithUs() {
           display: flex;
           align-items: flex-end;
           justify-content: flex-start;
-          padding: 0px 0px 100px 0px;
+          padding: 100px 0px;
         }
         .modal {
           background-color: rgba(134, 134, 134, 0.2);
@@ -227,7 +227,7 @@ function WorkWithUs() {
           }
           .container {
             align-items: center;
-            padding: 0;
+            padding: 50px 0px;
           }
           .modal {
             padding: 20px;
