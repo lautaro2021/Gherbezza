@@ -81,18 +81,16 @@ function Hero() {
             width: 100%;
             height: 70%;
             max-height: 1000px;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(2, 1fr);
-            grid-column-gap: 0px;
-            grid-row-gap: 0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
           }
           .cards_container {
             display: flex;
             align-items: center;
             justify-content: flex-start;
             gap: 10px;
-            grid-area: 1 / 1 / 2 / 2;
+            height: 100%;
           }
           .text_container {
             grid-area: 2 / 2 / 3 / 3;
@@ -137,7 +135,7 @@ function Hero() {
               font-size: var(--s-hero-home-fontsize);
             }
           }
-          @media screen and (max-width: 380px) {
+          @media screen and (max-width: 400px) {
             h1 {
               font-size: var(--sm-hero-home-fontsize);
             }

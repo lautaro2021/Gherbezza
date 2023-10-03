@@ -52,6 +52,13 @@ function Navbar({ backgroundColor, textColor }: Navbar) {
                 src={"/images/logo/logo.png"}
                 alt="logo-gherbezza-turbinas-neumaticas-sembradoras"
                 title="Gherbezza, turbinas neumaticas para sembradoras"
+                className="iso_desktop"
+              />
+              <img
+                src={"/images/logo/ISO.png"}
+                alt="logo-gherbezza-turbinas-neumaticas-sembradoras"
+                title="Gherbezza, turbinas neumaticas para sembradoras"
+                className="iso_mobile"
               />
             </Link>
             <ul className={showMobileOptions ? "mobile" : "desktop"}>
@@ -107,6 +114,9 @@ function Navbar({ backgroundColor, textColor }: Navbar) {
           box-shadow: ${navbarColor !== "transparent" &&
           "0px 2px 6px 2px rgba(117, 117, 117, 0.2)"};
           transition: all 0.3s ease;
+        }
+        .iso_mobile {
+          display: none;
         }
         .nav_container {
           width: 100%;
@@ -180,12 +190,21 @@ function Navbar({ backgroundColor, textColor }: Navbar) {
             max-width: 20px;
           }
         }
-        @media screen and (max-width: 650px) {
+        @media screen and (max-width: 760px) {
           img {
             max-width: 200px;
           }
           .mobile li {
             font-size: 16px;
+          }
+        }
+        @media screen and (max-width: 500px) {
+          .iso_desktop {
+            display: none;
+          }
+          .iso_mobile {
+            display: inline-block;
+            max-width: 50px;
           }
         }
       `}</style>
