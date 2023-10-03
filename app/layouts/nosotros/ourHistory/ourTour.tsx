@@ -3,30 +3,35 @@ import { BsArrowRightCircle } from "react-icons/bs";
 
 import { tourData } from "@/app/common/utils/history-carousel";
 import Carousel from "@/app/components/carousel";
-import useSliderMargin from "@/app/hooks/useSliderMargin";
 import { theme } from "@/app/common/styles/themes/theme";
+import PageSection from "@/app/components/page-section";
+import CenterDiv from "@/app/components/center-div";
 
 function OurTour() {
-  const SLIDER_MARGIN = useSliderMargin(1500);
   const OPTIONS = { dragFree: true, containScroll: "trimSnaps" };
 
   return (
     <>
-      <section>
-        <h3>Nuestro recorrido</h3>
-        <div className="carousel_container">
-          <div className="arrow_container">
-            <BsArrowRightCircle
-              style={{
-                fontSize: "40px",
-                color: `${theme.secondary.lightGrey}`,
-              }}
-            />
-          </div>
+      <PageSection height maxHeight>
+        <CenterDiv>
+          <section>
+            <h3>Nuestro recorrido</h3>
+            <div className="carousel_container">
+              <div className="arrow_container">
+                <BsArrowRightCircle
+                  style={{
+                    fontSize: "40px",
+                    color: `${theme.secondary.lightGrey}`,
+                  }}
+                />
+              </div>
 
-          <Carousel options={OPTIONS} data={tourData} />
-        </div>
-      </section>
+              <Carousel options={OPTIONS} data={tourData} />
+            </div>
+          </section>
+        </CenterDiv>
+      </PageSection>
+
       <style jsx>{`
         section {
           width: 100%;
@@ -48,7 +53,6 @@ function OurTour() {
           gap: 25px;
           width: 100%;
           padding: 20px 0px;
-          padding-left: ${SLIDER_MARGIN}px;
           overflow: hidden;
         }
         .arrow_container {
@@ -57,14 +61,6 @@ function OurTour() {
         @media screen and (max-width: 1920px) {
           h3 {
             font-size: clamp(30px, 2.1vw, 40px);
-          }
-        }
-        @media screen and (max-width: 1530px) {
-          section {
-            padding: 50px 30px;
-          }
-          .carousel_container {
-            padding: 20px 0px !important;
           }
         }
         @media screen and (max-width: 600px) {
