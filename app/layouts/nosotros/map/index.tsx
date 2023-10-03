@@ -52,7 +52,7 @@ function Map() {
               center={[-32.98992591053522, -60.71321197004614]}
               zoom={12}
               scrollWheelZoom={true}
-              style={{ height: "500px", width: "70%" }}
+              style={{ height: "500px", width: "100%" }}
             >
               <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -77,6 +77,10 @@ function Map() {
         </CenterDiv>
       </PageSection>
       <style jsx>{`
+        .leaflet-bar {
+          z-index: 0;
+          border: 2px solid red !important;
+        }
         .container {
           width: 100%;
           height: 500px;
@@ -121,6 +125,43 @@ function Map() {
           display: block;
           content: "";
           margin: 15px 0px;
+        }
+        @media screen and (max-width: 1920px) {
+          h4 {
+            font-size: var(--d-text-fontsize);
+          }
+          h3 {
+            font-size: clamp(40px, 2.604vw, 50px);
+          }
+          span {
+            font-size: clamp(18px, 1.042vw, 20px);
+          }
+          img {
+            width: clamp(32px, 2.083vw, 40px);
+          }
+        }
+        @media screen and (max-width: 1000px) {
+          .container {
+            flex-direction: column-reverse;
+            height: auto;
+          }
+          .info_container {
+            width: 100%;
+          }
+        }
+        @media screen and (max-width: 760px) {
+          .info_container {
+            padding: 20px;
+          }
+          h3 {
+            font-size: clamp(30px, 5.263vw, 40px);
+          }
+          h4 {
+            font-size: 18px;
+          }
+          span {
+            font-size: 16px;
+          }
         }
       `}</style>
     </>

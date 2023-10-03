@@ -15,12 +15,15 @@ function OurTour() {
       <section>
         <h3>Nuestro recorrido</h3>
         <div className="carousel_container">
-          <BsArrowRightCircle
-            style={{
-              fontSize: "40px",
-              color: `${theme.secondary.lightGrey}`,
-            }}
-          />
+          <div className="arrow_container">
+            <BsArrowRightCircle
+              style={{
+                fontSize: "40px",
+                color: `${theme.secondary.lightGrey}`,
+              }}
+            />
+          </div>
+
           <Carousel options={OPTIONS} data={tourData} />
         </div>
       </section>
@@ -47,6 +50,30 @@ function OurTour() {
           padding: 20px 0px;
           padding-left: ${SLIDER_MARGIN}px;
           overflow: hidden;
+        }
+        .arrow_container {
+          width: 40px;
+        }
+        @media screen and (max-width: 1920px) {
+          h3 {
+            font-size: clamp(30px, 2.1vw, 40px);
+          }
+        }
+        @media screen and (max-width: 1530px) {
+          section {
+            padding: 50px 30px;
+          }
+          .carousel_container {
+            padding: 20px 0px !important;
+          }
+        }
+        @media screen and (max-width: 600px) {
+          h3 {
+            font-size: clamp(25px, 5vw, 30px);
+          }
+          .arrow_container {
+            display: none;
+          }
         }
       `}</style>
     </>

@@ -45,6 +45,31 @@ function Banner() {
           max-width: 28ch;
           font-weight: 200;
         }
+        @media screen and (max-width: 1920px) {
+          .container {
+            gap: 25px;
+          }
+          h3 {
+            font-size: clamp(35px, 2.344vw, 45px);
+          }
+          p {
+            font-size: clamp(16px, 0.938vw, 18px);
+            max-width: 32ch;
+          }
+        }
+        @media screen and (max-width: 1000px) {
+          .container {
+            flex-wrap: wrap;
+          }
+        }
+        @media screen and (max-width: 760px) {
+          p {
+            font-size: clamp(12px, 2.083vw, 16px);
+          }
+          h3 {
+            font-size: clamp(28px, 2.344vw, 35px);
+          }
+        }
       `}</style>
     </>
   );

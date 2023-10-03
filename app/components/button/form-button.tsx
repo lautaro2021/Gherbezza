@@ -66,6 +66,11 @@ function FormButton({
           background-color: ${theme.secondary.lightGrey};
           color: ${theme.secondary.white};
         }
+        @media screen and (max-width: 760px) {
+          button {
+            font-size: clamp(16px, 2.368vw, 18px) !important;
+          }
+        }
       `}</style>
     </>
   );

@@ -100,7 +100,7 @@ function Navbar({ backgroundColor, textColor }: Navbar) {
           display: flex;
           align-items: center;
           justify-content: center;
-          z-index: 1000;
+          z-index: 10000;
           background-color: ${navbarColor};
           box-shadow: ${navbarColor !== "transparent" &&
           "0px 2px 6px 2px rgba(117, 117, 117, 0.2)"};
