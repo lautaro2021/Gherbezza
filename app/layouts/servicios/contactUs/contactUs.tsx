@@ -75,6 +75,24 @@ function ContactUs() {
           max-width: 50ch;
           color: white;
         }
+        @media screen and (max-width: 1920px) {
+          p {
+            font-size: var(--d-text-fontsize);
+          }
+        }
+        @media screen and (max-width: 1530px) {
+          .container {
+            padding: 50px 0px;
+          }
+        }
+        @media screen and (max-width: 760px) {
+          p {
+            font-size: var(--s-text-fontsize);
+          }
+          .container {
+            padding: 20px 0px;
+          }
+        }
       `}</style>
     </>
   );

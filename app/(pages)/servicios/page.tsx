@@ -17,7 +17,7 @@ function Services() {
     <main>
       <Hero />
       <OurServices />
-      {/* <ContactUs /> */}
+      <ContactUs />
     </main>
   );
 }
