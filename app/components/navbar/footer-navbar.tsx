@@ -18,6 +18,13 @@ function FooterNavbar() {
                 src={"/images/logo/logo.png"}
                 alt="logo-gherbezza-turbinas-neumaticas-sembradoras"
                 title="Gherbezza, turbinas neumaticas para sembradoras"
+                className="desktop"
+              />
+              <img
+                src={"/images/logo/ISO.png"}
+                alt="logo-gherbezza-turbinas-neumaticas-sembradoras"
+                title="Gherbezza, turbinas neumaticas para sembradoras"
+                className="mobile"
               />
             </Link>
             <ul>
@@ -42,6 +49,9 @@ function FooterNavbar() {
           align-items: center;
           justify-content: center;
           z-index: 1000;
+        }
+        .mobile {
+          display: none;
         }
         .nav_container {
           width: 100%;
@@ -71,6 +81,31 @@ function FooterNavbar() {
         }
         ul li:last-child {
           font-weight: bold;
+        }
+        @media screen and (max-width: 1000px) {
+          ul li {
+            font-size: clamp(16px, 1.8vw, 18px);
+          }
+          .desktop {
+            display: none;
+          }
+          .mobile {
+            display: inline-block;
+            max-width: 50px;
+          }
+        }
+        @media screen and (max-width: 760px) {
+          .mobile {
+            display: none;
+          }
+          ul {
+            width: 100%;
+            justify-content: space-between;
+            gap: 0;
+          }
+          ul li {
+            font-size: clamp(12px, 2.105vw, 16px);
+          }
         }
       `}</style>
     </>

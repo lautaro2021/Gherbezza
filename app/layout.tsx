@@ -46,8 +46,8 @@ export default function RootLayout({
                 backgroundColor="transparent"
               />
               <StyledJsxRegistry>{children}</StyledJsxRegistry>
-              {/* <Footer />
-              <Powered /> */}
+              <Footer />
+              <Powered />
             </>
           )}
         </body>

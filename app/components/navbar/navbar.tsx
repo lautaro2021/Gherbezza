@@ -42,8 +42,6 @@ function Navbar({ backgroundColor, textColor }: Navbar) {
     window.addEventListener("scroll", handleScroll);
   }, []);
 
-  console.log(showMobileOptions);
-
   return (
     <>
       <nav>
@@ -64,7 +62,11 @@ function Navbar({ backgroundColor, textColor }: Navbar) {
                   color: currentNavigation ? theme.primary.lightGreen : "",
                 };
                 return (
-                  <li key={index} style={style}>
+                  <li
+                    key={index}
+                    style={style}
+                    onClick={() => setShowMobileOptions(false)}
+                  >
                     <Link href={option.link}>{option.name}</Link>
                   </li>
                 );
@@ -146,7 +148,7 @@ function Navbar({ backgroundColor, textColor }: Navbar) {
           }
           .mobile {
             position: absolute;
-            top: 100px;
+            top: 115px;
             left: 0;
             width: 100%;
             flex-direction: column;
@@ -155,6 +157,10 @@ function Navbar({ backgroundColor, textColor }: Navbar) {
             border-radius: 0px 0px 15px 15px;
             box-shadow: 0px 10px 12px 1px rgba(0, 0, 0, 0.05);
             animation: appear 0.5s ease;
+            background-color: ${theme.secondary.white};
+          }
+          .mobile li {
+            color: ${theme.secondary.black} !important;
           }
           @keyframes appear {
             from {
