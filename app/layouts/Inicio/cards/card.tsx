@@ -8,7 +8,7 @@ import { theme } from "@/app/common/styles/themes/theme";
 function Card({ subtitle, title, description, buttonText, href }: CardType) {
   return (
     <>
-      <Link href={href} style={{ width: "100%", height: "100%" }}>
+      <Link href={href} style={{ width: "auto", height: "100%" }}>
         <div className="card_container">
           <div className="info_container">
             <span>{subtitle}</span>
@@ -30,6 +30,8 @@ function Card({ subtitle, title, description, buttonText, href }: CardType) {
           border: 2px solid white;
           height: 100%;
           width: 100%;
+          max-width: 200px;
+          max-height: 400px;
           border-radius: 0px 60px 0px 0px;
           display: flex;
           flex-direction: column;

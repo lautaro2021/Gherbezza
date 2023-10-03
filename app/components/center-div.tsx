@@ -38,6 +38,11 @@ function CenterDiv({
         }
         @media screen and (max-width: 1530px) {
           div {
+            max-width: 1200px;
+          }
+        }
+        @media screen and (max-width: 1200px) {
+          div {
             padding: 0px 30px;
           }
         }
