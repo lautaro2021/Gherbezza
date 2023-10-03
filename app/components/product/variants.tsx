@@ -71,7 +71,7 @@ function Variants({ title, text, dataForVariants }: VariantType) {
 
   return (
     <>
-      <PageSection>
+      <PageSection height maxHeight>
         <CenterDiv>
           <div className="container">
             <section className="text_container">
@@ -106,6 +106,7 @@ function Variants({ title, text, dataForVariants }: VariantType) {
         .container {
           width: 100%;
           height: 100%;
+          min-height: 600px;
           display: flex;
           flex-direction: column;
           align-items: flex-start;
@@ -121,6 +122,26 @@ function Variants({ title, text, dataForVariants }: VariantType) {
           align-items: center;
           justify-content: flex-start;
           gap: 20px;
+        }
+        @media screen and (max-width: 1920px) {
+          p {
+            font-size: var(--d-text-fontsize);
+          }
+        }
+        @media screen and (max-width: 1000px) {
+          .products_card_container {
+            flex-wrap: wrap;
+            padding: 25px 0px;
+          }
+          p {
+            max-width: 100%;
+            font-size: clamp(16px, 2vw, 20px);
+          }
+        }
+        @media screen and (max-width: 760px) {
+          p {
+            font-size: clamp(14px, 2.105vw, 16px);
+          }
         }
       `}</style>
     </>

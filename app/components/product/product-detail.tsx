@@ -2,7 +2,6 @@
 import ProductCarousel from "./productCarousel";
 import CenterDiv from "@/app/components/center-div";
 import PageSection from "@/app/components/page-section";
-import SectionTitles from "@/app/components/titles/section-titles";
 
 import { ProductDetailType } from "../../types/product-detail.type";
 import { theme } from "@/app/common/styles/themes/theme";
@@ -23,14 +22,15 @@ function ProductDetail({
             <article className="side_container">
               <div className="text_container">
                 <h4>{subtitle}</h4>
-                <SectionTitles
-                  text={title}
-                  colorText={theme.secondary.black}
-                  fontSize="50px"
-                />
+                <h2>{title}</h2>
                 <br />
                 <p>{description}</p>
               </div>
+              {
+                <div className="image_container mobile">
+                  <ProductCarousel options={OPTIONS} data={dataForCarrousel} />
+                </div>
+              }
               <div className="buttons_container">
                 <a href={dataSheetLink} target="_blank" rel="noreferrer">
                   <div className="svg_container">
@@ -73,7 +73,7 @@ function ProductDetail({
                 </a>
               </div>
             </article>
-            <div className="image_container">
+            <div className="image_container desktop">
               <ProductCarousel options={OPTIONS} data={dataForCarrousel} />
             </div>
           </div>
@@ -148,6 +148,75 @@ function ProductDetail({
           font-weight: 400;
           font-size: 20px;
           color: ${theme.secondary.lightGrey};
+        }
+        h2 {
+          font-size: 50px;
+          color: ${theme.secondary.black};
+        }
+        .mobile {
+          display: none;
+        }
+        @media screen and (max-width: 1920px) {
+          p {
+            font-size: var(--d-text-fontsize);
+          }
+          h2 {
+            font-size: clamp(35px, 2.604vw, 50px);
+          }
+        }
+        @media screen and (max-width: 1530px) {
+          .side_container {
+            width: 45%;
+          }
+          .image_container {
+            width: 55%;
+          }
+        }
+        @media screen and (max-width: 1000px) {
+          .container {
+            padding: 50px 0px;
+          }
+          a {
+            max-width: 100%;
+          }
+          .svg_container {
+            width: 10%;
+          }
+          svg {
+            max-width: 16px;
+          }
+          span {
+            font-size: clamp(18px, 2.2vw, 22px);
+          }
+        }
+        @media screen and (max-width: 760px) {
+          span {
+            font-size: clamp(16px, 2.368vw, 18px);
+          }
+          p {
+            font-size: var(--s-text-fontsize);
+          }
+          h2 {
+            font-size: clamp(30px, 4.605vw, 35px);
+          }
+          .desktop {
+            display: none;
+          }
+          .side_container {
+            width: 100%;
+          }
+          .mobile {
+            display: block;
+            padding: 15px 0px;
+            width: 100%;
+          }
+          .container {
+            padding: 20px 0px;
+          }
+          .buttons_container {
+            gap: 5px;
+            height: auto;
+          }
         }
       `}</style>
     </>

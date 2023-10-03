@@ -44,11 +44,40 @@ function ProductCard({
           font-weight: 400;
         }
         p {
-          font-size: 22px;
+          font-size: 24px;
           font-weight: 200;
         }
         article:hover {
           box-shadow: 0px 5px 12px 2px rgba(0, 0, 0, 0.1);
+        }
+        @media screen and (max-width: 1920px) {
+          p {
+            font-size: var(--d-text-fontsize);
+          }
+          h3 {
+            font-size: clamp(30px, 1.823vw, 35px);
+          }
+          article {
+            height: clamp(250px, 15.625vw, 300px);
+          }
+        }
+        @media screen and (max-width: 1000px) {
+          article {
+            max-height: 180px;
+            padding: 12px 25px;
+          }
+          p {
+            width: 85%;
+            font-size: clamp(16px, 2vw, 20px);
+          }
+        }
+        @media screen and (max-width: 760px) {
+          h3 {
+            font-size: clamp(25px, 3.947vw, 30px);
+          }
+          p {
+            font-size: clamp(14px, 2.105vw, 16px);
+          }
         }
       `}</style>
     </>
