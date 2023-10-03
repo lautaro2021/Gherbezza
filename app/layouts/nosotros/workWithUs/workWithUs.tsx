@@ -208,6 +208,36 @@ function WorkWithUs() {
         select:focus {
           outline: 0;
         }
+        @media screen and (max-width: 1920px) {
+          h3 {
+            font-size: clamp(30px, 2.083vw, 40px);
+          }
+        }
+        @media screen and (max-width: 1000px) {
+          input,
+          select {
+            max-width: 75%;
+          }
+        }
+        @media screen and (max-width: 760px) {
+          input,
+          select {
+            max-width: 100%;
+            font-size: clamp(16px, 2.368vw, 18px);
+          }
+          .container {
+            align-items: center;
+            padding: 0;
+          }
+          .modal {
+            padding: 20px;
+          }
+        }
+        @media screen and (max-width: 380px) {
+          section {
+            height: 90dvh;
+          }
+        }
       `}</style>
     </>
   );

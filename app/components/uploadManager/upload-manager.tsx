@@ -77,6 +77,11 @@ function UploadManager() {
           background-color: ${theme.secondary.white};
           color: ${theme.secondary.black};
         }
+        @media screen and (max-width: 760px) {
+          button {
+            font-size: clamp(14px, 2.368vw, 18px);
+          }
+        }
       `}</style>
     </>
   );

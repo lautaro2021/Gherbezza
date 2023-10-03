@@ -15,97 +15,103 @@ function OurServices() {
   const leftArrowStyle = {
     color: `${
       actualService === "postventa"
-        ? theme.secondary.lightGrey
-        : theme.secondary.white
+        ? theme.primary.lightGreen
+        : theme.primary.darkGreen
     }`,
     cursor: "pointer",
   };
   const rightArrowStyle = {
     color: `${
       actualService !== "postventa"
-        ? theme.secondary.lightGrey
-        : theme.secondary.white
+        ? theme.primary.lightGreen
+        : theme.primary.darkGreen
     }`,
     cursor: "pointer",
   };
 
   return (
     <>
-      <PageSection backgroundColor={theme.secondary.greyBackground}>
+      <PageSection
+        backgroundColor={theme.secondary.greyBackground}
+        height
+        maxHeight
+      >
         <CenterDiv>
-          <div className="title_container">
-            <div></div>
-            <h2>Servicios clave</h2>
+          <div className="container">
+            <div className="title_container">
+              <div></div>
+              <h2>Servicios clave</h2>
+            </div>
+            {actualService === "postventa" ? (
+              <div className="service">
+                <div className="image_container">
+                  <img src="/images/layouts/inicio/ourServices/imagen.png" />
+                  <div>
+                    <Link href={`?service=postventa`} scroll={false}>
+                      <BsArrowLeft style={leftArrowStyle} />
+                    </Link>
+                    <Link href={`?service=asesoramiento`} scroll={false}>
+                      <BsArrowRight style={rightArrowStyle} />
+                    </Link>
+                  </div>
+                </div>
+                <div className="service_info_container">
+                  <h3>Postventa</h3>
+                  <p>
+                    Ofrecemos un servicio postventa de calidad y eficiente para
+                    garantizar la plena satisfacción con nuestras turbinas
+                    neumáticas para sembradoras.
+                  </p>
+                  <br />
+                  <br />
+                  <Button
+                    bordered={true}
+                    text="Ver más"
+                    textColor={theme.secondary.white}
+                    link="/servicios"
+                  />
+                </div>
+              </div>
+            ) : (
+              <div className="service">
+                <div className="image_container">
+                  <img src="/images/layouts/inicio/ourServices/imagen.png" />
+                  <div>
+                    <Link href={`?service=postventa`} scroll={false}>
+                      <BsArrowLeft style={leftArrowStyle} />
+                    </Link>
+                    <Link href={`?service=asesoramiento`} scroll={false}>
+                      <BsArrowRight style={rightArrowStyle} />
+                    </Link>
+                  </div>
+                </div>
+                <div className="service_info_container">
+                  <h3>Asesoramiento Técnico</h3>
+                  <p>
+                    Ofrecemos un servicio postventa de calidad y eficiente para
+                    garantizar la plena satisfacción con nuestras turbinas
+                    neumáticas para sembradoras.
+                  </p>
+                  <br />
+                  <br />
+                  <Button
+                    bordered={true}
+                    text="Ver más"
+                    textColor={theme.secondary.white}
+                    link="/servicios"
+                  />
+                </div>
+              </div>
+            )}
           </div>
-          {actualService === "postventa" ? (
-            <div className="service">
-              <div className="image_container">
-                <img src="/images/layouts/inicio/ourServices/imagen.png" />
-                <div>
-                  <Link href={`?service=postventa`} scroll={false}>
-                    <BsArrowLeft style={leftArrowStyle} />
-                  </Link>
-                  <Link href={`?service=asesoramiento`} scroll={false}>
-                    <BsArrowRight style={rightArrowStyle} />
-                  </Link>
-                </div>
-              </div>
-              <div className="service_info_container">
-                <h3>Postventa</h3>
-                <p>
-                  Ofrecemos un servicio postventa de calidad y eficiente para
-                  garantizar la plena satisfacción con nuestras turbinas
-                  neumáticas para sembradoras.
-                </p>
-                <br />
-                <br />
-                <Button
-                  bordered={true}
-                  text="Ver más"
-                  textColor={theme.secondary.white}
-                  link="/servicios"
-                />
-              </div>
-            </div>
-          ) : (
-            <div className="service">
-              <div className="image_container">
-                <img src="/images/layouts/inicio/ourServices/imagen.png" />
-                <div>
-                  <Link href={`?service=postventa`} scroll={false}>
-                    <BsArrowLeft style={leftArrowStyle} />
-                  </Link>
-                  <Link href={`?service=asesoramiento`} scroll={false}>
-                    <BsArrowRight style={rightArrowStyle} />
-                  </Link>
-                </div>
-              </div>
-              <div className="service_info_container">
-                <h3>Asesoramiento Técnico</h3>
-                <p>
-                  Ofrecemos un servicio postventa de calidad y eficiente para
-                  garantizar la plena satisfacción con nuestras turbinas
-                  neumáticas para sembradoras.
-                </p>
-                <br />
-                <br />
-                <Button
-                  bordered={true}
-                  text="Ver más"
-                  textColor={theme.secondary.white}
-                  link="/servicios"
-                />
-              </div>
-            </div>
-          )}
         </CenterDiv>
       </PageSection>
       <style jsx>{`
-        section {
+        .container {
           width: 100%;
-          height: 100dvh;
-          background-color: ${theme.secondary.greyBackground};
+          height: 100%;
           display: flex;
+          flex-direction: column;
           align-items: center;
           justify-content: center;
         }
@@ -130,8 +136,7 @@ function OurServices() {
           padding: 20px 50px;
           display: flex;
           align-items: flex-start;
-          justify-content: flex-end;
-          position: relative;
+          justify-content: space-between;
         }
         .service_info_container {
           display: flex;
@@ -145,28 +150,94 @@ function OurServices() {
           line-height: 100%;
         }
         .service_info_container p {
-          width: max(100%, 6ch);
+          width: 100%;
           font-size: 24px;
           margin-top: 15px;
         }
         .image_container {
-          height: 600px;
-          position: absolute;
-          left: 50px;
-          bottom: 50px;
+          height: 550px;
           color: ${theme.secondary.white};
           font-size: 28px;
+          margin-top: -150px;
+          position: relative;
         }
         img {
           width: 100%;
           height: 100%;
         }
         .image_container div {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
           width: 100%;
           display: flex;
           align-items: center;
-          justify-content: center;
+          justify-content: space-between;
           gap: 12px;
+          padding: 0px 12px;
+        }
+        @media screen and (max-width: 1920px) {
+          .service_info_container h3,
+          .title_container h2 {
+            font-size: var(--d-title-fontsize);
+          }
+          .service_info_container p {
+            font-size: var(--d-text-fontsize);
+          }
+          .image_container {
+            height: 450px;
+            width: 50%;
+          }
+          .image_container img {
+            object-fit: cover;
+          }
+          .service {
+            max-height: 400px;
+          }
+        }
+        @media screen and (max-width: 1000px) {
+          .service_info_container h3,
+          .title_container h2 {
+            font-size: 35px;
+          }
+          .service_info_container p {
+            font-size: 16px;
+          }
+          .service {
+            padding: 20px;
+            max-height: 350px;
+          }
+          .image_container {
+            left: 20px;
+            height: 380px;
+            margin-top: -10vh;
+          }
+          .title_container {
+            padding: 20px;
+          }
+        }
+        @media screen and (max-width: 800px) {
+          .title_container div {
+            display: none;
+          }
+          .title_container h2 {
+            width: 100%;
+            font-size: 30px;
+          }
+          .image_container {
+            display: none;
+          }
+          .service_info_container {
+            width: 100%;
+          }
+          .service_info_container h3 {
+            font-size: 30px;
+          }
+          .service_info_container p {
+            width: 100%;
+            font-size: clamp(14px, 2vw, 16px);
+          }
         }
       `}</style>
     </>

@@ -55,6 +55,11 @@ function OptionalsAndAccesories({
           gap: 2vw;
           margin: 50px 0px;
         }
+        @media screen and (max-width: 1200px) {
+          ul {
+            flex-wrap: wrap;
+          }
+        }
       `}</style>
     </>
   );

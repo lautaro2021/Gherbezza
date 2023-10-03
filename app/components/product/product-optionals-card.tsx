@@ -54,6 +54,19 @@ function ProductOptionalsCard({
         p {
           font-size: 20px;
         }
+        @media screen and (max-width: 1920px) {
+          p {
+            font-size: clamp(18px, 1.042vw, 20px);
+          }
+        }
+        @media screen and (max-width: 760px) {
+          article {
+            height: clamp(250px, 39.474vw, 300px);
+          }
+          p {
+            font-size: clamp(14px, 2.632vw, 18px);
+          }
+        }
       `}</style>
     </>
   );

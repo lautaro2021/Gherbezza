@@ -76,12 +76,12 @@ function Modal({ isOpen, onClose, product }: ModalType) {
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
-          width: 30%;
+          width: 40%;
           height: 100%;
           max-height: 60%;
           background-color: ${theme.secondary.white};
           border-radius: 5px;
-          padding: 25px;
+          padding: 0px 25px 25px 25px;
           overflow-y: scroll;
           z-index: 2000;
           animation: appear 0.3s ease-in-out;
@@ -106,6 +106,7 @@ function Modal({ isOpen, onClose, product }: ModalType) {
           top: 0;
           left: 0;
           z-index: 500;
+          padding-top: 25px;
           background-color: ${theme.secondary.white};
         }
         .header h3 {
@@ -134,6 +135,7 @@ function Modal({ isOpen, onClose, product }: ModalType) {
         .image_container {
           width: 100%;
           height: 50%;
+          min-height: 250px;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -158,6 +160,47 @@ function Modal({ isOpen, onClose, product }: ModalType) {
         }
         p {
           font-size: 20px;
+        }
+        @media screen and (max-width: 1920px) {
+          .header h3 {
+            font-size: clamp(30px, 1.823vw, 35px);
+          }
+          h4 {
+            font-size: clamp(28px, 1.667vw, 32px);
+          }
+          p {
+            font-size: clamp(16px, 1.042vw, 20px);
+          }
+        }
+        @media screen and (max-width: 1600px) {
+          .modal_container {
+            width: 50%;
+          }
+        }
+        @media screen and (max-width: 1000px) {
+          .modal_container {
+            width: 90%;
+          }
+        }
+        @media screen and (max-width: 760px) {
+          .image_container {
+            height: 35%;
+          }
+          .header h3 {
+            font-size: clamp(28px, 3.947vw, 30px);
+          }
+          h4 {
+            font-size: clamp(25px, 3.684vw, 28px);
+          }
+          p {
+            font-size: clamp(14px, 2.105vw, 16px);
+          }
+        }
+        @media screen and (max-width: 500px) {
+          .image_container {
+            height: 25%;
+            min-height: 110px;
+          }
         }
       `}</style>
     </>

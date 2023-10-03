@@ -2,6 +2,38 @@
   --font-mono: 'Gill Sans', ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+
+
+    /* BIG DESKTOP */
+    --bd-title-fontsize: 70px;
+    --bd-subtitle-fontsize: '';
+    --bd-text-fontsize: 24px;
+    --bd-hero-home-fontsize: 120px;
+    --bd-button-fontsize: 18px;
+    /* DESKTOP */
+    --d-hero-title-fontsize: clamp(60px, 3.64vw, 70px);
+    --d-title-fontsize: clamp(45px, 3.125vw ,60px);
+    --d-subtitle-fontsize: '';
+    --d-text-fontsize: clamp(20px, 1.25vw, 24px);
+    --d-hero-home-fontsize: clamp(75px, 5.2vw, 100px);
+    --d-button-fontsize: 18px;
+    /* TABLET */
+    --t-hero-title-fontsize: clamp(50px, 6vw, 60px);
+    --t-title-fontsize: 45px;
+    --t-subtitle-fontsize: '';
+    --t-text-fontsize: 20px;
+    --t-button-fontsize: 18px;
+    /* SMARTPHONE */
+    --s-title-fontsize: clamp(30px, 7.5vw, 45px);
+    --s-subtitle-fontsize: '';
+    --s-text-fontsize: clamp(14px, 3.33vw, 20px);
+    --s-hero-home-fontsize: clamp(50px, 12vw, 75px);
+    --s-button-fontsize: clamp(12px, 3vw, 18px);
+    /* SM-SMARTPHONE */
+    --sm-title-fontsize: '';
+    --sm-subtitle-fontsize: '';
+    --sm-text-fontsize: '';
+    --sm-hero-home-fontsize: clamp(45px, 12vw, 50px);
 }
 
 * {

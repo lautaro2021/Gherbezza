@@ -87,6 +87,25 @@ function OurClients() {
           align-items: center;
           justify-content: space-evenly;
         }
+        @media screen and (max-width: 1000px) {
+          img {
+            max-width: clamp(150px, 20vw, 200px);
+          }
+        }
+        @media screen and (max-width: 600px) {
+          .embla__container {
+            height: 60%;
+          }
+          .embla {
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          img {
+            max-width: clamp(85px, 20vw, 150px);
+          }
+        }
       `}</style>
     </>
   );

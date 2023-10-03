@@ -10,7 +10,7 @@ import { theme } from "@/app/common/styles/themes/theme";
 function BePartOfUs() {
   return (
     <>
-      <PageSection>
+      <PageSection height maxHeight>
         <CenterDiv>
           <div className="container">
             <div className="image_container">
@@ -77,6 +77,39 @@ function BePartOfUs() {
         .text_container p {
           font-size: 24px;
           font-weight: 200;
+        }
+        @media screen and (max-width: 1920px) {
+          .text_container p {
+            font-size: var(--d-text-fontsize);
+          }
+        }
+        @media screen and (max-width: 1000px) {
+          .image_container {
+            width: 50%;
+            height: 500px;
+          }
+          .image_container img {
+            width: 30vw;
+          }
+        }
+        @media screen and (max-width: 600px) {
+          .image_container img {
+            display: none;
+          }
+          .image_container {
+            width: 100%;
+            height: 66vw;
+          }
+          .container {
+            flex-direction: column;
+          }
+          .text_container {
+            width: 100%;
+            padding: 8px 0px;
+          }
+          .text_container p {
+            font-size: var(--s-text-fontsize);
+          }
         }
       `}</style>
     </>

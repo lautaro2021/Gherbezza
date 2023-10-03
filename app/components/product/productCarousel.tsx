@@ -71,6 +71,22 @@ function ProductCarousel(props: any) {
         span {
           color: ${theme.secondary.lightGrey};
         }
+        @media screen and (max-width: 1000px) {
+          .embla__slide {
+            max-width: 95%;
+          }
+        }
+        @media screen and (max-width: 760px) {
+          .embla__slide {
+            max-width: 85%;
+          }
+          .embla__slide:first-child {
+            padding-left: 0;
+          }
+          .embla__slide__img {
+            min-height: 250px;
+          }
+        }
       `}</style>
     </>
   );

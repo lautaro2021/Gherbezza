@@ -18,7 +18,8 @@ function Card({ subtitle, title, description, buttonText, href }: CardType) {
             <p>{description}</p>
           </div>
           <div className="button_container">
-            {buttonText}
+            <strong>{buttonText}</strong>
+
             <BsArrowRight />
           </div>
         </div>
@@ -58,6 +59,48 @@ function Card({ subtitle, title, description, buttonText, href }: CardType) {
           justify-content: space-between;
           border-top: 2px solid white;
           padding-top: 10px;
+        }
+        @media screen and (max-width: 1500px) {
+          h3 {
+            font-size: clamp(28px, 2.33vw, 35vw);
+          }
+        }
+        @media screen and (max-width: 1200px) {
+          .card_container {
+            padding: 10px;
+          }
+          span,
+          p,
+          strong {
+            font-size: clamp(14px, 1.33vw, 16px);
+          }
+        }
+        @media screen and (max-width: 1000px) {
+          .card_container {
+            max-width: 170px;
+            height: 100%;
+            max-height: 370px;
+          }
+        }
+        @media screen and (max-width: 600px) {
+          .card_container {
+            width: 100%;
+            height: auto;
+            min-height: 260px;
+          }
+          br {
+            display: none;
+          }
+          h3 {
+            white-space: wrap;
+            height: 80px;
+            font-size: clamp(20px, 4.66vw, 28px);
+          }
+          span,
+          p,
+          strong {
+            font-size: clamp(10px, 2.33vw, 14px);
+          }
         }
       `}</style>
     </>

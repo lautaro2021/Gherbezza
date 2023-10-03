@@ -25,6 +25,16 @@ function SectionTitles({
           width: ${centeredText ? "100%" : ""};
           text-align: ${centeredText ? "center" : ""};
         }
+        @media screen and (max-width: 1920px) {
+          h2 {
+            font-size: var(--d-title-fontsize);
+          }
+        }
+        @media screen and (max-width: 600px) {
+          h2 {
+            font-size: var(--s-title-fontsize);
+          }
+        }
       `}</style>
     </>
   );

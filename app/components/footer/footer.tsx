@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 
-import Navbar from "../navbar/navbar";
+import FooterNavbar from "../navbar/footer-navbar";
 
 import { footerOptions } from "@/app/common/utils/footer-options";
 import { footerSocial } from "@/app/common/utils/footer-options";
@@ -13,11 +13,7 @@ function Footer() {
   return (
     <>
       <footer>
-        <Navbar
-          footerPosition={true}
-          textColor={theme.secondary.white}
-          backgroundColor="transparent"
-        />
+        <FooterNavbar />
         <CenterDiv>
           <div className="footer_options_container">
             <p>
@@ -102,6 +98,36 @@ function Footer() {
         }
         .footer_options_container div img:hover {
           filter: brightness(2);
+        }
+        @media screen and (max-width: 1920px) {
+          .footer_options_container p {
+            font-size: clamp(16px, 1.042vw, 20px);
+          }
+        }
+        @media screen and (max-width: 1200px) {
+          .footer_options_container p {
+            max-width: 50%;
+          }
+        }
+        @media screen and (max-width: 1000px) {
+          footer {
+            height: 500px;
+          }
+        }
+        @media screen and (max-width: 760px) {
+          footer {
+            height: 400px;
+          }
+          .footer_options_container p {
+            display: none;
+          }
+          .footer_options_container ul {
+            width: 100%;
+          }
+          .footer_options_container div img {
+            width: 30px;
+            height: 30px;
+          }
         }
       `}</style>
     </>

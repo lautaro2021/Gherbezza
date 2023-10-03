@@ -55,12 +55,34 @@ function Carousel(props: any) {
           width: 100%;
           max-width: 500px;
           object-fit: cover;
+          background-color: ${theme.secondary.greyBackground};
         }
         strong {
           margin-top: 15px;
         }
         span {
           color: ${theme.secondary.lightGrey};
+        }
+        @media screen and (max-width: 1000px) {
+          .embla__slide__img {
+            min-height: 50vw;
+            aspect-ratio: 1/1.5;
+          }
+          .embla__slide {
+            flex: 0 0 75%;
+          }
+        }
+        @media screen and (max-width: 760px) {
+          .embla__slide__img {
+            min-height: 300px;
+          }
+          .embla__slide {
+            padding-left: 20px;
+          }
+          strong,
+          span {
+            font-size: 14px;
+          }
         }
       `}</style>
     </>

@@ -77,6 +77,16 @@ function ProductsNavbar() {
           display: grid;
           place-items: center;
         }
+        @media screen and (max-width: 1530px) {
+          li {
+            font-size: clamp(12px, 1.046vw, 16px);
+          }
+        }
+        @media screen and (max-width: 1000px) {
+          nav {
+            height: clamp(35px, 5vw, 50px);
+          }
+        }
       `}</style>
     </>
   );

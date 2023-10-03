@@ -157,6 +157,40 @@ function OurServices() {
         .inverted {
           flex-direction: row-reverse;
         }
+        @media screen and (max-width: 1920px) {
+          h4 {
+            font-size: clamp(20px, 1.146vw, 22px);
+          }
+          p,
+          li {
+            font-size: clamp(18px, 1.042vw, 20px);
+          }
+        }
+        @media screen and (max-width: 1000px) {
+          aside {
+            display: none;
+          }
+          h4 {
+            font-size: clamp(18px, 2vw, 20px);
+          }
+          p,
+          li {
+            font-size: clamp(16px, 1.8vw, 18px);
+          }
+          .sp {
+            margin-top: 50px;
+          }
+          article,
+          .sp_article {
+            padding: 0;
+          }
+        }
+        @media screen and (max-width: 760px) {
+          p,
+          li {
+            font-size: clamp(14px, 2.105vw, 16px);
+          }
+        }
       `}</style>
     </>
   );

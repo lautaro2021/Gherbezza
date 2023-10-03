@@ -97,6 +97,51 @@ function Eolo() {
           font-size: 20px;
           font-weight: 200;
         }
+        @media screen and (max-width: 1920px) {
+          li h4 {
+            font-size: clamp(30px, 1.563vw, 35px);
+          }
+          li p {
+            font-size: clamp(16px, 1.042vw, 20px);
+          }
+        }
+        @media screen and (max-width: 1530px) {
+          img:nth-child(odd) {
+            height: 26.667vw;
+          }
+          img:nth-child(even) {
+            height: 45.533vw;
+          }
+        }
+        @media screen and (max-width: 1000px) {
+          ul {
+            flex-wrap: wrap;
+          }
+          li {
+            max-width: 40%;
+          }
+        }
+        @media screen and (max-width: 760px) {
+          ul {
+            margin: 0;
+          }
+          li {
+            max-width: 100%;
+          }
+          li h4 {
+            font-size: clamp(25px, 3.906vw, 30px);
+          }
+          li p {
+            font-size: clamp(14px, 2.083vw, 16px);
+          }
+          img:nth-child(odd) {
+            display: none;
+          }
+          img {
+            width: 100%;
+            height: auto !important;
+          }
+        }
       `}</style>
     </>
   );

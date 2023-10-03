@@ -25,25 +25,27 @@ function Hero() {
           />
         </video>
         <CenterDiv>
-          <div className="grid_container">
-            <div className="cards_container">
-              {cardsProperties.map((card: CardType, index: number) => (
-                <Card
-                  title={card.title}
-                  subtitle={card.subtitle}
-                  description={card.description}
-                  buttonText={card.buttonText}
-                  key={index}
-                  href={card.href}
-                />
-              ))}
-            </div>
-            <div className="text_container">
-              <h1>
-                <span>DISEÑO</span>
-                <span>TECNOLOGÍA</span>
-                <span>INNOVACIÓN</span>
-              </h1>
+          <div className="container">
+            <div className="grid_container">
+              <div className="cards_container">
+                {cardsProperties.map((card: CardType, index: number) => (
+                  <Card
+                    title={card.title}
+                    subtitle={card.subtitle}
+                    description={card.description}
+                    buttonText={card.buttonText}
+                    key={index}
+                    href={card.href}
+                  />
+                ))}
+              </div>
+              <div className="text_container">
+                <h1>
+                  <span>DISEÑO</span>
+                  <span>TECNOLOGÍA</span>
+                  <span>INNOVACIÓN</span>
+                </h1>
+              </div>
             </div>
           </div>
         </CenterDiv>
@@ -52,9 +54,8 @@ function Hero() {
         {`
           section {
             width: 100%;
-            height: 100vh;
+            height: 100dvh;
             min-height: 650px;
-            padding: 200px 150px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -64,14 +65,22 @@ function Hero() {
             top: 0;
             left: 0;
             width: 100%;
-            max-height: 100dvh;
+            height: 100%;
             object-fit: cover;
             z-index: -1;
             filter: brightness(0.2);
           }
-          .grid_container {
+          .container {
             width: 100%;
             height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          .grid_container {
+            width: 100%;
+            height: 70%;
+            max-height: 1000px;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(2, 1fr);
@@ -89,10 +98,11 @@ function Hero() {
             grid-area: 2 / 2 / 3 / 3;
             text-align: end;
             display: flex;
+            justify-content: flex-end;
             align-items: flex-end;
           }
           h1 {
-            font-size: 120px;
+            font-size: var(--bd-hero-home-fontsize);
             font-weight: bold;
             line-height: 110%;
           }
@@ -102,6 +112,35 @@ function Hero() {
           }
           span:nth-child(2) {
             color: ${theme.primary.red};
+          }
+          @media screen and (max-width: 1920px) {
+            h1 {
+              font-size: var(--d-hero-home-fontsize);
+            }
+          }
+          @media screen and (max-width: 1000px) {
+            .grid_container {
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              justify-content: space-between;
+            }
+            .cards_container {
+              height: 100%;
+            }
+            .text_container {
+              width: 100%;
+            }
+          }
+          @media screen and (max-width: 600px) {
+            h1 {
+              font-size: var(--s-hero-home-fontsize);
+            }
+          }
+          @media screen and (max-width: 380px) {
+            h1 {
+              font-size: var(--sm-hero-home-fontsize);
+            }
           }
         `}
       </style>
