@@ -1,5 +1,3 @@
-import React from "react";
-
 import Hero from "../layouts/Inicio/Hero";
 import Banner from "../layouts/Inicio/banner/banner";
 import OurCompany from "../layouts/Inicio/ourCompany/ourCompany";

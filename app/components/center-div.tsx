@@ -28,6 +28,7 @@ function CenterDiv({
           background-color: ${backgroundColor ? backgroundColor : ""};
           padding: ${padding ? `${padding} 0 ${padding} ${padding}` : ""};
           border-radius: ${borderRadius ? borderRadius : ""};
+          z-index: 10;
         }
         .bg_image {
           background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),

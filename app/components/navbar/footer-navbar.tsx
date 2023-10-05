@@ -15,13 +15,13 @@ function FooterNavbar() {
           <div className="nav_container">
             <Link href="/">
               <img
-                src={"/images/logo/logo.png"}
+                src={"/images/logo/logo.webp"}
                 alt="logo-gherbezza-turbinas-neumaticas-sembradoras"
                 title="Gherbezza, turbinas neumaticas para sembradoras"
                 className="desktop"
               />
               <img
-                src={"/images/logo/ISO.png"}
+                src={"/images/logo/ISO.webp"}
                 alt="logo-gherbezza-turbinas-neumaticas-sembradoras"
                 title="Gherbezza, turbinas neumaticas para sembradoras"
                 className="mobile"

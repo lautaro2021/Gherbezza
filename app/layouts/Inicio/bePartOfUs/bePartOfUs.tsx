@@ -15,18 +15,18 @@ function BePartOfUs() {
           <div className="container">
             <div className="image_container">
               <Image
-                src="/images/layouts/inicio/bePartOfUs/partOfUs.png"
+                src="/images/layouts/inicio/bePartOfUs/partOfUs.webp"
                 alt="Trabaja con nostros Gherbezza turbinas neumaticas para sembradoras"
                 title="Trabaja con nostros Gherbezza turbinas neumaticas para sembradoras"
                 fill
                 style={{ objectFit: "cover" }}
                 priority
                 placeholder="blur"
-                blurDataURL="/images/layouts/inicio/bePartOfUs/partOfUs.png"
+                blurDataURL="/images/layouts/inicio/bePartOfUs/partOfUs.webp"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
               <img
-                src="/images/layouts/inicio/bePartOfUs/operario.png"
+                src="/images/layouts/inicio/bePartOfUs/operario.webp"
                 alt="operario - trabaja con nosotros - gherbezza turbinas neumaticas para sembradoras"
                 title="trabaja con nosotros"
               />

@@ -45,7 +45,11 @@ function OurServices() {
             {actualService === "postventa" ? (
               <div className="service">
                 <div className="image_container">
-                  <img src="/images/layouts/inicio/ourServices/imagen.png" />
+                  <img
+                    src="/images/layouts/servicios/postventa.webp"
+                    alt="Servicio de postventa - Gherbezza, turbinas neumaticas para sembradoras"
+                    title="Servicio de Postventa - Gherbezza"
+                  />
                   <div>
                     <Link href={`?service=postventa`} scroll={false}>
                       <BsArrowLeft style={leftArrowStyle} />
@@ -75,7 +79,11 @@ function OurServices() {
             ) : (
               <div className="service">
                 <div className="image_container">
-                  <img src="/images/layouts/inicio/ourServices/imagen.png" />
+                  <img
+                    src="/images/layouts/servicios/asesoramiento-tecnico.webp"
+                    alt="Servicio de Asesoramiento Tecnico - Gherbezza, turbinas neumaticas para sembradoras"
+                    title="Servicio de Asesoramiento Tecnico - Gherbezza"
+                  />
                   <div>
                     <Link href={`?service=postventa`} scroll={false}>
                       <BsArrowLeft style={leftArrowStyle} />

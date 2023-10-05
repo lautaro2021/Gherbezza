@@ -18,7 +18,7 @@ export const productVariants: ProductVariantsType = {
       ],
       productInfo:
         "Las turbinas Eolo Junior desarrollan una presión máxima de entre 80 y 90 mbar con caudales que van desde 0,2 hasta 1,1 m3/s.",
-      table: "/images/layouts/productos/eolo/variants/eolomini/table.png",
+      table: "/images/layouts/productos/eolo/variants/eolomini/table.webp",
     },
     {
       title: "EOLO Junior",
@@ -30,7 +30,7 @@ export const productVariants: ProductVariantsType = {
       ],
       productInfo:
         "Las turbinas Eolo Junior desarrollan una presión máxima de entre 80 y 90 mbar con caudales que van desde 0,2 hasta 1,1 m3/s.",
-      table: "/images/layouts/productos/eolo/variants/eolojunior/table.png",
+      table: "/images/layouts/productos/eolo/variants/eolojunior/table.webp",
     },
     {
       title: "EOLO Senior",
@@ -42,7 +42,7 @@ export const productVariants: ProductVariantsType = {
       ],
       productInfo:
         "Las turbinas Eolo Junior desarrollan una presión máxima de entre 80 y 90 mbar con caudales que van desde 0,2 hasta 1,1 m3/s.",
-      table: "/images/layouts/productos/eolo/variants/eolosenior/table.png",
+      table: "/images/layouts/productos/eolo/variants/eolosenior/table.webp",
     },
   ],
   vacuoVariants: [
@@ -56,7 +56,7 @@ export const productVariants: ProductVariantsType = {
       ],
       productInfo:
         "Las turbinas Eolo Junior desarrollan una presión máxima de entre 80 y 90 mbar con caudales que van desde 0,2 hasta 1,1 m3/s.",
-      table: "/images/layouts/productos/eolo/variants/eolomini/table.png",
+      table: "/images/layouts/productos/eolo/variants/eolomini/table.webp",
     },
     {
       title: "Hidráulica Estándar",
@@ -68,7 +68,7 @@ export const productVariants: ProductVariantsType = {
       ],
       productInfo:
         "Las turbinas Eolo Junior desarrollan una presión máxima de entre 80 y 90 mbar con caudales que van desde 0,2 hasta 1,1 m3/s.",
-      table: "/images/layouts/productos/eolo/variants/eolojunior/table.png",
+      table: "/images/layouts/productos/eolo/variants/eolojunior/table.webp",
     },
     {
       title: "TDF Estándar",
@@ -80,7 +80,7 @@ export const productVariants: ProductVariantsType = {
       ],
       productInfo:
         "Las turbinas Eolo Junior desarrollan una presión máxima de entre 80 y 90 mbar con caudales que van desde 0,2 hasta 1,1 m3/s.",
-      table: "/images/layouts/productos/eolo/variants/eolosenior/table.png",
+      table: "/images/layouts/productos/eolo/variants/eolosenior/table.webp",
     },
     {
       title: "Superior",
@@ -92,7 +92,7 @@ export const productVariants: ProductVariantsType = {
       ],
       productInfo:
         "Las turbinas Eolo Junior desarrollan una presión máxima de entre 80 y 90 mbar con caudales que van desde 0,2 hasta 1,1 m3/s.",
-      table: "/images/layouts/productos/eolo/variants/eolosenior/table.png",
+      table: "/images/layouts/productos/eolo/variants/eolosenior/table.webp",
     },
   ],
   airdrillVariants: [
@@ -106,7 +106,7 @@ export const productVariants: ProductVariantsType = {
       ],
       productInfo:
         "Las turbinas Eolo Junior desarrollan una presión máxima de entre 80 y 90 mbar con caudales que van desde 0,2 hasta 1,1 m3/s.",
-      table: "/images/layouts/productos/eolo/variants/eolomini/table.png",
+      table: "/images/layouts/productos/eolo/variants/eolomini/table.webp",
     },
     {
       title: "EOLO Junior",
@@ -118,7 +118,7 @@ export const productVariants: ProductVariantsType = {
       ],
       productInfo:
         "Las turbinas Eolo Junior desarrollan una presión máxima de entre 80 y 90 mbar con caudales que van desde 0,2 hasta 1,1 m3/s.",
-      table: "/images/layouts/productos/eolo/variants/eolojunior/table.png",
+      table: "/images/layouts/productos/eolo/variants/eolojunior/table.webp",
     },
     {
       title: "EOLO Senior",
@@ -130,7 +130,7 @@ export const productVariants: ProductVariantsType = {
       ],
       productInfo:
         "Las turbinas Eolo Junior desarrollan una presión máxima de entre 80 y 90 mbar con caudales que van desde 0,2 hasta 1,1 m3/s.",
-      table: "/images/layouts/productos/eolo/variants/eolosenior/table.png",
+      table: "/images/layouts/productos/eolo/variants/eolosenior/table.webp",
     },
   ],
 };
