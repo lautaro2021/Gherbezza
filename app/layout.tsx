@@ -1,5 +1,3 @@
-"use client";
-/*eslint-disable*/
 import "./common/styles/globals.css";
 import { AppProvider } from "./store/context/context";
 import Script from "next/script";
@@ -12,23 +10,12 @@ import Loader from "./components/loader/loader";
 import StyledJsxRegistry from "./registry";
 
 import { theme } from "./common/styles/themes/theme";
-import { useEffect, useState } from "react";
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const [loader, setLoader] = useState(true);
-
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setLoader(false);
-    }, 4000);
-
-    return () => clearTimeout(timeout);
-  }, []);
-
   return (
     <AppProvider>
       <html lang="es">
@@ -37,19 +24,14 @@ export default function RootLayout({
           type="text/javascript"
         ></Script>
         <body>
-          {loader ? (
-            <Loader />
-          ) : (
-            <>
-              <Navbar
-                textColor={theme.secondary.white}
-                backgroundColor="transparent"
-              />
-              <StyledJsxRegistry>{children}</StyledJsxRegistry>
-              <Footer />
-              <Powered />
-            </>
-          )}
+          <Loader />
+          <Navbar
+            textColor={theme.secondary.white}
+            backgroundColor="transparent"
+          />
+          <StyledJsxRegistry>{children}</StyledJsxRegistry>
+          <Footer />
+          <Powered />
         </body>
       </html>
     </AppProvider>
