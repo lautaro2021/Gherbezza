@@ -13,7 +13,7 @@ function Loader() {
     }, 4000);
 
     return () => clearTimeout(timeout);
-  });
+  }, []);
 
   return (
     <>
