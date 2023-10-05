@@ -9,19 +9,19 @@ export const footerOptions: OptionsFooterInterface[] = [
 export const footerSocial: OptionsFooterInterface[] = [
   {
     link: "https://www.instagram.com/gherbezza_sa/",
-    image: "/images/footer/social/instagram.png",
+    image: "/images/footer/social/instagram.webp",
     description: "instagram-gherbezza-turbinas-neumaticas-para-sembradoras",
     title: "instagram gherbezza turbinas neumaticas para sembradoras",
   },
   {
     link: "https://www.linkedin.com/company/gherbezzaoficial/",
-    image: "/images/footer/social/linkedin.png",
+    image: "/images/footer/social/linkedin.webp",
     description: "linkedin-gherbezza-turbinas-neumaticas-para-sembradoras",
     title: "linkedin gherbezza turbinas neumaticas para sembradoras",
   },
   {
     link: "https://www.linkedin.com/company/gherbezzaoficial/",
-    image: "/images/footer/social/whatsapp.png",
+    image: "/images/footer/social/whatsapp.webp",
     description: "facebook-gherbezza-turbinas-neumaticas-para-sembradoras",
     title: "facebook gherbezza turbinas neumaticas para sembradoras",
   },

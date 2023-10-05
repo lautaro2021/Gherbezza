@@ -59,6 +59,7 @@ function Hero() {
             display: flex;
             align-items: center;
             justify-content: center;
+            background-color: ${theme.primary.darkGreen};
           }
           video {
             position: absolute;

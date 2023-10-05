@@ -51,13 +51,13 @@ function Navbar({ backgroundColor, textColor }: Navbar) {
           <div className="nav_container">
             <Link href="/">
               <img
-                src={"/images/logo/logo.png"}
+                src={"/images/logo/logo.webp"}
                 alt="logo-gherbezza-turbinas-neumaticas-sembradoras"
                 title="Gherbezza, turbinas neumaticas para sembradoras"
                 className="iso_desktop"
               />
               <img
-                src={"/images/logo/ISO.png"}
+                src={"/images/logo/ISO.webp"}
                 alt="logo-gherbezza-turbinas-neumaticas-sembradoras"
                 title="Gherbezza, turbinas neumaticas para sembradoras"
                 className="iso_mobile"
@@ -82,15 +82,19 @@ function Navbar({ backgroundColor, textColor }: Navbar) {
               })}
             </ul>
             {showMobileOptions ? (
-              <GrClose
-                onClick={handleOptionsMobile}
-                style={{ width: "22px", height: "22px" }}
-              />
+              <div className="mobile_icon">
+                <GrClose
+                  onClick={handleOptionsMobile}
+                  style={{ width: "22px", height: "22px" }}
+                />
+              </div>
             ) : (
-              <FaBars
-                onClick={handleOptionsMobile}
-                style={{ width: "22px", height: "22px" }}
-              />
+              <div className="mobile_icon">
+                <FaBars
+                  onClick={handleOptionsMobile}
+                  style={{ width: "22px", height: "22px" }}
+                />
+              </div>
             )}
           </div>
         </CenterDiv>
@@ -145,7 +149,7 @@ function Navbar({ backgroundColor, textColor }: Navbar) {
         ul li:last-child {
           font-weight: bold;
         }
-        svg {
+        .mobile_icon {
           display: none;
         }
         @media screen and (max-width: 1000px) {
@@ -167,6 +171,9 @@ function Navbar({ backgroundColor, textColor }: Navbar) {
           }
           .mobile li {
             color: ${theme.secondary.black} !important;
+          }
+          .mobile_icon {
+            display: inline-block;
           }
           @keyframes appear {
             from {
