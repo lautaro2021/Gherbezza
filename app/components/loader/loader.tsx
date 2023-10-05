@@ -8,7 +8,6 @@ function Loader() {
 
   useEffect(() => {
     const timeout = setTimeout(() => {
-      window.scrollTo(0, 0);
       setLoaded(true);
     }, 4000);
 
