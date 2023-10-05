@@ -6,8 +6,8 @@ import OurTour from "@/app/layouts/nosotros/ourHistory/ourTour";
 import Banner from "@/app/layouts/nosotros/banner/us-banner";
 import KnowProducts from "@/app/layouts/nosotros/knowProducts/know-products";
 import Eolo from "@/app/layouts/nosotros/knowProducts/eolo";
-// import WorkWithUs from "@/app/layouts/nosotros/workWithUs/workWithUs";
-import Map from "@/app/layouts/nosotros/map";
+import WorkWithUs from "@/app/layouts/nosotros/workWithUs/workWithUs";
+// import Map from "@/app/layouts/nosotros/map";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -25,8 +25,8 @@ function OurUs() {
       <Banner />
       <KnowProducts />
       <Eolo />
-      {/* <WorkWithUs /> */}
-      <Map />
+      <WorkWithUs />
+      {/* <Map /> */}
     </main>
   );
 }
