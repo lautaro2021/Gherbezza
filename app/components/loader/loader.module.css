@@ -12,10 +12,10 @@
     overflow: hidden;
 }
 .image{
-    width: 250px;
     filter: brightness(5);
     animation: aparecer 1.25s ease infinite;
     opacity: 0;
+    aspect-ratio: attr(width) / attr(height);
 }
 @keyframes aparecer {
     0%{

@@ -5,27 +5,14 @@ import { cardsProperties } from "@/app/common/utils/cards";
 import Card from "./cards/card";
 import CardType from "@/app/types/card.type";
 import CenterDiv from "@/app/components/center-div";
-import useOptimizeVideo from "@/app/components/optimize-video/optmizeVideo";
 
 import { theme } from "@/app/common/styles/themes/theme";
 
 function Hero() {
-  const { isVideoLoaded, videoUrl } = useOptimizeVideo();
-
   return (
     <>
       <section>
-        {isVideoLoaded && (
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            id="Gherbezza%20turbinas%20neumaticas%20para%20sembradoras%20-%20Home%20BG"
-          >
-            <source src={videoUrl} type="video/mp4" />
-          </video>
-        )}
+        <img src="/prueba.jpg" />
 
         <CenterDiv>
           <div className="container">
@@ -64,7 +51,7 @@ function Hero() {
             justify-content: center;
             background-color: ${theme.primary.darkGreen};
           }
-          video {
+          img {
             position: absolute;
             top: 0;
             left: 0;

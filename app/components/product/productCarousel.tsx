@@ -78,13 +78,23 @@ function ProductCarousel(props: any) {
         }
         @media screen and (max-width: 760px) {
           .embla__slide {
-            max-width: 85%;
+            max-width: 50%;
           }
           .embla__slide:first-child {
             padding-left: 0;
           }
           .embla__slide__img {
-            min-height: 250px;
+            min-height: 0;
+            max-height: 300px;
+          }
+        }
+        @media screen and (max-width: 500px) {
+          .embla__slide {
+            max-width: 65%;
+          }
+          .embla__slide__img {
+            min-height: 0;
+            max-height: 250px;
           }
         }
       `}</style>

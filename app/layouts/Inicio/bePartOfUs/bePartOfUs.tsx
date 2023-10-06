@@ -20,7 +20,6 @@ function BePartOfUs() {
                 title="Trabaja con nostros Gherbezza turbinas neumaticas para sembradoras"
                 fill
                 style={{ objectFit: "cover" }}
-                priority
                 placeholder="blur"
                 blurDataURL="/images/layouts/inicio/bePartOfUs/partOfUs.webp"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

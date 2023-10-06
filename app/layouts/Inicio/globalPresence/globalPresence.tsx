@@ -34,7 +34,6 @@ function GlobalPresence() {
                 title="nuestra presencia global Gherbezza turbinas neumaticas para sembradoras"
                 fill
                 style={{ objectFit: "contain" }}
-                priority
                 placeholder="blur"
                 blurDataURL="/images/layouts/inicio/globalPresence/globalPresence.webp"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
