@@ -1,8 +1,9 @@
 "use client";
-import L from "leaflet";
-import { MapContainer, TileLayer, Marker } from "react-leaflet";
-import MarkerIcon from "@/node_modules/leaflet/dist/images/marker-icon.png";
-import MarkerShadow from "@/node_modules/leaflet/dist/images/marker-shadow.png";
+// import { useEffect, useState } from "react";
+// import L from "leaflet";
+// import { MapContainer, TileLayer, Marker } from "react-leaflet";
+// import MarkerIcon from "@/node_modules/leaflet/dist/images/marker-icon.png";
+// import MarkerShadow from "@/node_modules/leaflet/dist/images/marker-shadow.png";
 
 import "leaflet/dist/leaflet.css";
 
@@ -11,16 +12,15 @@ import PageSection from "@/app/components/page-section";
 import { theme } from "@/app/common/styles/themes/theme";
 import { footerSocial } from "@/app/common/utils/footer-options";
 import OptionsFooterInterface from "@/app/types/footer-options.type";
-import { useEffect, useState } from "react";
 
 function Map() {
-  const [windowLoaded, setWindowLoaded] = useState(false);
+  // const [windowLoaded, setWindowLoaded] = useState(false);
 
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      setWindowLoaded(true);
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (typeof window !== "undefined") {
+  //     setWindowLoaded(true);
+  //   }
+  // }, []);
 
   return (
     <>
@@ -57,7 +57,7 @@ function Map() {
                 ))}
               </div>
             </div>
-            {windowLoaded && (
+            {/* {windowLoaded && (
               <MapContainer
                 center={[-32.98992591053522, -60.71321197004614]}
                 zoom={12}
@@ -83,7 +83,7 @@ function Map() {
                   position={[-32.98992591053522, -60.71321197004614]}
                 ></Marker>
               </MapContainer>
-            )}
+            )} */}
           </div>
         </CenterDiv>
       </PageSection>
