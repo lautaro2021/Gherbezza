@@ -1,4 +1,3 @@
-"use client";
 import Link from "next/link";
 
 import CenterDiv from "../center-div";
@@ -19,6 +18,8 @@ function FooterNavbar() {
                 alt="logo-gherbezza-turbinas-neumaticas-sembradoras"
                 title="Gherbezza, turbinas neumaticas para sembradoras"
                 className="desktop"
+                width={250}
+                height={60}
               />
               <img
                 src={"/images/logo/ISO.webp"}
@@ -60,7 +61,7 @@ function FooterNavbar() {
           justify-content: space-between;
         }
         img {
-          width: 250px;
+          aspect-ratio: attr(width) / attr(height);
         }
         ul {
           display: flex;

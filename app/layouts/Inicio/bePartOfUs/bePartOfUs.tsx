@@ -15,18 +15,17 @@ function BePartOfUs() {
           <div className="container">
             <div className="image_container">
               <Image
-                src="/images/layouts/inicio/bePartOfUs/partOfUs.webp"
+                src="https://res.cloudinary.com/dn72zz8r5/image/upload/v1696613838/GHERBEZZA/INICIO/partOfUs_bp0p9x.webp"
                 alt="Trabaja con nostros Gherbezza turbinas neumaticas para sembradoras"
                 title="Trabaja con nostros Gherbezza turbinas neumaticas para sembradoras"
                 fill
                 style={{ objectFit: "cover" }}
-                priority
                 placeholder="blur"
-                blurDataURL="/images/layouts/inicio/bePartOfUs/partOfUs.webp"
+                blurDataURL="https://res.cloudinary.com/dn72zz8r5/image/upload/v1696613838/GHERBEZZA/INICIO/partOfUs_bp0p9x.webp"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
               <img
-                src="/images/layouts/inicio/bePartOfUs/operario.webp"
+                src="https://res.cloudinary.com/dn72zz8r5/image/upload/v1696613837/GHERBEZZA/INICIO/operario_ijj6y7.webp"
                 alt="operario - trabaja con nosotros - gherbezza turbinas neumaticas para sembradoras"
                 title="trabaja con nosotros"
               />

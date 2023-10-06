@@ -120,15 +120,15 @@ function Contacto() {
             <div className="info_container">
               <div className="image_container">
                 <Image
-                  src="/images/layouts/contacto/background.webp"
+                  src="https://res.cloudinary.com/dn72zz8r5/image/upload/v1696615438/GHERBEZZA/CONTACTO/background_isc921.webp"
                   alt="Contacto - Gherbezza turbinas neumaticas para sembradoras"
                   title="Contacto - Gherbezza turbinas neumaticas para sembradoras"
                   fill
                   style={{ objectFit: "cover" }}
-                  priority
                   placeholder="blur"
-                  blurDataURL="/images/layouts/contacto/background.webp"
+                  blurDataURL="https://res.cloudinary.com/dn72zz8r5/image/upload/v1696615438/GHERBEZZA/CONTACTO/background_isc921.webp"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  priority
                 />
               </div>
               <div className="location_info">

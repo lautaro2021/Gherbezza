@@ -16,14 +16,11 @@ function OurHistory() {
           <div className="container">
             <div className="image_container">
               <Image
-                src="/images/layouts/nosotros/ourHistory/company.webp"
+                src="https://res.cloudinary.com/dn72zz8r5/image/upload/v1696615710/GHERBEZZA/NOSOTROS/company_kjoiij.webp"
                 alt="Nuestra empresa - Gherbezza fabrica de turbinas neumaticas para sembradoras"
                 title="Nuestra empresa - Gherbezza turbinas neumaticas para sembradoras"
                 fill
                 style={{ objectFit: "cover" }}
-                placeholder="blur"
-                blurDataURL="/images/layouts/nosotros/ourHistory/company.webp"
-                priority
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>

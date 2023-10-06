@@ -47,15 +47,13 @@ function OurServices() {
               </article>
               <aside>
                 <Image
-                  src="/images/layouts/servicios/asesoramiento-tecnico.webp"
+                  src="https://res.cloudinary.com/dn72zz8r5/image/upload/v1696616110/GHERBEZZA/SERVICIOS/asesoramiento-tecnico_ftjq9z.webp"
                   alt="Asesoramiento tecnico - Gherbezza fabrica de turbinas para sembradoras"
                   title="Gherbezza, nuestros servicios - asesoramiento tecnico"
                   fill
                   style={{ objectFit: "cover" }}
-                  placeholder="blur"
-                  blurDataURL="/images/layouts/servicios/asesoramiento-tecnico.webp"
-                  priority
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  priority
                 />
               </aside>
             </div>
@@ -92,15 +90,13 @@ function OurServices() {
               </article>
               <aside>
                 <Image
-                  src="/images/layouts/servicios/postventa.webp"
+                  src="https://res.cloudinary.com/dn72zz8r5/image/upload/v1696616109/GHERBEZZA/SERVICIOS/postventa_as44e1.webp"
                   alt="Asesoramiento tecnico - Gherbezza fabrica de turbinas para sembradoras"
                   title="Gherbezza, nuestros servicios - asesoramiento tecnico"
                   fill
                   style={{ objectFit: "cover" }}
-                  placeholder="blur"
-                  blurDataURL="/images/layouts/servicios/postventa.webp"
-                  priority
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  priority
                 />
               </aside>
             </div>

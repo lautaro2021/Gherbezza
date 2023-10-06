@@ -9,7 +9,7 @@ function Loader() {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setLoaded(true);
-    }, 4000);
+    }, 3000);
 
     window.scrollTo(0, 0);
     return () => clearTimeout(timeout);
@@ -25,6 +25,8 @@ function Loader() {
             title="gherbezza turbinas para sembradoras"
             fetchPriority="high"
             className={styles.image}
+            width={250}
+            height={140}
           />
         </section>
       )}

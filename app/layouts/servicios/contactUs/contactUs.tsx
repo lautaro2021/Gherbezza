@@ -16,7 +16,7 @@ function ContactUs() {
           backgroundColor={theme.primary.darkGreen}
           padding="50px"
           backgroundImage
-          backgroundURL="/images/layouts/servicios/contactanos-bg.webp"
+          backgroundURL="https://res.cloudinary.com/dn72zz8r5/image/upload/v1696616111/GHERBEZZA/SERVICIOS/contactanos-bg_afjsot.webp"
         >
           <div className="container">
             <div className="text_container">

@@ -26,11 +26,9 @@ function ProductDetail({
                 <br />
                 <p>{description}</p>
               </div>
-              {
-                <div className="image_container mobile">
-                  <ProductCarousel options={OPTIONS} data={dataForCarrousel} />
-                </div>
-              }
+              <div className="image_container mobile">
+                <ProductCarousel options={OPTIONS} data={dataForCarrousel} />
+              </div>
               <div className="buttons_container">
                 <a href={dataSheetLink} target="_blank" rel="noreferrer">
                   <div className="svg_container">

@@ -1,10 +1,21 @@
+import dynamic from "next/dynamic";
 import Hero from "../layouts/Inicio/Hero";
-import Banner from "../layouts/Inicio/banner/banner";
-import OurCompany from "../layouts/Inicio/ourCompany/ourCompany";
-import OurServices from "../layouts/Inicio/ourServices/ourServices";
-import OurClients from "../layouts/Inicio/ourClients/ourClients";
-import GlobalPresence from "../layouts/Inicio/globalPresence/globalPresence";
-import BePartOfUs from "../layouts/Inicio/bePartOfUs/bePartOfUs";
+const Banner = dynamic(() => import("../layouts/Inicio/banner/banner"));
+const OurCompany = dynamic(
+  () => import("../layouts/Inicio/ourCompany/ourCompany")
+);
+const OurServices = dynamic(
+  () => import("../layouts/Inicio/ourServices/ourServices")
+);
+const OurClients = dynamic(
+  () => import("../layouts/Inicio/ourClients/ourClients")
+);
+const GlobalPresence = dynamic(
+  () => import("../layouts/Inicio/globalPresence/globalPresence")
+);
+const BePartOfUs = dynamic(
+  () => import("../layouts/Inicio/bePartOfUs/bePartOfUs")
+);
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

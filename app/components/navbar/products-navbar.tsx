@@ -87,6 +87,11 @@ function ProductsNavbar() {
             height: clamp(35px, 5vw, 50px);
           }
         }
+        @media screen and (max-width: 760px) {
+          nav {
+            top: 80px;
+          }
+        }
       `}</style>
     </>
   );

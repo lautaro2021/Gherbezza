@@ -1,32 +1,32 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 
 import { cardsProperties } from "@/app/common/utils/cards";
 import Card from "./cards/card";
 import CardType from "@/app/types/card.type";
 import CenterDiv from "@/app/components/center-div";
-import useOptimizeVideo from "@/app/components/optimize-video/optmizeVideo";
 
 import { theme } from "@/app/common/styles/themes/theme";
 
 function Hero() {
-  const { isVideoLoaded, videoUrl } = useOptimizeVideo();
-
   return (
     <>
       <section>
-        {isVideoLoaded && (
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            id="Gherbezza%20turbinas%20neumaticas%20para%20sembradoras%20-%20Home%20BG"
-          >
-            <source src={videoUrl} type="video/mp4" />
-          </video>
-        )}
-
+        <Image
+          alt="Background"
+          src="https://res.cloudinary.com/dn72zz8r5/image/upload/v1696614271/GHERBEZZA/INICIO/prueba_eftpdw.webp"
+          placeholder="blur"
+          blurDataURL="https://res.cloudinary.com/dn72zz8r5/image/upload/v1696614271/GHERBEZZA/INICIO/prueba_eftpdw.webp"
+          quality={100}
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          style={{
+            objectFit: "cover",
+            filter: "brightness(0.2)",
+          }}
+          priority
+        />
         <CenterDiv>
           <div className="container">
             <div className="grid_container">
@@ -63,17 +63,7 @@ function Hero() {
             align-items: center;
             justify-content: center;
             background-color: ${theme.primary.darkGreen};
-          }
-          video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            filter: brightness(0.2);
-            background-color: ${theme.primary.darkGreen};
-            z-index: 0;
+            position: relative;
           }
           .video_loader {
             position: absolute;
@@ -145,9 +135,6 @@ function Hero() {
             }
           }
           @media screen and (max-width: 600px) {
-            video {
-              display: none;
-            }
             h1 {
               font-size: var(--s-hero-home-fontsize);
             }

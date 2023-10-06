@@ -4,7 +4,6 @@ import Script from "next/script";
 
 import Navbar from "./components/navbar/navbar";
 import Footer from "./components/footer/footer";
-import Powered from "./components/footer/powered";
 import Loader from "./components/loader/loader";
 
 import StyledJsxRegistry from "./registry";
@@ -31,7 +30,6 @@ export default function RootLayout({
           />
           <StyledJsxRegistry>{children}</StyledJsxRegistry>
           <Footer />
-          <Powered />
         </body>
       </html>
     </AppProvider>
