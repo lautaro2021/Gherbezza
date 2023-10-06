@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 
 import CenterDiv from "@/app/components/center-div";
 import { theme } from "@/app/common/styles/themes/theme";
@@ -10,6 +11,20 @@ function Hero() {
   return (
     <>
       <section>
+        <Image
+          alt="Background - Productos"
+          src="https://res.cloudinary.com/dn72zz8r5/image/upload/v1696614708/GHERBEZZA/PRODUCTOS/productos-bg_q2tlks.webp"
+          placeholder="blur"
+          blurDataURL="https://res.cloudinary.com/dn72zz8r5/image/upload/v1696614708/GHERBEZZA/PRODUCTOS/productos-bg_q2tlks.webp"
+          quality={100}
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          style={{
+            objectFit: "cover",
+            filter: "brightness(0.2)",
+          }}
+          priority
+        />
         <CenterDiv>
           <div className="container">
             <RouteText linkedText="INICIO" text="PRODUCTOS" />
@@ -28,11 +43,7 @@ function Hero() {
           display: flex;
           align-items: center;
           justify-content: center;
-          background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-            url("/images/layouts/productos/hero/productos-bg.webp");
-          background-size: cover;
-          background-position: center;
-          background-repeat: no-repeat;
+          position: relative;
         }
         .container {
           width: 100%;

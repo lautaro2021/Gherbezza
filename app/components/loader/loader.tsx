@@ -9,7 +9,7 @@ function Loader() {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setLoaded(true);
-    }, 4000);
+    }, 3000);
 
     window.scrollTo(0, 0);
     return () => clearTimeout(timeout);

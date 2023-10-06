@@ -32,13 +32,13 @@ function OurCompany() {
             </div>
             <div className="image_container">
               <Image
-                src="/images/layouts/inicio/ourCompany/ourCompany.webp"
+                src="https://res.cloudinary.com/dn72zz8r5/image/upload/v1696613861/GHERBEZZA/ourCompany_cqm5gp.webp"
                 alt="Gherbezza fabrica de turbinas neumaticas para sembradoras"
                 title="Gherbezza turbinas neumaticas para sembradoras"
                 fill
                 style={{ objectFit: "cover" }}
                 placeholder="blur"
-                blurDataURL="/images/layouts/inicio/ourCompany/ourCompany.webp"
+                blurDataURL="https://res.cloudinary.com/dn72zz8r5/image/upload/v1696613861/GHERBEZZA/ourCompany_cqm5gp.webp"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>

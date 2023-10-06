@@ -28,9 +28,6 @@ function Modal({ isOpen, onClose, product }: ModalType) {
                       title={`${title}, imagen ${index} - Gherbezza, fabrica de turbinas neumaticas para sembradoras`}
                       fill
                       style={{ objectFit: "cover" }}
-                      priority
-                      placeholder="blur"
-                      blurDataURL={image}
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                   </figure>

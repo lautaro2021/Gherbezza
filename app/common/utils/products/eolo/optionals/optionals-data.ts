@@ -13,39 +13,47 @@ export const optionalsData: OptionalsDataType = {
   eoloOptionals: [
     {
       optionalDescription: "Soporte para radiador de aceite",
-      imageUrl: "/images/layouts/productos/eolo/optionals/preview.webp",
+      imageUrl:
+        "https://res.cloudinary.com/dn72zz8r5/image/upload/v1696614713/GHERBEZZA/PRODUCTOS/preview_e1xlt8.webp",
     },
     {
       optionalDescription: "Brida para conectar salida a cañeria o tolva",
-      imageUrl: "/images/layouts/productos/eolo/optionals/preview.webp",
+      imageUrl:
+        "https://res.cloudinary.com/dn72zz8r5/image/upload/v1696614713/GHERBEZZA/PRODUCTOS/preview_e1xlt8.webp",
     },
     {
       optionalDescription: "Sin motor para accionamientos especiales",
-      imageUrl: "/images/layouts/productos/eolo/optionals/preview.webp",
+      imageUrl:
+        "https://res.cloudinary.com/dn72zz8r5/image/upload/v1696614713/GHERBEZZA/PRODUCTOS/preview_e1xlt8.webp",
     },
   ],
   vacuoOptionals: [
     {
       optionalDescription: "Bocas intercambiables",
-      imageUrl: "/images/layouts/productos/eolo/optionals/preview.webp",
+      imageUrl:
+        "https://res.cloudinary.com/dn72zz8r5/image/upload/v1696614713/GHERBEZZA/PRODUCTOS/preview_e1xlt8.webp",
     },
     {
       optionalDescription: "Soporte para alternador",
-      imageUrl: "/images/layouts/productos/eolo/optionals/preview.webp",
+      imageUrl:
+        "https://res.cloudinary.com/dn72zz8r5/image/upload/v1696614713/GHERBEZZA/PRODUCTOS/preview_e1xlt8.webp",
     },
     {
       optionalDescription: "Variedad de Accionamiento",
-      imageUrl: "/images/layouts/productos/eolo/optionals/preview.webp",
+      imageUrl:
+        "https://res.cloudinary.com/dn72zz8r5/image/upload/v1696614713/GHERBEZZA/PRODUCTOS/preview_e1xlt8.webp",
     },
   ],
   airdrillOptionals: [
     {
       optionalDescription: "Colocacion de Rolos",
-      imageUrl: "/images/layouts/productos/eolo/optionals/preview.webp",
+      imageUrl:
+        "https://res.cloudinary.com/dn72zz8r5/image/upload/v1696614713/GHERBEZZA/PRODUCTOS/preview_e1xlt8.webp",
     },
     {
       optionalDescription: "Torres de distribución",
-      imageUrl: "/images/layouts/productos/eolo/optionals/preview.webp",
+      imageUrl:
+        "https://res.cloudinary.com/dn72zz8r5/image/upload/v1696614713/GHERBEZZA/PRODUCTOS/preview_e1xlt8.webp",
     },
   ],
 };

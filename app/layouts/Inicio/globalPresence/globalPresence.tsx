@@ -29,13 +29,13 @@ function GlobalPresence() {
             </div>
             <div className="image_container">
               <Image
-                src="/images/layouts/inicio/globalPresence/globalPresence.webp"
+                src="https://res.cloudinary.com/dn72zz8r5/image/upload/v1696613845/GHERBEZZA/INICIO/globalPresence_ws2scd.webp"
                 alt="nuestra presencia global Gherbezza turbinas neumaticas para sembradoras"
                 title="nuestra presencia global Gherbezza turbinas neumaticas para sembradoras"
                 fill
                 style={{ objectFit: "contain" }}
                 placeholder="blur"
-                blurDataURL="/images/layouts/inicio/globalPresence/globalPresence.webp"
+                blurDataURL="https://res.cloudinary.com/dn72zz8r5/image/upload/v1696613845/GHERBEZZA/INICIO/globalPresence_ws2scd.webp"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>

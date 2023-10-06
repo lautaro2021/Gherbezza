@@ -9,51 +9,60 @@ type ProductsCarouselType = {
 export const productsCarouselData: ProductsCarouselType = {
   eolo: [
     {
-      image: "/images/layouts/productos/eolo/eolo.webp",
+      image:
+        "https://res.cloudinary.com/dn72zz8r5/image/upload/v1696614963/GHERBEZZA/PRODUCTOS/eolo_f2zvja.webp",
       alt: "Linea Eolo - imagen 1",
       title: "Eolo, imagen 1 - Gherbezza",
     },
     {
-      image: "/images/layouts/productos/eolo/eolo.webp",
+      image:
+        "https://res.cloudinary.com/dn72zz8r5/image/upload/v1696614963/GHERBEZZA/PRODUCTOS/eolo_f2zvja.webp",
       alt: "Linea Eolo - imagen 2",
       title: "Eolo, imagen 2 - Gherbezza",
     },
     {
-      image: "/images/layouts/productos/eolo/eolo.webp",
+      image:
+        "https://res.cloudinary.com/dn72zz8r5/image/upload/v1696614963/GHERBEZZA/PRODUCTOS/eolo_f2zvja.webp",
       alt: "Linea Eolo - imagen 3",
       title: "Eolo, imagen 3 - Gherbezza",
     },
   ],
   airdrill: [
     {
-      image: "/images/layouts/productos/eolo/eolo.webp",
+      image:
+        "https://res.cloudinary.com/dn72zz8r5/image/upload/v1696614963/GHERBEZZA/PRODUCTOS/eolo_f2zvja.webp",
       alt: "Linea Eolo - imagen 1",
       title: "Eolo, imagen 1 - Gherbezza",
     },
     {
-      image: "/images/layouts/productos/eolo/eolo.webp",
+      image:
+        "https://res.cloudinary.com/dn72zz8r5/image/upload/v1696614963/GHERBEZZA/PRODUCTOS/eolo_f2zvja.webp",
       alt: "Linea Eolo - imagen 2",
       title: "Eolo, imagen 2 - Gherbezza",
     },
     {
-      image: "/images/layouts/productos/eolo/eolo.webp",
+      image:
+        "https://res.cloudinary.com/dn72zz8r5/image/upload/v1696614963/GHERBEZZA/PRODUCTOS/eolo_f2zvja.webp",
       alt: "Linea Eolo - imagen 3",
       title: "Eolo, imagen 3 - Gherbezza",
     },
   ],
   vacuo: [
     {
-      image: "/images/layouts/productos/eolo/eolo.webp",
+      image:
+        "https://res.cloudinary.com/dn72zz8r5/image/upload/v1696614963/GHERBEZZA/PRODUCTOS/eolo_f2zvja.webp",
       alt: "Linea Eolo - imagen 1",
       title: "Eolo, imagen 1 - Gherbezza",
     },
     {
-      image: "/images/layouts/productos/eolo/eolo.webp",
+      image:
+        "https://res.cloudinary.com/dn72zz8r5/image/upload/v1696614963/GHERBEZZA/PRODUCTOS/eolo_f2zvja.webp",
       alt: "Linea Eolo - imagen 2",
       title: "Eolo, imagen 2 - Gherbezza",
     },
     {
-      image: "/images/layouts/productos/eolo/eolo.webp",
+      image:
+        "https://res.cloudinary.com/dn72zz8r5/image/upload/v1696614963/GHERBEZZA/PRODUCTOS/eolo_f2zvja.webp",
       alt: "Linea Eolo - imagen 3",
       title: "Eolo, imagen 3 - Gherbezza",
     },
