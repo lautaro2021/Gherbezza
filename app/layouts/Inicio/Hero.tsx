@@ -145,6 +145,9 @@ function Hero() {
             }
           }
           @media screen and (max-width: 600px) {
+            video {
+              display: none;
+            }
             h1 {
               font-size: var(--s-hero-home-fontsize);
             }
