@@ -1,18 +1,13 @@
 "use client";
-import L from "leaflet";
-import { MapContainer, TileLayer, Marker } from "react-leaflet";
-import MarkerIcon from "@/node_modules/leaflet/dist/images/marker-icon.png";
-import MarkerShadow from "@/node_modules/leaflet/dist/images/marker-shadow.png";
-
-import "leaflet/dist/leaflet.css";
-
 import CenterDiv from "@/app/components/center-div";
 import PageSection from "@/app/components/page-section";
 import { theme } from "@/app/common/styles/themes/theme";
 import { footerSocial } from "@/app/common/utils/footer-options";
 import OptionsFooterInterface from "@/app/types/footer-options.type";
 
-function Map() {
+import Map from "./map";
+
+function MapDirection() {
   return (
     <>
       <PageSection height maxHeight>
@@ -48,31 +43,7 @@ function Map() {
                 ))}
               </div>
             </div>
-            <MapContainer
-              center={[-32.98992591053522, -60.71321197004614]}
-              zoom={12}
-              scrollWheelZoom={true}
-              style={{ height: "500px", width: "100%" }}
-            >
-              <TileLayer
-                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-              />
-              <Marker
-                icon={
-                  new L.Icon({
-                    iconUrl: MarkerIcon.src,
-                    iconRetinaUrl: MarkerIcon.src,
-                    iconSize: [25, 41],
-                    iconAnchor: [12.5, 41],
-                    popupAnchor: [0, -41],
-                    shadowUrl: MarkerShadow.src,
-                    shadowSize: [41, 41],
-                  })
-                }
-                position={[-32.98992591053522, -60.71321197004614]}
-              ></Marker>
-            </MapContainer>
+            <Map />
           </div>
         </CenterDiv>
       </PageSection>
@@ -168,4 +139,4 @@ function Map() {
   );
 }
 
-export default Map;
+export default MapDirection;

@@ -1,4 +1,5 @@
 import React from "react";
+import dynamic from "next/dynamic";
 
 import Hero from "@/app/layouts/nosotros/Hero";
 import OurHistory from "@/app/layouts/nosotros/ourHistory/ourHistory";
@@ -7,8 +8,11 @@ import Banner from "@/app/layouts/nosotros/banner/us-banner";
 import KnowProducts from "@/app/layouts/nosotros/knowProducts/know-products";
 import Eolo from "@/app/layouts/nosotros/knowProducts/eolo";
 import WorkWithUs from "@/app/layouts/nosotros/workWithUs/workWithUs";
-// import Map from "@/app/layouts/nosotros/map";
 import { Metadata } from "next";
+
+const MapDirection = dynamic(() => import("@/app/layouts/nosotros/map/index"), {
+  ssr: false,
+});
 
 export const metadata: Metadata = {
   title: "Nosotros | Gherbezza - Turbinas neumáticas para sembradoras",
@@ -26,7 +30,7 @@ function OurUs() {
       <KnowProducts />
       <Eolo />
       <WorkWithUs />
-      {/* <Map /> */}
+      <MapDirection />
     </main>
   );
 }
