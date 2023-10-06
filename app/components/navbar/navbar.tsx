@@ -153,6 +153,9 @@ function Navbar({ backgroundColor, textColor }: Navbar) {
           display: none;
         }
         @media screen and (max-width: 1000px) {
+          nav {
+            background-color: ${theme.secondary.white};
+          }
           .desktop {
             display: none;
           }
@@ -194,6 +197,12 @@ function Navbar({ backgroundColor, textColor }: Navbar) {
           }
         }
         @media screen and (max-width: 760px) {
+          nav {
+            height: 80px;
+          }
+          .mobile {
+            top: 80px;
+          }
           img {
             max-width: 200px;
           }
