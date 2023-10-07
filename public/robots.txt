@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://gherbezza.vercel.app/sitemap.xml
