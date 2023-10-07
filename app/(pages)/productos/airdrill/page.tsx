@@ -24,10 +24,7 @@ function Airdrill() {
           property="og:description"
           content="Descubre la línea AIRDRILL de dosificadores de siembra de Gherbezza, diseñada para una siembra precisa y eficiente en el campo. ¡Optimiza tus cultivos con nuestra tecnología de vanguardia en dosificación!"
         />
-        <meta
-          property="og:image"
-          content="https://gherbezza.vercel.app/og-image.png"
-        />
+        <meta property="og:image" content="/ogimage.png" />
         <meta
           property="og:url"
           content="https://gherbezza.vercel.app/productos/airdrill"
@@ -35,10 +32,7 @@ function Airdrill() {
         <meta property="og:type" content="website" />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:image"
-          content="https://gherbezza.vercel.app/og-image.png"
-        />
+        <meta name="twitter:image" content="/ogimage.png" />
       </Head>
       <main>
         <ProductDetail

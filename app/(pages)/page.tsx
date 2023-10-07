@@ -38,18 +38,12 @@ export default function Home() {
           property="og:description"
           content="Optimiza tus cultivos con nuestras turbinas neumáticas de vanguardia. Descubre cómo Gherbezza puede ayudarte en la agricultura."
         />
-        <meta
-          property="og:image"
-          content="https://gherbezza.vercel.app/og-image.png"
-        />
+        <meta property="og:image" content="/ogimage.png" />
         <meta property="og:url" content="https://gherbezza.vercel.app/" />
         <meta property="og:type" content="website" />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:image"
-          content="https://gherbezza.vercel.app/og-image.png"
-        />
+        <meta name="twitter:image" content="/ogimage.png" />
       </Head>
       <main>
         <Hero />

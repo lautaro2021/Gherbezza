@@ -23,10 +23,7 @@ function Contact() {
           property="og:description"
           content="¿Listo para hablar con nosotros? Utiliza nuestro formulario de contacto para ponerte en contacto con el equipo de Gherbezza. Estamos aquí para responder a tus preguntas y brindarte el mejor soporte posible."
         />
-        <meta
-          property="og:image"
-          content="https://gherbezza.vercel.app/og-image.png"
-        />
+        <meta property="og:image" content="/ogimage.png" />
         <meta
           property="og:url"
           content="https://gherbezza.vercel.app/contacto"
@@ -34,10 +31,7 @@ function Contact() {
         <meta property="og:type" content="website" />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:image"
-          content="https://gherbezza.vercel.app/og-image.png"
-        />
+        <meta name="twitter:image" content="/ogimage.png" />
       </Head>
       <main>
         <Contacto />

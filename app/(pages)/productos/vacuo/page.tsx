@@ -28,10 +28,7 @@ function Vacuo() {
           property="og:description"
           content="Conoce la línea VACUO de turbinas de aspiración de Gherbezza, diseñada para optimizar la siembra y el rendimiento en el campo. ¡Mejora tus cultivos con nuestra tecnología de calidad superior en aspiración!"
         />
-        <meta
-          property="og:image"
-          content="https://gherbezza.vercel.app/og-image.png"
-        />
+        <meta property="og:image" content="/ogimage.png" />
         <meta
           property="og:url"
           content="https://gherbezza.vercel.app/productos/vacuo"
@@ -39,10 +36,7 @@ function Vacuo() {
         <meta property="og:type" content="website" />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:image"
-          content="https://gherbezza.vercel.app/og-image.png"
-        />
+        <meta name="twitter:image" content="/ogimage.png" />
       </Head>
       <main>
         <ProductDetail

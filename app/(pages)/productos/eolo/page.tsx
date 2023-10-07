@@ -28,10 +28,7 @@ function Eolo() {
           property="og:description"
           content="Explora la línea EOLO de turbinas de soplado de Gherbezza, diseñada para mejorar la siembra y la eficiencia en el campo. ¡Optimiza tus cultivos con nuestra tecnología líder en soplado!"
         />
-        <meta
-          property="og:image"
-          content="https://gherbezza.vercel.app/og-image.png"
-        />
+        <meta property="og:image" content="/ogimage.png" />
         <meta
           property="og:url"
           content="https://gherbezza.vercel.app/productos/eolo"
@@ -39,10 +36,7 @@ function Eolo() {
         <meta property="og:type" content="website" />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:image"
-          content="https://gherbezza.vercel.app/og-image.png"
-        />
+        <meta name="twitter:image" content="/ogimage.png" />
       </Head>
       <main>
         <ProductDetail
