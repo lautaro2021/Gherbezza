@@ -1,5 +1,6 @@
 import React from "react";
 import dynamic from "next/dynamic";
+import Head from "next/head";
 
 const Hero = dynamic(() => import("@/app/layouts/nosotros/Hero"));
 const OurHistory = dynamic(
@@ -26,21 +27,48 @@ const MapDirection = dynamic(() => import("@/app/layouts/nosotros/map/index"), {
 export const metadata: Metadata = {
   title: "Nosotros | Gherbezza - Turbinas neumáticas para sembradoras",
   description:
-    "Bienvenido a la fábrica de turbinas neumáticas para sembradoras en Rosario, Santa Fe. Descubre nuestras avanzadas turbinas neumáticas para agricultura de precisión. Nuestros productos de alta calidad mejoran la eficiencia en la siembra, impulsando la productividad agrícola. Explora nuestras soluciones líderes en la industria y haz que tus sembradoras sean más precisas y rentables.",
+    "Conoce más sobre Gherbezza: nuestra pasión por la agricultura, nuestra historia y nuestra visión. Descubre por qué somos líderes en la fabricación de turbinas neumáticas para sembradoras.",
 };
 
 function OurUs() {
   return (
-    <main>
-      <Hero />
-      <OurHistory />
-      <OurTour />
-      <Banner />
-      <KnowProducts />
-      <Eolo />
-      <WorkWithUs />
-      <MapDirection />
-    </main>
+    <>
+      <Head>
+        <meta
+          property="og:title"
+          content="Acerca de Gherbezza - Nuestra Pasión por la Agricultura"
+        />
+        <meta
+          property="og:description"
+          content="Conoce más sobre Gherbezza, nuestra pasión por la agricultura y nuestra visión. Descubre por qué somos líderes en la fabricación de turbinas neumáticas para sembradoras."
+        />
+        <meta
+          property="og:image"
+          content="https://gherbezza.vercel.app/og-image.png"
+        />
+        <meta
+          property="og:url"
+          content="https://gherbezza.vercel.app/nosotros"
+        />
+        <meta property="og:type" content="website" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:image"
+          content="https://gherbezza.vercel.app/og-image.png"
+        />
+      </Head>
+      <main>
+        <Hero />
+        <OurHistory />
+        <OurTour />
+        <Banner />
+        <KnowProducts />
+        <Eolo />
+        <WorkWithUs />
+        <MapDirection />
+      </main>
+    </>
   );
 }
 
