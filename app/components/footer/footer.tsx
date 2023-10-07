@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import Image from "next/image";
 
 import FooterNavbar from "../navbar/footer-navbar";
 import Powered from "./powered";
@@ -15,18 +14,6 @@ function Footer() {
   return (
     <>
       <footer>
-        <Image
-          alt="Background - Footer"
-          src="https://res.cloudinary.com/dn72zz8r5/image/upload/v1696615962/GHERBEZZA/footer/background_dhk4ak.webp"
-          quality={100}
-          fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          style={{
-            objectFit: "cover",
-            filter: "brightness(0.2)",
-          }}
-          priority
-        />
         <FooterNavbar />
         <CenterDiv>
           <div className="footer_options_container">
@@ -70,12 +57,11 @@ function Footer() {
           display: flex;
           flex-direction: column;
           align-items: center;
-          background-color: ${theme.primary.darkGreen};
-        }
-        img {
-          object-fit: cover;
-          width: 100%;
-          height: 100%;
+          background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+            url("/images/footer/background.webp");
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
         }
         .footer_options_container {
           width: 100%;

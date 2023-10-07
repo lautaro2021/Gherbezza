@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 import styles from "./loader.module.css";
 
@@ -19,11 +20,10 @@ function Loader() {
     <>
       {!loaded && (
         <section className={styles.section}>
-          <img
+          <Image
             src="/images/logo/logo-byn.webp"
             alt="logo gherbezza turbinas para sembradoras"
             title="gherbezza turbinas para sembradoras"
-            fetchPriority="high"
             className={styles.image}
             width={250}
             height={140}

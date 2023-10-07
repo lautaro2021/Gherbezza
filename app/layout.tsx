@@ -1,10 +1,11 @@
+import dynamic from "next/dynamic";
 import "./common/styles/globals.css";
 import { AppProvider } from "./store/context/context";
 import Script from "next/script";
 
-import Navbar from "./components/navbar/navbar";
-import Footer from "./components/footer/footer";
-import Loader from "./components/loader/loader";
+const Footer = dynamic(() => import("./components/footer/footer"));
+const Navbar = dynamic(() => import("./components/navbar/navbar"));
+const Loader = dynamic(() => import("./components/loader/loader"));
 
 import StyledJsxRegistry from "./registry";
 

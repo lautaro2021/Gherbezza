@@ -49,6 +49,7 @@ function OurServices() {
                     src="https://res.cloudinary.com/dn72zz8r5/image/upload/v1696616109/GHERBEZZA/SERVICIOS/postventa_as44e1.webp"
                     alt="Servicio de postventa - Gherbezza, turbinas neumaticas para sembradoras"
                     title="Servicio de Postventa - Gherbezza"
+                    loading="lazy"
                   />
                   <div>
                     <Link href={`?service=postventa`} scroll={false}>
@@ -83,6 +84,7 @@ function OurServices() {
                     src="https://res.cloudinary.com/dn72zz8r5/image/upload/v1696616110/GHERBEZZA/SERVICIOS/asesoramiento-tecnico_ftjq9z.webp"
                     alt="Servicio de Asesoramiento Tecnico - Gherbezza, turbinas neumaticas para sembradoras"
                     title="Servicio de Asesoramiento Tecnico - Gherbezza"
+                    loading="lazy"
                   />
                   <div>
                     <Link href={`?service=postventa`} scroll={false}>

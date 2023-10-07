@@ -32,6 +32,7 @@ function OurClients() {
                       alt={obj.alt}
                       title={obj.title}
                       key={obj.title}
+                      loading="lazy"
                     />
                   ))}
                 </div>
@@ -42,6 +43,7 @@ function OurClients() {
                       alt={obj.alt}
                       title={obj.title}
                       key={obj.title}
+                      loading="lazy"
                     />
                   ))}
                 </div>
@@ -52,6 +54,7 @@ function OurClients() {
                       alt={obj.alt}
                       title={obj.title}
                       key={obj.title}
+                      loading="lazy"
                     />
                   ))}
                 </div>

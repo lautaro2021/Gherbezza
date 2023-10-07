@@ -1,13 +1,22 @@
 import React from "react";
 import dynamic from "next/dynamic";
 
-import Hero from "@/app/layouts/nosotros/Hero";
-import OurHistory from "@/app/layouts/nosotros/ourHistory/ourHistory";
-import OurTour from "@/app/layouts/nosotros/ourHistory/ourTour";
-import Banner from "@/app/layouts/nosotros/banner/us-banner";
-import KnowProducts from "@/app/layouts/nosotros/knowProducts/know-products";
-import Eolo from "@/app/layouts/nosotros/knowProducts/eolo";
-import WorkWithUs from "@/app/layouts/nosotros/workWithUs/workWithUs";
+const Hero = dynamic(() => import("@/app/layouts/nosotros/Hero"));
+const OurHistory = dynamic(
+  () => import("@/app/layouts/nosotros/ourHistory/ourHistory")
+);
+const OurTour = dynamic(
+  () => import("@/app/layouts/nosotros/ourHistory/ourTour")
+);
+const Banner = dynamic(() => import("@/app/layouts/nosotros/banner/us-banner"));
+const KnowProducts = dynamic(
+  () => import("@/app/layouts/nosotros/knowProducts/know-products")
+);
+const Eolo = dynamic(() => import("@/app/layouts/nosotros/knowProducts/eolo"));
+const WorkWithUs = dynamic(
+  () => import("@/app/layouts/nosotros/workWithUs/workWithUs")
+);
+
 import { Metadata } from "next";
 
 const MapDirection = dynamic(() => import("@/app/layouts/nosotros/map/index"), {
