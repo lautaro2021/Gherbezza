@@ -30,10 +30,7 @@ function Services() {
           property="og:description"
           content="En Gherbezza, ofrecemos servicios excepcionales que incluyen atención al cliente y servicio de postventa. Estamos aquí para satisfacer tus necesidades agrícolas."
         />
-        <meta
-          property="og:image"
-          content="https://gherbezza.vercel.app/og-image.png"
-        />
+        <meta property="og:image" content="/ogimage.png" />
         <meta
           property="og:url"
           content="https://gherbezza.vercel.app/servicios"
@@ -41,10 +38,7 @@ function Services() {
         <meta property="og:type" content="website" />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:image"
-          content="https://gherbezza.vercel.app/og-image.png"
-        />
+        <meta name="twitter:image" content="/ogimage.png" />
       </Head>
       <main>
         <Hero />
