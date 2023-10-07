@@ -1,7 +1,5 @@
 :root {
-  --font-mono: 'Gill Sans', ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+  --font-mono: 'Gill Sans', monospace;
 
     /* BIG DESKTOP */
     --bd-title-fontsize: 70px;

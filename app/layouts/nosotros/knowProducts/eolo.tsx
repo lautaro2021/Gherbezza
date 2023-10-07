@@ -26,6 +26,7 @@ function Eolo() {
                   src={image.src}
                   alt={image.alt}
                   title={image.title}
+                  loading="lazy"
                 />
               ))}
             </div>

@@ -28,6 +28,7 @@ function BePartOfUs() {
                 src="https://res.cloudinary.com/dn72zz8r5/image/upload/v1696613837/GHERBEZZA/INICIO/operario_ijj6y7.webp"
                 alt="operario - trabaja con nosotros - gherbezza turbinas neumaticas para sembradoras"
                 title="trabaja con nosotros"
+                loading="lazy"
               />
             </div>
             <div className="text_container">
