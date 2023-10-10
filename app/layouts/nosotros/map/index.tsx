@@ -21,10 +21,10 @@ function MapDirection() {
               <span>Rosario, Santa Fe</span>
               <br />
               <h4>Contacto</h4>
-              <span>+ 54 9 341 388 08 95</span>
+              <span>+ 54 9 341 572398</span>
               <br />
               <h4>Mail</h4>
-              <span>info@gherbezza.com</span>
+              <span>ventas@gherbezza.com</span>
               <br />
               <div>
                 {footerSocial.map((option: OptionsFooterInterface) => (
