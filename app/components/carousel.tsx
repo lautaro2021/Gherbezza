@@ -16,9 +16,10 @@ function Carousel(props: any) {
             {data.map((obj: HistoryCarouselType, index: number) => (
               <div className="embla__slide" key={index}>
                 <img
+                  src={obj.image}
                   className="embla__slide__img"
-                  alt={`Nuestro Recorrido - Carrusel${index}`}
-                  title={`Nuestro Recorrido - Imagen ${index}`}
+                  alt={obj.alt}
+                  title={obj.title}
                   loading="lazy"
                 />
                 <strong>{obj.textTitle}</strong>
