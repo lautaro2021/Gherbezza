@@ -52,7 +52,7 @@ export const tourData: HistoryCarouselType[] = [
     title:
       "Fabricacion turbina N° 1000 - Gherbezza, turbinas neumaticas para sembradoras",
     textTitle: "2022",
-    textDescription: "Fabricacion turbina N° 1000",
+    textDescription: "Fabricacion turbina N° 10000",
   },
   {
     image:

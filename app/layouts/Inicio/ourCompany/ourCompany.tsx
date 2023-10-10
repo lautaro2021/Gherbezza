@@ -32,15 +32,19 @@ function OurCompany() {
             </div>
             <div className="image_container">
               <Image
-                src="https://res.cloudinary.com/dn72zz8r5/image/upload/v1696613861/GHERBEZZA/INICIO/ourCompany_cqm5gp.webp"
+                src="https://res.cloudinary.com/dn72zz8r5/image/upload/v1696947638/GHERBEZZA/INICIO/ORIGINAL_Logo_VERTICAL_Simplificado_Color_Pantone_GHERBEZZA_May_2018_xxbuww.webp"
                 alt="Gherbezza fabrica de turbinas neumaticas para sembradoras"
                 title="Gherbezza turbinas neumaticas para sembradoras"
                 fill
-                style={{ objectFit: "cover" }}
+                style={{
+                  objectFit: "contain",
+                  maxWidth: 300,
+                  margin: "0 auto",
+                }}
                 placeholder="blur"
-                blurDataURL="https://res.cloudinary.com/dn72zz8r5/image/upload/v1696613861/GHERBEZZA/INICIO/ourCompany_cqm5gp.webp"
+                blurDataURL="https://res.cloudinary.com/dn72zz8r5/image/upload/v1696947638/GHERBEZZA/INICIO/ORIGINAL_Logo_VERTICAL_Simplificado_Color_Pantone_GHERBEZZA_May_2018_xxbuww.webp"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                loading="lazy"
+                className="image"
               />
             </div>
           </div>
@@ -72,6 +76,7 @@ function OurCompany() {
           width: 40%;
           height: 100%;
           position: relative;
+          border: 1px solid grey;
         }
         @media screen and (max-width: 1920px) {
           .text_container p {

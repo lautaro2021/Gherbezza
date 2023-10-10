@@ -120,13 +120,13 @@ function Contacto() {
             <div className="info_container">
               <div className="image_container">
                 <Image
-                  src="https://res.cloudinary.com/dn72zz8r5/image/upload/v1696615438/GHERBEZZA/CONTACTO/background_isc921.webp"
+                  src="https://res.cloudinary.com/dn72zz8r5/image/upload/v1696947309/GHERBEZZA/CONTACTO/181A3369_fpfi37.webp"
                   alt="Contacto - Gherbezza turbinas neumaticas para sembradoras"
                   title="Contacto - Gherbezza turbinas neumaticas para sembradoras"
                   fill
                   style={{ objectFit: "cover" }}
                   placeholder="blur"
-                  blurDataURL="https://res.cloudinary.com/dn72zz8r5/image/upload/v1696615438/GHERBEZZA/CONTACTO/background_isc921.webp"
+                  blurDataURL="https://res.cloudinary.com/dn72zz8r5/image/upload/v1696947309/GHERBEZZA/CONTACTO/181A3369_fpfi37.webp"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   priority
                 />
@@ -138,8 +138,8 @@ function Contacto() {
               <div className="info">
                 <h3>INFORMACIÓN</h3>
                 <div>
-                  <strong>Tel: 0341 - 459 9468</strong>
-                  <strong>Email: info@gherbezza.com</strong>
+                  <strong>Tel: 341 - 572398</strong>
+                  <strong>Email: ventas@gherbezza.com</strong>
                 </div>
               </div>
             </div>
