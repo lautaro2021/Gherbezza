@@ -15,11 +15,11 @@ export const listServicesData: ListServicesType = {
       text: "Mejora constante para cumplir sus expectativas.",
     },
     {
-      strong: "Educación y capacitación:",
+      strong: "Educación y Capacitación:",
       text: "Recursos para un mantenimiento efectivo.",
     },
     {
-      strong: "Comunicación abierta:",
+      strong: "Comunicación Abierta:",
       text: "Fomentamos la retroalimentación de los clientes.",
     },
     {
@@ -29,28 +29,24 @@ export const listServicesData: ListServicesType = {
   ],
   postventa: [
     {
-      strong: "Soporte técnico especializado:",
-      text: "Expertos disponibles para asesoramiento personalizado.",
+      strong: "Soporte Duradero:",
+      text: "Expertos en nuestro equipo disponibles para atender sus necesidades en el futuro.",
     },
     {
-      strong: "Asistencia rápida:",
-      text: "Respuestas ágiles para minimizar el tiempo de inactividad.",
+      strong: "Mantenimiento Continuo:",
+      text: "Respuestas ágiles y soluciones inmediatas para minimizar cualquier interrupción.",
     },
     {
-      strong: "Satisfacción del cliente:",
-      text: "Mejora constante para cumplir sus expectativas.",
+      strong: "Garantía de Satisfacción:",
+      text: "Nos esforzamos constantemente por superar sus expectativas a lo largo del tiempo.",
     },
     {
-      strong: "Educación y capacitación:",
-      text: "Recursos para un mantenimiento efectivo.",
+      strong: "Educación y Capacitación en Curso:",
+      text: "Recursos actualizados para garantizar el mantenimiento efectivo de su equipo.",
     },
     {
-      strong: "Comunicación abierta:",
+      strong: "Comunicación Abierta:",
       text: "Fomentamos la retroalimentación de los clientes.",
-    },
-    {
-      strong: "Garantía y soporte postventa",
-      text: "Garantías sólidas y servicio de por vida.",
     },
   ],
 };

@@ -47,6 +47,7 @@ function Modal({ isOpen, onClose, product }: ModalType) {
                       src={table}
                       alt={`${title} - table`}
                       title={`${title}, table - Gherbezza, fabrica de turbinas neumaticas para sembradoras`}
+                      loading="lazy"
                     />
                   </figure>
                 </>

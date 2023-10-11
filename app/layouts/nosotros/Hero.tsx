@@ -13,7 +13,7 @@ function Hero() {
       <section>
         <Image
           alt="Background - Nosotros"
-          src="https://res.cloudinary.com/dn72zz8r5/image/upload/v1696615699/GHERBEZZA/NOSOTROS/background_wvpma4.webp"
+          src="https://res.cloudinary.com/dn72zz8r5/image/upload/v1697027552/GHERBEZZA/NOSOTROS/APX_apdkw9.webp"
           placeholder="blur"
           blurDataURL="https://res.cloudinary.com/dn72zz8r5/image/upload/v1696615699/GHERBEZZA/NOSOTROS/background_wvpma4.webp"
           quality={100}
@@ -21,7 +21,7 @@ function Hero() {
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           style={{
             objectFit: "cover",
-            filter: "brightness(0.2)",
+            filter: "brightness(0.3)",
           }}
           priority
         />

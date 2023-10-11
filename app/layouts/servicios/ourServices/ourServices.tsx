@@ -69,16 +69,17 @@ function OurServices() {
                 <h4>Nuestra Misión</h4>
                 <br />
                 <p>
-                  Nuestra misión es superar las expectativas de nuestros
-                  clientes en cada interacción. Estamos dedicados a brindar
-                  soluciones rápidas y efectivas, así como asesoramiento
-                  experto, para garantizar que sus turbinas funcionen de manera
-                  óptima en todo momento. Su éxito es nuestro éxito.
+                  En nuestro compromiso por superar las expectativas de nuestros
+                  clientes, el Servicio de Postventa se erige como un pilar
+                  esencial. Estamos dedicados a respaldar su inversión a lo
+                  largo del tiempo, brindando soluciones duraderas y un soporte
+                  continuo para asegurar que su satisfacción y rendimiento sean
+                  impecables. Su éxito sostenido es nuestro mayor logro.
                 </p>
                 <br />
                 <h4>¿Qué ofrecemos en nuestro servicio?</h4>
                 <ul>
-                  {listServicesData.asesoramientoTecnico?.map(
+                  {listServicesData.postventa?.map(
                     (service: ServicesDescriptionType, index: number) => (
                       <li key={index}>
                         <strong>{service.strong}</strong>

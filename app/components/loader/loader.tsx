@@ -27,6 +27,7 @@ function Loader() {
             className={styles.image}
             width={250}
             height={140}
+            priority
           />
         </section>
       )}
