@@ -98,9 +98,9 @@ function OurServices() {
                 <div className="service_info_container">
                   <h3>Asesoramiento Técnico</h3>
                   <p>
-                    Ofrecemos un servicio postventa de calidad y eficiente para
-                    garantizar la plena satisfacción con nuestras turbinas
-                    neumáticas para sembradoras.
+                    Brindamos asesoramiento técnico de calidad y altamente
+                    eficiente para garantizar que obtenga el máximo rendimiento
+                    de nuestras turbinas neumáticas para sembradoras.
                   </p>
                   <br />
                   <br />

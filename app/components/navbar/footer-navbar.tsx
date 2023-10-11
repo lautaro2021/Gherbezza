@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 
 import CenterDiv from "../center-div";
@@ -20,12 +21,14 @@ function FooterNavbar() {
                 className="desktop"
                 width={250}
                 height={60}
+                loading="lazy"
               />
               <img
                 src={"/images/logo/ISO.webp"}
                 alt="logo-gherbezza-turbinas-neumaticas-sembradoras"
                 title="Gherbezza, turbinas neumaticas para sembradoras"
                 className="mobile"
+                loading="lazy"
               />
             </Link>
             <ul>

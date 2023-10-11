@@ -88,6 +88,7 @@ function Eolo() {
           width: 100%;
           border-radius: 8px;
           text-align: center;
+          min-height: 200px;
         }
         li h4 {
           color: ${theme.primary.orange};
@@ -128,6 +129,7 @@ function Eolo() {
           }
           li {
             max-width: 100%;
+            min-height: auto;
           }
           li h4 {
             font-size: clamp(25px, 3.906vw, 30px);

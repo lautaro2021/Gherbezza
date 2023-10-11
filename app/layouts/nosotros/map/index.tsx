@@ -38,6 +38,7 @@ function MapDirection() {
                       src={option.image}
                       alt={option.description}
                       title={option.title}
+                      loading="lazy"
                     />
                   </a>
                 ))}

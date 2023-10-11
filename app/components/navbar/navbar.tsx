@@ -57,6 +57,7 @@ function Navbar({ backgroundColor, textColor }: Navbar) {
                 className="iso_desktop"
                 width={250}
                 height={60}
+                loading="lazy"
               />
               <img
                 src={"/images/logo/ISO.webp"}
@@ -65,6 +66,7 @@ function Navbar({ backgroundColor, textColor }: Navbar) {
                 className="iso_mobile"
                 width="50px"
                 height="50px"
+                loading="lazy"
               />
             </Link>
             <ul className={showMobileOptions ? "mobile" : "desktop"}>

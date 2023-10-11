@@ -16,7 +16,7 @@ function OurHistory() {
           <div className="container">
             <div className="image_container">
               <Image
-                src="https://res.cloudinary.com/dn72zz8r5/image/upload/v1696615710/GHERBEZZA/NOSOTROS/company_kjoiij.webp"
+                src="https://res.cloudinary.com/dn72zz8r5/image/upload/v1697027013/GHERBEZZA/NOSOTROS/IMG_20231009_104912784_HDR_jqwjym.webp"
                 alt="Nuestra empresa - Gherbezza fabrica de turbinas neumaticas para sembradoras"
                 title="Nuestra empresa - Gherbezza turbinas neumaticas para sembradoras"
                 fill

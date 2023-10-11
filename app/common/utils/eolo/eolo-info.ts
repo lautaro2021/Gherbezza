@@ -6,14 +6,14 @@ export type EoloCardsType = {
 export const eoloCardsInfo: EoloCardsType[] = [
   {
     productType: "Línea Vacuo",
-    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+    text: "Para sembradoras con dosificadores neumáticos monograno. Garantiza una dosificación homogénea de semillas.",
   },
   {
     productType: "Línea Eolo",
-    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+    text: "Para transporte neumático en maquinaria agrícola sembradoras tipo Air Drill, fertilizadoras neumáticas y cualquier otro equipo agrícola que utilice sistemas de soplado de aire.",
   },
   {
     productType: "Línea Air Drill",
-    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+    text: "Para dosificar semillas o fertilizantes. Adaptable a diferentes tipos de semilla, ya sean finas, medianas o gruesas. Modelo disponible para distintas medidas de tolva.",
   },
 ];
