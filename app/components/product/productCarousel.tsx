@@ -21,6 +21,7 @@ function ProductCarousel(props: any) {
                     alt={productImage.alt}
                     title={productImage.title}
                     fill
+                    style={{ objectFit: "cover" }}
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                 </figure>

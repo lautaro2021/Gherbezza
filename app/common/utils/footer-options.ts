@@ -20,7 +20,7 @@ export const footerSocial: OptionsFooterInterface[] = [
     title: "linkedin gherbezza turbinas neumaticas para sembradoras",
   },
   {
-    link: "https://wa.me/341572398",
+    link: "https://wa.me/+549341572398",
     image: "/images/footer/social/whatsapp.webp",
     description: "facebook-gherbezza-turbinas-neumaticas-para-sembradoras",
     title: "facebook gherbezza turbinas neumaticas para sembradoras",

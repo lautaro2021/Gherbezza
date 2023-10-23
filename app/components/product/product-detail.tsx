@@ -30,7 +30,7 @@ function ProductDetail({
                 <ProductCarousel options={OPTIONS} data={dataForCarrousel} />
               </div>
               <div className="buttons_container">
-                <a href={dataSheetLink} target="_blank" rel="noreferrer">
+                <a href={dataSheetLink.manual} target="_blank" rel="noreferrer">
                   <div className="svg_container">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -43,7 +43,11 @@ function ProductDetail({
                     <span>Manual de uso</span>
                   </div>
                 </a>
-                <a href={dataSheetLink} target="_blank" rel="noreferrer">
+                <a
+                  href={dataSheetLink.medidas}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <div className="svg_container">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -56,7 +60,11 @@ function ProductDetail({
                     <span>Medidas</span>
                   </div>
                 </a>
-                <a href={dataSheetLink} target="_blank" rel="noreferrer">
+                <a
+                  href={dataSheetLink.fichaTecnica}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <div className="svg_container">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

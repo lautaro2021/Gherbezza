@@ -18,9 +18,9 @@ function Footer() {
         <CenterDiv>
           <div className="footer_options_container">
             <p>
-              Líderes en turbinas neumáticas y tecnología agrícola. Unimos
-              calidad y innovación. Únete para impulsar la agricultura del
-              futuro con soluciones tecnológicas de excelencia.
+              Somos líderes en turbinas neumáticas y tecnología agrícola. Unimos
+              calidad e innovación. Impulsamos la agricultura del futuro con
+              soluciones tecnológicas de excelencia.
             </p>
             <ul>
               {footerOptions.map((option: OptionsFooterInterface) => (

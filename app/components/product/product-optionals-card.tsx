@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 
 import { ProductOptionalsType } from "@/app/common/utils/products/eolo/optionals/optionals-data";
+import { theme } from "@/app/common/styles/themes/theme";
 
 function ProductOptionalsCard({
   optionalDescription,
@@ -16,7 +17,7 @@ function ProductOptionalsCard({
             alt="Gherbezza fabrica de turbinas neumaticas para sembradoras"
             title="Gherbezza turbinas neumaticas para sembradoras"
             fill
-            style={{ objectFit: "cover" }}
+            style={{ objectFit: "contain", padding: "20px" }}
             placeholder="blur"
             blurDataURL={imageUrl}
             priority
@@ -50,6 +51,7 @@ function ProductOptionalsCard({
           display: grid;
           place-items: center;
           padding: 12px;
+          border-top: 1px solid ${theme.secondary.darkGrey};
         }
         p {
           font-size: 20px;

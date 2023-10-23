@@ -27,21 +27,19 @@ function Modal({ isOpen, onClose, product }: ModalType) {
                       alt={`${title} - image${index}`}
                       title={`${title}, imagen ${index} - Gherbezza, fabrica de turbinas neumaticas para sembradoras`}
                       fill
-                      style={{ objectFit: "cover" }}
+                      style={{ objectFit: "contain" }}
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                   </figure>
                 ))}
               </div>
               <h4>Detalles</h4>
-              <p>{productInfo}</p>
-              <br />
-              <p>{productInfo}</p>
               <br />
               <p>{productInfo}</p>
               {table && (
                 <>
                   <h4>Tabla técnica</h4>
+                  <br />
                   <figure className="table_container">
                     <img
                       src={table}
