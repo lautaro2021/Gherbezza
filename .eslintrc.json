@@ -1,4 +1,8 @@
 {
+    "settings": {
+        "pragma": "React",
+        "version": "detect"
+    },
     "env": {
         "browser": true,
         "es2021": true,
