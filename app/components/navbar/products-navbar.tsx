@@ -27,23 +27,27 @@ function ProductsNavbar() {
               const product = value.name.toLowerCase().split(" ").join("");
               const selectedProductStyle = product === actualPath && color;
               return (
-                <li
+                <Link
                   key={index}
-                  style={{
-                    backgroundColor: `${
-                      selectedProductStyle ? selectedProductStyle : ""
-                    }`,
-                    color: `${
-                      selectedProductStyle
-                        ? theme.secondary.white
-                        : theme.secondary.black
-                    }`,
-                  }}
+                  href={value.link}
+                  scroll={false}
+                  style={{ width: "100%", height: "100%" }}
                 >
-                  <Link href={value.link} scroll={false}>
+                  <li
+                    style={{
+                      backgroundColor: `${
+                        selectedProductStyle ? selectedProductStyle : ""
+                      }`,
+                      color: `${
+                        selectedProductStyle
+                          ? theme.secondary.white
+                          : theme.secondary.black
+                      }`,
+                    }}
+                  >
                     {value.name}
-                  </Link>
-                </li>
+                  </li>
+                </Link>
               );
             })}
           </ul>
