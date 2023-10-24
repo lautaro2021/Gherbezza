@@ -21,9 +21,9 @@ export const productData = {
       "Para dosificar semillas o fertilizantes. Adaptable a diferentes tipos de semilla, ya sean finas, medianas o gruesas. Modelo disponible para distintas medidas de tolva.",
     subtitle: "Dosificador de Siembra",
     dataSheetLink: {
-      manual:
-        "https://drive.google.com/file/d/1D7yFH1yB3QDeN6bkm_qm-7EH9E2n-Vfg/view?usp=sharing",
-      medidas: "",
+      manual: "",
+      medidas:
+        "https://drive.google.com/file/d/16NuJoop36YwuZryjpP4_BBEHPJmVEfUq/view?usp=sharing",
       fichaTecnica:
         "https://drive.google.com/file/d/1Z131uZTqmVBlcnbhUe-BXfJK5CWn5YqD/view?usp=sharing",
     },
@@ -38,7 +38,8 @@ export const productData = {
     dataSheetLink: {
       manual:
         "https://drive.google.com/file/d/1D7yFH1yB3QDeN6bkm_qm-7EH9E2n-Vfg/view?usp=sharing",
-      medidas: "",
+      medidas:
+        "https://drive.google.com/file/d/1zRCMFKG2hPg-uOHrDOMXYI8LGRdhkJ0F/view?usp=sharing",
       fichaTecnica:
         "https://drive.google.com/file/d/1Pp8D-7E-IygNE5xIN32oAIiLe5yRXp8-/view?usp=sharing",
     },

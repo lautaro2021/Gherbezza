@@ -90,6 +90,9 @@ function OurClients() {
           align-items: center;
           justify-content: space-evenly;
         }
+        img {
+          max-width: 250px;
+        }
         @media screen and (max-width: 1000px) {
           img {
             max-width: clamp(150px, 20vw, 200px);

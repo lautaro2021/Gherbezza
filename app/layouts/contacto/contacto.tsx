@@ -138,7 +138,7 @@ function Contacto() {
               <div className="info">
                 <h3>INFORMACIÓN</h3>
                 <div>
-                  <strong>Tel: 341 - 572398</strong>
+                  <strong>Tel: 341 5772398</strong>
                   <strong>Email: ventas@gherbezza.com</strong>
                 </div>
               </div>
