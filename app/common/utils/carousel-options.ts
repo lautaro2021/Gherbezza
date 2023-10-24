@@ -8,9 +8,9 @@ export const carouselOptions: CarouselType = {
       title: "Apache - Gherbezza",
     },
     {
-      src: "/assets/icons/ourClients/ascanelli.webp",
-      alt: "Ascanelli clientes que confian Gherbezza",
-      title: "Ascanelli - Gherbezza",
+      src: "/assets/icons/ourClients/crucianelli.webp",
+      alt: "crucianelli clientes que confian Gherbezza",
+      title: "crucianelli - Gherbezza",
     },
     {
       src: "/assets/icons/ourClients/cele.webp",
@@ -30,9 +30,9 @@ export const carouselOptions: CarouselType = {
       title: "El Pato - Gherbezza",
     },
     {
-      src: "/assets/icons/ourClients/giorgi.webp",
-      alt: "Giorgi clientes que confian Gherbezza",
-      title: "Giorgi - Gherbezza",
+      src: "/assets/icons/ourClients/agrometal.webp",
+      alt: "agrometal clientes que confian Gherbezza",
+      title: "agrometal - Gherbezza",
     },
   ],
   slide3: [

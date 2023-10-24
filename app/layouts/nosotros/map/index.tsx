@@ -21,7 +21,7 @@ function MapDirection() {
               <span>Rosario, Santa Fe</span>
               <br />
               <h4>Contacto</h4>
-              <span>+ 54 9 341 572398</span>
+              <span>+ 54 9 341 5772398</span>
               <br />
               <h4>Mail</h4>
               <span>ventas@gherbezza.com</span>
